@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace TrabalhoWindowsForm
 {
-    public partial class LojasForm : Form
+    public partial class EditarApagarLojasForm : Form
     {
-        public LojasForm()
+        public EditarApagarLojasForm()
         {
             InitializeComponent();
         }
