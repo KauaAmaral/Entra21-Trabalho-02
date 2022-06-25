@@ -87,7 +87,7 @@
             // checkBoxCarros
             // 
             this.checkBoxCarros.AutoSize = true;
-            this.checkBoxCarros.Location = new System.Drawing.Point(15, 331);
+            this.checkBoxCarros.Location = new System.Drawing.Point(209, 340);
             this.checkBoxCarros.Name = "checkBoxCarros";
             this.checkBoxCarros.Size = new System.Drawing.Size(60, 19);
             this.checkBoxCarros.TabIndex = 1;
@@ -143,7 +143,7 @@
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(608, 331);
+            this.comboBox1.Location = new System.Drawing.Point(481, 340);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(121, 23);
             this.comboBox1.TabIndex = 7;
