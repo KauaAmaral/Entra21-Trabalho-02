@@ -35,9 +35,9 @@
             this.checkBoxVendas = new System.Windows.Forms.CheckBox();
             this.dateTimePickerDataDeAbertura = new System.Windows.Forms.DateTimePicker();
             this.labelCnpj = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBoxRazaoSocial = new System.Windows.Forms.TextBox();
             this.radioButtonSim = new System.Windows.Forms.RadioButton();
-            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
+            this.maskedTextBoxCnpj = new System.Windows.Forms.MaskedTextBox();
             this.buttonCancelar = new System.Windows.Forms.Button();
             this.labelRazaoSocial = new System.Windows.Forms.Label();
             this.labelTelefone = new System.Windows.Forms.Label();
@@ -49,9 +49,9 @@
             this.labelLogradouro = new System.Windows.Forms.Label();
             this.labelCep = new System.Windows.Forms.Label();
             this.maskedTextBoxCep = new System.Windows.Forms.MaskedTextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBoxLogradouro = new System.Windows.Forms.TextBox();
             this.labelNomeContato = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.textBoxNomeContato = new System.Windows.Forms.TextBox();
             this.labelDataDeAbertura = new System.Windows.Forms.Label();
             this.labelAtiva = new System.Windows.Forms.Label();
             this.radioButtonNao = new System.Windows.Forms.RadioButton();
@@ -119,12 +119,12 @@
             this.labelCnpj.TabIndex = 3;
             this.labelCnpj.Text = "CNPJ";
             // 
-            // textBox1
+            // textBoxRazaoSocial
             // 
-            this.textBox1.Location = new System.Drawing.Point(131, 110);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(499, 23);
-            this.textBox1.TabIndex = 4;
+            this.textBoxRazaoSocial.Location = new System.Drawing.Point(131, 110);
+            this.textBoxRazaoSocial.Name = "textBoxRazaoSocial";
+            this.textBoxRazaoSocial.Size = new System.Drawing.Size(499, 23);
+            this.textBoxRazaoSocial.TabIndex = 4;
             // 
             // radioButtonSim
             // 
@@ -138,13 +138,13 @@
             this.radioButtonSim.Text = "Sim";
             this.radioButtonSim.UseVisualStyleBackColor = true;
             // 
-            // maskedTextBox1
+            // maskedTextBoxCnpj
             // 
-            this.maskedTextBox1.Location = new System.Drawing.Point(131, 75);
-            this.maskedTextBox1.Mask = "99.999.999/9999-99";
-            this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(94, 23);
-            this.maskedTextBox1.TabIndex = 6;
+            this.maskedTextBoxCnpj.Location = new System.Drawing.Point(131, 75);
+            this.maskedTextBoxCnpj.Mask = "99.999.999/9999-99";
+            this.maskedTextBoxCnpj.Name = "maskedTextBoxCnpj";
+            this.maskedTextBoxCnpj.Size = new System.Drawing.Size(94, 23);
+            this.maskedTextBoxCnpj.TabIndex = 6;
             // 
             // buttonCancelar
             // 
@@ -239,12 +239,12 @@
             this.maskedTextBoxCep.Size = new System.Drawing.Size(94, 23);
             this.maskedTextBoxCep.TabIndex = 6;
             // 
-            // textBox3
+            // textBoxLogradouro
             // 
-            this.textBox3.Location = new System.Drawing.Point(320, 223);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(310, 23);
-            this.textBox3.TabIndex = 4;
+            this.textBoxLogradouro.Location = new System.Drawing.Point(320, 223);
+            this.textBoxLogradouro.Name = "textBoxLogradouro";
+            this.textBoxLogradouro.Size = new System.Drawing.Size(310, 23);
+            this.textBoxLogradouro.TabIndex = 4;
             // 
             // labelNomeContato
             // 
@@ -255,12 +255,12 @@
             this.labelNomeContato.TabIndex = 3;
             this.labelNomeContato.Text = "Nome Contato";
             // 
-            // textBox4
+            // textBoxNomeContato
             // 
-            this.textBox4.Location = new System.Drawing.Point(320, 262);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(310, 23);
-            this.textBox4.TabIndex = 4;
+            this.textBoxNomeContato.Location = new System.Drawing.Point(320, 262);
+            this.textBoxNomeContato.Name = "textBoxNomeContato";
+            this.textBoxNomeContato.Size = new System.Drawing.Size(310, 23);
+            this.textBoxNomeContato.TabIndex = 4;
             // 
             // labelDataDeAbertura
             // 
@@ -347,15 +347,15 @@
             this.Controls.Add(this.buttonCancelar);
             this.Controls.Add(this.maskedTextBoxTelefone);
             this.Controls.Add(this.maskedTextBoxCep);
-            this.Controls.Add(this.maskedTextBox1);
+            this.Controls.Add(this.maskedTextBoxCnpj);
             this.Controls.Add(this.radioButtonNao);
             this.Controls.Add(this.radioButtonSim);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.textBoxNomeContato);
             this.Controls.Add(this.textBoxEMail);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.textBoxLogradouro);
             this.Controls.Add(this.textBoxNomeFantasia);
             this.Controls.Add(this.labelNomeContato);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.textBoxRazaoSocial);
             this.Controls.Add(this.labelServicos);
             this.Controls.Add(this.labelAtiva);
             this.Controls.Add(this.labelEMail);
@@ -392,9 +392,9 @@
         private CheckBox checkBoxVendas;
         private DateTimePicker dateTimePickerDataDeAbertura;
         private Label labelCnpj;
-        private TextBox textBox1;
+        private TextBox textBoxRazaoSocial;
         private RadioButton radioButtonSim;
-        private MaskedTextBox maskedTextBox1;
+        private MaskedTextBox maskedTextBoxCnpj;
         private Button buttonCancelar;
         private Label labelRazaoSocial;
         private Label labelTelefone;
@@ -406,9 +406,9 @@
         private Label labelLogradouro;
         private Label labelCep;
         private MaskedTextBox maskedTextBoxCep;
-        private TextBox textBox3;
+        private TextBox textBoxLogradouro;
         private Label labelNomeContato;
-        private TextBox textBox4;
+        private TextBox textBoxNomeContato;
         private Label labelDataDeAbertura;
         private Label labelAtiva;
         private RadioButton radioButtonNao;
