@@ -118,10 +118,22 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="atendimento-ao-cliente" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\atendimento-ao-cliente.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="usuario-masculino" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\usuario-masculino.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="alugar-um-carro" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\alugar-um-carro.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="chave" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\chave.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="atendimento-ao-cliente" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\atendimento-ao-cliente.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="midia-social" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\midia-social.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="do-utilizador" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\do-utilizador.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

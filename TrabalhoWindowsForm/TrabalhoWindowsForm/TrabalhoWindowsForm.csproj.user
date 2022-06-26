@@ -7,6 +7,9 @@
     <Compile Update="EditarApagarLojasForm.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="MenuListar.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="PainelLogin.cs">
       <SubType>Form</SubType>
     </Compile>

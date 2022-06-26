@@ -39,10 +39,10 @@ namespace TrabalhoWindowsForm
 
         private void linkLabelSuporte_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            var uri = "https://www.linkedin.com/in/felipeecorrea/";
+            var enderecoSuporte = "https://www.linkedin.com/in/felipeecorrea/";
             var psi = new System.Diagnostics.ProcessStartInfo();
             psi.UseShellExecute = true;
-            psi.FileName = uri;
+            psi.FileName = enderecoSuporte;
             System.Diagnostics.Process.Start(psi);
         }
     }

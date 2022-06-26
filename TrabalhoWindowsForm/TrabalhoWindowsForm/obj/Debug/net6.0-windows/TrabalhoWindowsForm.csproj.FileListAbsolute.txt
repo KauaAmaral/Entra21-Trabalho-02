@@ -18,3 +18,4 @@ C:\Users\Administrator\Source\Repos\KauaAmaral\Entra21-Trabalho-02\TrabalhoWindo
 C:\Users\Administrator\Source\Repos\KauaAmaral\Entra21-Trabalho-02\TrabalhoWindowsForm\TrabalhoWindowsForm\obj\Debug\net6.0-windows\TrabalhoWindowsForm.genruntimeconfig.cache
 C:\Users\Administrator\Source\Repos\KauaAmaral\Entra21-Trabalho-02\TrabalhoWindowsForm\TrabalhoWindowsForm\obj\Debug\net6.0-windows\ref\TrabalhoWindowsForm.dll
 C:\Users\Administrator\Source\Repos\KauaAmaral\Entra21-Trabalho-02\TrabalhoWindowsForm\TrabalhoWindowsForm\obj\Debug\net6.0-windows\TrabalhoWindowsForm.Properties.Resources.resources
+C:\Users\Administrator\Source\Repos\KauaAmaral\Entra21-Trabalho-02\TrabalhoWindowsForm\TrabalhoWindowsForm\obj\Debug\net6.0-windows\TrabalhoWindowsForm.MenuListar.resources
