@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "pqXWbkk3NACZ8vwan7U3I6U+f0MBbw9DRjrsf31q7Z0RIDFLvm62q7NiEbli3d/vZCnY1HjZ0zi9OHRFtn4qBQ==",
+  "dgSpecHash": "lL1QlpJhsDe1WLd/FQUM7pKBvlJcqwfUfYfAAObbU1NGPVw4v8TgPcMyYZIJRbM9LlSpcVDInuo1e7BWzNaoWA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Administrator\\Source\\Repos\\KauaAmaral\\Entra21-Trabalho-02\\TrabalhoWindowsForm\\TrabalhoWindowsForm\\TrabalhoWindowsForm.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "C:\\Users\\Emerson Testoni\\Source\\Repos\\KauaAmaral\\Entra21-Trabalho-02\\TrabalhoWindowsForm\\TrabalhoWindowsForm\\TrabalhoWindowsForm.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Emerson Testoni\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512"
+  ],
   "logs": []
 }

@@ -1,9 +1,10 @@
 {
   "ExpandedNodes": [
-    "",
-    "\\TrabalhoWindowsForm",
-    "\\TrabalhoWindowsForm\\TrabalhoWindowsForm"
+    ""
   ],
+<<<<<<< HEAD
   "SelectedNode": "\\TrabalhoWindowsForm\\TrabalhoWindowsForm\\PainelLogin.cs",
+=======
+>>>>>>> 0f1a101ee179c3e54f3a4da960b7fc765d383f9f
   "PreviewInSolutionExplorer": false
 }
