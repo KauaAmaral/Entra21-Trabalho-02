@@ -31,13 +31,12 @@
             this.buttonSalvar = new System.Windows.Forms.Button();
             this.buttonEditar = new System.Windows.Forms.Button();
             this.buttonApagar = new System.Windows.Forms.Button();
-            this.checkBoxCarros = new System.Windows.Forms.CheckBox();
+            this.checkBoxVendas = new System.Windows.Forms.CheckBox();
             this.dateTimePickerDataDeAbertura = new System.Windows.Forms.DateTimePicker();
             this.labelCnpj = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.radioButtonSim = new System.Windows.Forms.RadioButton();
             this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.buttonCancelar = new System.Windows.Forms.Button();
             this.labelRazaoSocial = new System.Windows.Forms.Label();
             this.labelTelefone = new System.Windows.Forms.Label();
@@ -55,6 +54,10 @@
             this.labelDataDeAbertura = new System.Windows.Forms.Label();
             this.labelAtiva = new System.Windows.Forms.Label();
             this.radioButtonNao = new System.Windows.Forms.RadioButton();
+            this.labelServicos = new System.Windows.Forms.Label();
+            this.checkBoxCompras = new System.Windows.Forms.CheckBox();
+            this.checkBoxAlugueis = new System.Windows.Forms.CheckBox();
+            this.checkBoxConsertos = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // buttonSalvar
@@ -84,15 +87,15 @@
             this.buttonApagar.Text = "Apagar";
             this.buttonApagar.UseVisualStyleBackColor = true;
             // 
-            // checkBoxCarros
+            // checkBoxVendas
             // 
-            this.checkBoxCarros.AutoSize = true;
-            this.checkBoxCarros.Location = new System.Drawing.Point(209, 340);
-            this.checkBoxCarros.Name = "checkBoxCarros";
-            this.checkBoxCarros.Size = new System.Drawing.Size(60, 19);
-            this.checkBoxCarros.TabIndex = 1;
-            this.checkBoxCarros.Text = "Carros";
-            this.checkBoxCarros.UseVisualStyleBackColor = true;
+            this.checkBoxVendas.AutoSize = true;
+            this.checkBoxVendas.Location = new System.Drawing.Point(112, 322);
+            this.checkBoxVendas.Name = "checkBoxVendas";
+            this.checkBoxVendas.Size = new System.Drawing.Size(63, 19);
+            this.checkBoxVendas.TabIndex = 1;
+            this.checkBoxVendas.Text = "Vendas";
+            this.checkBoxVendas.UseVisualStyleBackColor = true;
             // 
             // dateTimePickerDataDeAbertura
             // 
@@ -139,14 +142,6 @@
             this.maskedTextBox1.Name = "maskedTextBox1";
             this.maskedTextBox1.Size = new System.Drawing.Size(94, 23);
             this.maskedTextBox1.TabIndex = 6;
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(481, 340);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 23);
-            this.comboBox1.TabIndex = 7;
             // 
             // buttonCancelar
             // 
@@ -292,13 +287,51 @@
             this.radioButtonNao.Text = "Não";
             this.radioButtonNao.UseVisualStyleBackColor = true;
             // 
+            // labelServicos
+            // 
+            this.labelServicos.AutoSize = true;
+            this.labelServicos.Location = new System.Drawing.Point(12, 322);
+            this.labelServicos.Name = "labelServicos";
+            this.labelServicos.Size = new System.Drawing.Size(50, 15);
+            this.labelServicos.TabIndex = 3;
+            this.labelServicos.Text = "Serviços";
+            // 
+            // checkBoxCompras
+            // 
+            this.checkBoxCompras.AutoSize = true;
+            this.checkBoxCompras.Location = new System.Drawing.Point(181, 322);
+            this.checkBoxCompras.Name = "checkBoxCompras";
+            this.checkBoxCompras.Size = new System.Drawing.Size(74, 19);
+            this.checkBoxCompras.TabIndex = 1;
+            this.checkBoxCompras.Text = "Compras";
+            this.checkBoxCompras.UseVisualStyleBackColor = true;
+            // 
+            // checkBoxAlugueis
+            // 
+            this.checkBoxAlugueis.AutoSize = true;
+            this.checkBoxAlugueis.Location = new System.Drawing.Point(261, 321);
+            this.checkBoxAlugueis.Name = "checkBoxAlugueis";
+            this.checkBoxAlugueis.Size = new System.Drawing.Size(72, 19);
+            this.checkBoxAlugueis.TabIndex = 1;
+            this.checkBoxAlugueis.Text = "Aluguéis";
+            this.checkBoxAlugueis.UseVisualStyleBackColor = true;
+            // 
+            // checkBoxConsertos
+            // 
+            this.checkBoxConsertos.AutoSize = true;
+            this.checkBoxConsertos.Location = new System.Drawing.Point(339, 322);
+            this.checkBoxConsertos.Name = "checkBoxConsertos";
+            this.checkBoxConsertos.Size = new System.Drawing.Size(79, 19);
+            this.checkBoxConsertos.TabIndex = 1;
+            this.checkBoxConsertos.Text = "Consertos";
+            this.checkBoxConsertos.UseVisualStyleBackColor = true;
+            // 
             // CadastroLojasForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(864, 531);
             this.Controls.Add(this.buttonCancelar);
-            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.maskedTextBoxTelefone);
             this.Controls.Add(this.maskedTextBoxCep);
             this.Controls.Add(this.maskedTextBox1);
@@ -310,6 +343,7 @@
             this.Controls.Add(this.textBoxNomeFantasia);
             this.Controls.Add(this.labelNomeContato);
             this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.labelServicos);
             this.Controls.Add(this.labelAtiva);
             this.Controls.Add(this.labelEMail);
             this.Controls.Add(this.labelLogradouro);
@@ -320,7 +354,10 @@
             this.Controls.Add(this.labelRazaoSocial);
             this.Controls.Add(this.labelCnpj);
             this.Controls.Add(this.dateTimePickerDataDeAbertura);
-            this.Controls.Add(this.checkBoxCarros);
+            this.Controls.Add(this.checkBoxConsertos);
+            this.Controls.Add(this.checkBoxAlugueis);
+            this.Controls.Add(this.checkBoxCompras);
+            this.Controls.Add(this.checkBoxVendas);
             this.Controls.Add(this.buttonApagar);
             this.Controls.Add(this.buttonEditar);
             this.Controls.Add(this.buttonSalvar);
@@ -338,13 +375,12 @@
         private Button buttonSalvar;
         private Button buttonEditar;
         private Button buttonApagar;
-        private CheckBox checkBoxCarros;
+        private CheckBox checkBoxVendas;
         private DateTimePicker dateTimePickerDataDeAbertura;
         private Label labelCnpj;
         private TextBox textBox1;
         private RadioButton radioButtonSim;
         private MaskedTextBox maskedTextBox1;
-        private ComboBox comboBox1;
         private Button buttonCancelar;
         private Label labelRazaoSocial;
         private Label labelTelefone;
@@ -362,5 +398,9 @@
         private Label labelDataDeAbertura;
         private Label labelAtiva;
         private RadioButton radioButtonNao;
+        private Label labelServicos;
+        private CheckBox checkBoxCompras;
+        private CheckBox checkBoxAlugueis;
+        private CheckBox checkBoxConsertos;
     }
 }
