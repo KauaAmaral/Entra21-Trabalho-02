@@ -22,7 +22,7 @@ namespace TrabalhoWindowsForm
             Application.Exit();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void buttonLogar_Click(object sender, EventArgs e)
         {
             if (textBoxUser.Text != "Admin" && textBoxPassword.Text != "Admin")
             {
@@ -35,6 +35,11 @@ namespace TrabalhoWindowsForm
                 MessageBox.Show("Usuario ou Senha Invalido!");
                 return;
             }
+
+            var menuListar = new MenuListar();
+            menuListar.ShowDialog();
+
+            Application.Exit();
         }
 
         private void linkLabelSuporte_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)

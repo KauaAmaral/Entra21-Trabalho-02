@@ -32,7 +32,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.textBoxUser = new System.Windows.Forms.TextBox();
             this.textBoxPassword = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.buttonLogar = new System.Windows.Forms.Button();
             this.pictureBoxImageSuport = new System.Windows.Forms.PictureBox();
             this.linkLabelSuporte = new System.Windows.Forms.LinkLabel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -97,19 +97,19 @@
             this.textBoxPassword.Size = new System.Drawing.Size(235, 30);
             this.textBoxPassword.TabIndex = 5;
             // 
-            // button1
+            // buttonLogar
             // 
-            this.button1.BackColor = System.Drawing.Color.White;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button1.Location = new System.Drawing.Point(123, 328);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(133, 41);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "ENTRAR";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.buttonLogar.BackColor = System.Drawing.Color.White;
+            this.buttonLogar.FlatAppearance.BorderSize = 0;
+            this.buttonLogar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonLogar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.buttonLogar.Location = new System.Drawing.Point(123, 328);
+            this.buttonLogar.Name = "buttonLogar";
+            this.buttonLogar.Size = new System.Drawing.Size(133, 41);
+            this.buttonLogar.TabIndex = 6;
+            this.buttonLogar.Text = "ENTRAR";
+            this.buttonLogar.UseVisualStyleBackColor = false;
+            this.buttonLogar.Click += new System.EventHandler(this.buttonLogar_Click);
             // 
             // pictureBoxImageSuport
             // 
@@ -199,7 +199,7 @@
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.linkLabelSuporte);
             this.Controls.Add(this.pictureBoxImageSuport);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.buttonLogar);
             this.Controls.Add(this.textBoxPassword);
             this.Controls.Add(this.textBoxUser);
             this.Controls.Add(this.panel1);
@@ -226,7 +226,7 @@
         private Panel panel1;
         private TextBox textBoxUser;
         private TextBox textBoxPassword;
-        private Button button1;
+        private Button buttonLogar;
         private PictureBox pictureBoxImageSuport;
         private LinkLabel linkLabelSuporte;
         private PictureBox pictureBox1;
