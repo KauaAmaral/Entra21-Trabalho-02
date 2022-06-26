@@ -267,7 +267,7 @@
             this.dateTimePickerDataDeAbertura.Location = new System.Drawing.Point(133, 240);
             this.dateTimePickerDataDeAbertura.MaxDate = new System.DateTime(2022, 6, 25, 0, 0, 0, 0);
             this.dateTimePickerDataDeAbertura.Name = "dateTimePickerDataDeAbertura";
-            this.dateTimePickerDataDeAbertura.Size = new System.Drawing.Size(85, 23);
+            this.dateTimePickerDataDeAbertura.Size = new System.Drawing.Size(94, 23);
             this.dateTimePickerDataDeAbertura.TabIndex = 17;
             this.dateTimePickerDataDeAbertura.Value = new System.DateTime(2022, 6, 25, 0, 0, 0, 0);
             // 
