@@ -31,8 +31,13 @@
             this.panelCabecalho = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
             this.panelMenu = new System.Windows.Forms.Panel();
-            this.panelAreaPrincipal = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.buttonComprar = new System.Windows.Forms.Button();
             this.panelCabecalho.SuspendLayout();
+            this.panelMenu.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelCabecalho
@@ -42,7 +47,7 @@
             this.panelCabecalho.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelCabecalho.Location = new System.Drawing.Point(0, 0);
             this.panelCabecalho.Name = "panelCabecalho";
-            this.panelCabecalho.Size = new System.Drawing.Size(1100, 40);
+            this.panelCabecalho.Size = new System.Drawing.Size(1103, 40);
             this.panelCabecalho.TabIndex = 0;
             // 
             // button1
@@ -62,33 +67,66 @@
             // panelMenu
             // 
             this.panelMenu.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.panelMenu.Controls.Add(this.pictureBox1);
+            this.panelMenu.Controls.Add(this.panel1);
             this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelMenu.Location = new System.Drawing.Point(0, 40);
             this.panelMenu.Name = "panelMenu";
-            this.panelMenu.Size = new System.Drawing.Size(242, 540);
+            this.panelMenu.Size = new System.Drawing.Size(242, 541);
             this.panelMenu.TabIndex = 1;
             // 
-            // panelAreaPrincipal
+            // pictureBox1
             // 
-            this.panelAreaPrincipal.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelAreaPrincipal.Location = new System.Drawing.Point(242, 40);
-            this.panelAreaPrincipal.Name = "panelAreaPrincipal";
-            this.panelAreaPrincipal.Size = new System.Drawing.Size(858, 540);
-            this.panelAreaPrincipal.TabIndex = 2;
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.pictureBox1.Image = global::TrabalhoWindowsForm.Properties.Resources.new_car;
+            this.pictureBox1.Location = new System.Drawing.Point(61, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(105, 73);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.buttonComprar);
+            this.panel1.Location = new System.Drawing.Point(0, 94);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(242, 53);
+            this.panel1.TabIndex = 0;
+            // 
+            // buttonComprar
+            // 
+            this.buttonComprar.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.buttonComprar.Image = global::TrabalhoWindowsForm.Properties.Resources.carros;
+            this.buttonComprar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonComprar.Location = new System.Drawing.Point(0, 0);
+            this.buttonComprar.Name = "buttonComprar";
+            this.buttonComprar.Size = new System.Drawing.Size(242, 52);
+            this.buttonComprar.TabIndex = 0;
+            this.buttonComprar.Text = "Comprar";
+            this.buttonComprar.UseVisualStyleBackColor = true;
+            this.buttonComprar.Click += new System.EventHandler(this.buttonComprar_Click);
             // 
             // MenuListar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1100, 580);
-            this.Controls.Add(this.panelAreaPrincipal);
+            this.BackColor = System.Drawing.SystemColors.Control;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.ClientSize = new System.Drawing.Size(1103, 581);
             this.Controls.Add(this.panelMenu);
             this.Controls.Add(this.panelCabecalho);
+            this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.IsMdiContainer = true;
             this.Name = "MenuListar";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MenuListar";
             this.panelCabecalho.ResumeLayout(false);
+            this.panelMenu.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -98,6 +136,8 @@
         private Panel panelCabecalho;
         private Button button1;
         private Panel panelMenu;
-        private Panel panelAreaPrincipal;
+        private PictureBox pictureBox1;
+        private Panel panel1;
+        private Button buttonComprar;
     }
 }

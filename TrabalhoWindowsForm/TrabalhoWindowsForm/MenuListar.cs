@@ -21,5 +21,13 @@ namespace TrabalhoWindowsForm
         {
             Application.Exit();
         }
+
+        private void buttonComprar_Click(object sender, EventArgs e)
+        {
+            var comprarVeiculo = new ComprarVeiculosForm();
+            comprarVeiculo.MdiParent = this;
+            comprarVeiculo.Show();
+            comprarVeiculo.WindowState = FormWindowState.Maximized;
+        }
     }
 }

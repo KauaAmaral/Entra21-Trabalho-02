@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace TrabalhoWindowsForm
 {
-    public partial class ComprarVeiculoForm : Form
+    public partial class ComprarVeiculosForm : Form
     {
-        public ComprarVeiculoForm()
+        public ComprarVeiculosForm()
         {
             InitializeComponent();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

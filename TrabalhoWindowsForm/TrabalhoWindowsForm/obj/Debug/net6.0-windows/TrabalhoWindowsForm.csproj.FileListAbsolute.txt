@@ -19,3 +19,7 @@ C:\Users\Administrator\Source\Repos\KauaAmaral\Entra21-Trabalho-02\TrabalhoWindo
 C:\Users\Administrator\Source\Repos\KauaAmaral\Entra21-Trabalho-02\TrabalhoWindowsForm\TrabalhoWindowsForm\obj\Debug\net6.0-windows\ref\TrabalhoWindowsForm.dll
 C:\Users\Administrator\Source\Repos\KauaAmaral\Entra21-Trabalho-02\TrabalhoWindowsForm\TrabalhoWindowsForm\obj\Debug\net6.0-windows\TrabalhoWindowsForm.Properties.Resources.resources
 C:\Users\Administrator\Source\Repos\KauaAmaral\Entra21-Trabalho-02\TrabalhoWindowsForm\TrabalhoWindowsForm\obj\Debug\net6.0-windows\TrabalhoWindowsForm.MenuListar.resources
+C:\Users\Administrator\Source\Repos\KauaAmaral\Entra21-Trabalho-02\TrabalhoWindowsForm\TrabalhoWindowsForm\bin\Debug\net6.0-windows\Newtonsoft.Json.dll
+C:\Users\Administrator\Source\Repos\KauaAmaral\Entra21-Trabalho-02\TrabalhoWindowsForm\TrabalhoWindowsForm\obj\Debug\net6.0-windows\TrabalhoWindowsForm.CadastroCarrosForm.resources
+C:\Users\Administrator\Source\Repos\KauaAmaral\Entra21-Trabalho-02\TrabalhoWindowsForm\TrabalhoWindowsForm\obj\Debug\net6.0-windows\TrabalhoWindowsForm.csproj.CopyComplete
+C:\Users\Administrator\Source\Repos\KauaAmaral\Entra21-Trabalho-02\TrabalhoWindowsForm\TrabalhoWindowsForm\obj\Debug\net6.0-windows\TrabalhoWindowsForm.ComprarVeiculosForm.resources

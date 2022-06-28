@@ -19,27 +19,37 @@ namespace TrabalhoWindowsForm
 
         private void buttonFecharLogin_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            this.Close();
         }
 
         private void buttonLogar_Click(object sender, EventArgs e)
         {
-            if (textBoxUser.Text != "Admin" && textBoxPassword.Text != "Admin")
+            try
             {
-                MessageBox.Show("Usuario ou Senha Invalido!");
-                return;
-            }
+                if (textBoxUser.Text.Equals("Admin") && textBoxPassword.Text.Equals("Admin"))
+                {
+                    var menuListar = new MenuListar();
+                    menuListar.Show();
 
-            if (textBoxPassword.Text != "Admin")
+                    this.Visible = false;
+                }
+                else
+                {
+                    MessageBox.Show("Usúario ou Senha Invalido!",
+                                    "Aviso!",
+                                    MessageBoxButtons.OK,
+                                    MessageBoxIcon.Error);
+                    textBoxUser.Focus();
+                    textBoxPassword.Text = "";
+                }
+            }
+            catch (Exception ex)
             {
-                MessageBox.Show("Usuario ou Senha Invalido!");
-                return;
+                MessageBox.Show("Aviso!",
+                                ex.Message,
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Error);
             }
-
-            var menuListar = new MenuListar();
-            menuListar.ShowDialog();
-
-            Application.Exit();
         }
 
         private void linkLabelSuporte_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
