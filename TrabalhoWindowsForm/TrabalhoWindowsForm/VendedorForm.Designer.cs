@@ -47,6 +47,10 @@
             this.comboBoxCliente = new System.Windows.Forms.ComboBox();
             this.labelSelecioneSeuPerfil = new System.Windows.Forms.Label();
             this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
+            this.ColumnCodigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnCnpj = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnNomeFantasia = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnAtiva = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -62,10 +66,16 @@
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ColumnCodigo,
+            this.ColumnCnpj,
+            this.ColumnNomeFantasia,
+            this.ColumnAtiva});
             this.dataGridView1.Location = new System.Drawing.Point(440, 39);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowTemplate.Height = 25;
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(576, 525);
             this.dataGridView1.TabIndex = 11;
             // 
@@ -225,6 +235,31 @@
             this.maskedTextBox1.Size = new System.Drawing.Size(97, 23);
             this.maskedTextBox1.TabIndex = 17;
             // 
+            // ColumnCodigo
+            // 
+            this.ColumnCodigo.HeaderText = "Código";
+            this.ColumnCodigo.Name = "ColumnCodigo";
+            this.ColumnCodigo.ReadOnly = true;
+            this.ColumnCodigo.Visible = false;
+            // 
+            // ColumnCnpj
+            // 
+            this.ColumnCnpj.HeaderText = "CNPJ";
+            this.ColumnCnpj.Name = "ColumnCnpj";
+            this.ColumnCnpj.ReadOnly = true;
+            // 
+            // ColumnNomeFantasia
+            // 
+            this.ColumnNomeFantasia.HeaderText = "Nome Fantasia";
+            this.ColumnNomeFantasia.Name = "ColumnNomeFantasia";
+            this.ColumnNomeFantasia.ReadOnly = true;
+            // 
+            // ColumnAtiva
+            // 
+            this.ColumnAtiva.HeaderText = "Ativa";
+            this.ColumnAtiva.Name = "ColumnAtiva";
+            this.ColumnAtiva.ReadOnly = true;
+            // 
             // VendedorForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -279,5 +314,9 @@
         private ComboBox comboBoxCliente;
         private Label labelSelecioneSeuPerfil;
         private MaskedTextBox maskedTextBox1;
+        private DataGridViewTextBoxColumn ColumnCodigo;
+        private DataGridViewTextBoxColumn ColumnCnpj;
+        private DataGridViewTextBoxColumn ColumnNomeFantasia;
+        private DataGridViewTextBoxColumn ColumnAtiva;
     }
 }
