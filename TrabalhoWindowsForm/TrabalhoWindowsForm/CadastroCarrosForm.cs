@@ -14,7 +14,7 @@ namespace TrabalhoWindowsForm
     {
         private Button buttonApagar;
         private DataGridView dataGridView1;
-        private Label labelNome;
+        private Label labelModelo;
         private TextBox textBoxNome;
         private Label labelPlaca;
         private TextBox textBoxPlaca;
@@ -32,7 +32,7 @@ namespace TrabalhoWindowsForm
             this.buttonEditar = new System.Windows.Forms.Button();
             this.buttonApagar = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.labelNome = new System.Windows.Forms.Label();
+            this.labelModelo = new System.Windows.Forms.Label();
             this.textBoxNome = new System.Windows.Forms.TextBox();
             this.labelPlaca = new System.Windows.Forms.Label();
             this.textBoxPlaca = new System.Windows.Forms.TextBox();
@@ -68,14 +68,14 @@ namespace TrabalhoWindowsForm
             this.dataGridView1.Size = new System.Drawing.Size(596, 285);
             this.dataGridView1.TabIndex = 2;
             // 
-            // labelNome
+            // labelModelo
             // 
-            this.labelNome.AutoSize = true;
-            this.labelNome.Location = new System.Drawing.Point(603, 41);
-            this.labelNome.Name = "labelNome";
-            this.labelNome.Size = new System.Drawing.Size(40, 15);
-            this.labelNome.TabIndex = 3;
-            this.labelNome.Text = "Nome";
+            this.labelModelo.AutoSize = true;
+            this.labelModelo.Location = new System.Drawing.Point(603, 41);
+            this.labelModelo.Name = "labelModelo";
+            this.labelModelo.Size = new System.Drawing.Size(48, 15);
+            this.labelModelo.TabIndex = 3;
+            this.labelModelo.Text = "Modelo";
             // 
             // textBoxNome
             // 
@@ -120,13 +120,13 @@ namespace TrabalhoWindowsForm
             // 
             // CadastroCarrosForm
             // 
-            this.ClientSize = new System.Drawing.Size(847, 326);
+            this.ClientSize = new System.Drawing.Size(1087, 532);
             this.Controls.Add(this.labelCategoria);
             this.Controls.Add(this.labelMarca);
             this.Controls.Add(this.textBoxPlaca);
             this.Controls.Add(this.labelPlaca);
             this.Controls.Add(this.textBoxNome);
-            this.Controls.Add(this.labelNome);
+            this.Controls.Add(this.labelModelo);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.buttonApagar);
             this.Controls.Add(this.buttonEditar);
