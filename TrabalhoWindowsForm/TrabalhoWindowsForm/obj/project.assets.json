@@ -48,19 +48,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Guilherme\\.nuget\\packages\\": {}
+    "C:\\Users\\felipe.correa\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Guilherme\\Source\\Repos\\KauaAmaral\\Entra21-Trabalho-02\\TrabalhoWindowsForm\\TrabalhoWindowsForm\\TrabalhoWindowsForm.csproj",
+      "projectUniqueName": "C:\\Users\\felipe.correa\\Source\\Repos\\KauaAmaral\\Entra21-Trabalho-02\\TrabalhoWindowsForm\\TrabalhoWindowsForm\\TrabalhoWindowsForm.csproj",
       "projectName": "TrabalhoWindowsForm",
-      "projectPath": "C:\\Users\\Guilherme\\Source\\Repos\\KauaAmaral\\Entra21-Trabalho-02\\TrabalhoWindowsForm\\TrabalhoWindowsForm\\TrabalhoWindowsForm.csproj",
-      "packagesPath": "C:\\Users\\Guilherme\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Guilherme\\Source\\Repos\\KauaAmaral\\Entra21-Trabalho-02\\TrabalhoWindowsForm\\TrabalhoWindowsForm\\obj\\",
+      "projectPath": "C:\\Users\\felipe.correa\\Source\\Repos\\KauaAmaral\\Entra21-Trabalho-02\\TrabalhoWindowsForm\\TrabalhoWindowsForm\\TrabalhoWindowsForm.csproj",
+      "packagesPath": "C:\\Users\\felipe.correa\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\felipe.correa\\Source\\Repos\\KauaAmaral\\Entra21-Trabalho-02\\TrabalhoWindowsForm\\TrabalhoWindowsForm\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Guilherme\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "\\\\Server\\c#-noturno\\felipe.correa\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -109,7 +109,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
       }
     }
   }

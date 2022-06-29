@@ -29,5 +29,21 @@ namespace TrabalhoWindowsForm
             comprarVeiculo.Show();
             comprarVeiculo.WindowState = FormWindowState.Maximized;
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            var cadastroCarros = new CadastroCarrosForm();
+            cadastroCarros.MdiParent = this;
+            cadastroCarros.Show();
+            cadastroCarros.WindowState = FormWindowState.Maximized;
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            var cliente = new ClientesForm();
+            cliente.MdiParent = this;
+            cliente.Show();
+            cliente.WindowState = FormWindowState.Maximized;
+        }
     }
 }
