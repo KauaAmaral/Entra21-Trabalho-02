@@ -12,13 +12,8 @@
       }
     ],
     "additionalProbingPaths": [
-<<<<<<< HEAD
       "C:\\Users\\felipe.correa\\.dotnet\\store\\|arch|\\|tfm|",
       "C:\\Users\\felipe.correa\\.nuget\\packages"
-=======
-      "C:\\Users\\kaua.amaral\\.dotnet\\store\\|arch|\\|tfm|",
-      "C:\\Users\\kaua.amaral\\.nuget\\packages"
->>>>>>> c990eb2657e83c43009903a13ff1a19eec4a81b3
     ],
     "configProperties": {
       "Microsoft.NETCore.DotNetHostPolicy.SetAppPaths": true

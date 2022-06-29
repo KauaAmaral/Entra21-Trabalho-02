@@ -1,18 +1,17 @@
 {
   "version": 2,
-<<<<<<< HEAD
   "dgSpecHash": "YUb0iJghJE6ITl7/pGy/LXU+wSb5edCEd5DEzoWuzu6J4skoVub2wVcLyPSE48yKIFbq5Q1YqdtmzXclVzZBhA==",
   "success": true,
   "projectFilePath": "C:\\Users\\felipe.correa\\Source\\Repos\\KauaAmaral\\Entra21-Trabalho-02\\TrabalhoWindowsForm\\TrabalhoWindowsForm\\TrabalhoWindowsForm.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\felipe.correa\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512"
-=======
-  "dgSpecHash": "gC4aqLpgHQskcKqGH97TMxVYOzfleWhBkYpPZuICTiDdqoKUnHKL1MYIUFnVU9dKdhd+G3IV35Lvd6zZzfMfWg==",
-  "success": true,
-  "projectFilePath": "C:\\Users\\kaua.amaral\\Source\\Repos\\KauaAmaral\\Entra21-Trabalho-02\\TrabalhoWindowsForm\\TrabalhoWindowsForm\\TrabalhoWindowsForm.csproj",
-  "expectedPackageFiles": [
-    "C:\\Users\\kaua.amaral\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512"
->>>>>>> c990eb2657e83c43009903a13ff1a19eec4a81b3
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problem reading the cache file C:\\Users\\felipe.correa\\Source\\Repos\\KauaAmaral\\Entra21-Trabalho-02\\TrabalhoWindowsForm\\TrabalhoWindowsForm\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
 }
