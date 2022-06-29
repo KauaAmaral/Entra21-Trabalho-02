@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace TrabalhoWindowsForm
 {
-    public partial class CadastroLojasForm : Form
+    public partial class VendedorForm : Form
     {
-        public CadastroLojasForm()
+        public VendedorForm()
         {
             InitializeComponent();
-        }
-
-        private void CadastroLojasForm_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }
