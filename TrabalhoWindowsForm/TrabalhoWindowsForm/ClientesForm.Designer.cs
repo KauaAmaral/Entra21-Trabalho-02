@@ -109,14 +109,14 @@
             // 
             // textBoxNome
             // 
-            this.textBoxNome.Location = new System.Drawing.Point(48, 171);
+            this.textBoxNome.Location = new System.Drawing.Point(48, 161);
             this.textBoxNome.Name = "textBoxNome";
             this.textBoxNome.Size = new System.Drawing.Size(350, 23);
             this.textBoxNome.TabIndex = 3;
             // 
             // textBoxEMail
             // 
-            this.textBoxEMail.Location = new System.Drawing.Point(48, 241);
+            this.textBoxEMail.Location = new System.Drawing.Point(48, 227);
             this.textBoxEMail.Name = "textBoxEMail";
             this.textBoxEMail.Size = new System.Drawing.Size(350, 23);
             this.textBoxEMail.TabIndex = 3;
@@ -124,7 +124,7 @@
             // dateTimePicker1
             // 
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(48, 309);
+            this.dateTimePicker1.Location = new System.Drawing.Point(48, 298);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(95, 23);
             this.dateTimePicker1.TabIndex = 4;
