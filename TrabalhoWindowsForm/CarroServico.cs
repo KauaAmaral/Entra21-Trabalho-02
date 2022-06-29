@@ -7,13 +7,24 @@ using System.Threading.Tasks;
 
 namespace TrabalhoWindowsForm
 {
-    public class CarrosServico
+    internal class CarroServico
     {
         private List<Carro> carros;
 
-        public CarrosServico ()
+        public CarroServico ()
         {
             carros = new List<Carro>();
+        }
+        public List<Carro> ObterTodos()
+        {
+            return carros;
+        }
+
+        public void CadastrarCarro(Carro carro)
+        {
+            carros.Add(carro);
+
+            SalvarArquivo();
         }
         private void SalvarArquivo()
         {

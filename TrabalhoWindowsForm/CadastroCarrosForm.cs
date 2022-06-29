@@ -26,6 +26,11 @@ namespace TrabalhoWindowsForm
         private Label labelPreco;
         private TextBox textBoxPreco;
         private Button buttonSalvar;
+        private DataGridViewTextBoxColumn ColumnModelo;
+        private DataGridViewTextBoxColumn ColumnPlaca;
+        private DataGridViewTextBoxColumn ColumnMarca;
+        private DataGridViewTextBoxColumn ColumnCategoria;
+        private DataGridViewTextBoxColumn ColumnPreco;
         private Button buttonEditar;
 
         public CadastroCarrosForm()
@@ -50,6 +55,11 @@ namespace TrabalhoWindowsForm
             this.labelPreco = new System.Windows.Forms.Label();
             this.textBoxPreco = new System.Windows.Forms.TextBox();
             this.buttonSalvar = new System.Windows.Forms.Button();
+            this.ColumnModelo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnPlaca = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnMarca = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnCategoria = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnPreco = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -77,6 +87,12 @@ namespace TrabalhoWindowsForm
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ColumnModelo,
+            this.ColumnPlaca,
+            this.ColumnMarca,
+            this.ColumnCategoria,
+            this.ColumnPreco});
             this.dataGridView1.Location = new System.Drawing.Point(1, 41);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
@@ -189,6 +205,36 @@ namespace TrabalhoWindowsForm
             this.buttonSalvar.UseVisualStyleBackColor = true;
             this.buttonSalvar.Click += new System.EventHandler(this.buttonSalvar_Click);
             // 
+            // ColumnModelo
+            // 
+            this.ColumnModelo.HeaderText = "Modelo";
+            this.ColumnModelo.Name = "ColumnModelo";
+            this.ColumnModelo.ReadOnly = true;
+            // 
+            // ColumnPlaca
+            // 
+            this.ColumnPlaca.HeaderText = "Placa";
+            this.ColumnPlaca.Name = "ColumnPlaca";
+            this.ColumnPlaca.ReadOnly = true;
+            // 
+            // ColumnMarca
+            // 
+            this.ColumnMarca.HeaderText = "Marca";
+            this.ColumnMarca.Name = "ColumnMarca";
+            this.ColumnMarca.ReadOnly = true;
+            // 
+            // ColumnCategoria
+            // 
+            this.ColumnCategoria.HeaderText = "Categoria";
+            this.ColumnCategoria.Name = "ColumnCategoria";
+            this.ColumnCategoria.ReadOnly = true;
+            // 
+            // ColumnPreco
+            // 
+            this.ColumnPreco.HeaderText = "Preço";
+            this.ColumnPreco.Name = "ColumnPreco";
+            this.ColumnPreco.ReadOnly = true;
+            // 
             // CadastroCarrosForm
             // 
             this.ClientSize = new System.Drawing.Size(900, 351);
@@ -226,7 +272,7 @@ namespace TrabalhoWindowsForm
 
         private void buttonSalvar_Click(object sender, EventArgs e)
         {
-            //Salvar();
+            
         }
     }
 }
