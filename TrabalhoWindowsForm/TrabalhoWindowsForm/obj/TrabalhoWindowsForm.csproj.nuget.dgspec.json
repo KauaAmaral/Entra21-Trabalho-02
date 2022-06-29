@@ -1,6 +1,7 @@
 {
   "format": 1,
   "restore": {
+<<<<<<< HEAD
     "C:\\Users\\felipe.correa\\Source\\Repos\\KauaAmaral\\Entra21-Trabalho-02\\TrabalhoWindowsForm\\TrabalhoWindowsForm\\TrabalhoWindowsForm.csproj": {}
   },
   "projects": {
@@ -15,6 +16,22 @@
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "\\\\Server\\c#-noturno\\felipe.correa\\AppData\\Roaming\\NuGet\\NuGet.Config",
+=======
+    "C:\\Users\\kaua.amaral\\Source\\Repos\\KauaAmaral\\Entra21-Trabalho-02\\TrabalhoWindowsForm\\TrabalhoWindowsForm\\TrabalhoWindowsForm.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\kaua.amaral\\Source\\Repos\\KauaAmaral\\Entra21-Trabalho-02\\TrabalhoWindowsForm\\TrabalhoWindowsForm\\TrabalhoWindowsForm.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\kaua.amaral\\Source\\Repos\\KauaAmaral\\Entra21-Trabalho-02\\TrabalhoWindowsForm\\TrabalhoWindowsForm\\TrabalhoWindowsForm.csproj",
+        "projectName": "TrabalhoWindowsForm",
+        "projectPath": "C:\\Users\\kaua.amaral\\Source\\Repos\\KauaAmaral\\Entra21-Trabalho-02\\TrabalhoWindowsForm\\TrabalhoWindowsForm\\TrabalhoWindowsForm.csproj",
+        "packagesPath": "C:\\Users\\kaua.amaral\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\kaua.amaral\\Source\\Repos\\KauaAmaral\\Entra21-Trabalho-02\\TrabalhoWindowsForm\\TrabalhoWindowsForm\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "\\\\Server\\c#-noturno\\kaua.amaral\\AppData\\Roaming\\NuGet\\NuGet.Config",
+>>>>>>> c990eb2657e83c43009903a13ff1a19eec4a81b3
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -63,7 +80,11 @@
               "privateAssets": "none"
             }
           },
+<<<<<<< HEAD
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
+=======
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.301\\RuntimeIdentifierGraph.json"
+>>>>>>> c990eb2657e83c43009903a13ff1a19eec4a81b3
         }
       }
     }
