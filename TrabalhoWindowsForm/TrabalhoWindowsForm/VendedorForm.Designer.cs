@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.textBoxRazaoSocial = new System.Windows.Forms.TextBox();
-            this.textBoxCnpj = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.buttonLimparCampos = new System.Windows.Forms.Button();
             this.buttonEditar = new System.Windows.Forms.Button();
@@ -47,6 +46,7 @@
             this.checkBoxConsertos = new System.Windows.Forms.CheckBox();
             this.comboBoxCliente = new System.Windows.Forms.ComboBox();
             this.labelSelecioneSeuPerfil = new System.Windows.Forms.Label();
+            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -56,13 +56,6 @@
             this.textBoxRazaoSocial.Name = "textBoxRazaoSocial";
             this.textBoxRazaoSocial.Size = new System.Drawing.Size(350, 23);
             this.textBoxRazaoSocial.TabIndex = 12;
-            // 
-            // textBoxCnpj
-            // 
-            this.textBoxCnpj.Location = new System.Drawing.Point(49, 163);
-            this.textBoxCnpj.Name = "textBoxCnpj";
-            this.textBoxCnpj.Size = new System.Drawing.Size(350, 23);
-            this.textBoxCnpj.TabIndex = 13;
             // 
             // dataGridView1
             // 
@@ -224,11 +217,20 @@
             this.labelSelecioneSeuPerfil.TabIndex = 5;
             this.labelSelecioneSeuPerfil.Text = "Selecione Seu Perfil";
             // 
+            // maskedTextBox1
+            // 
+            this.maskedTextBox1.Location = new System.Drawing.Point(49, 163);
+            this.maskedTextBox1.Mask = "99.999.999/9999-99";
+            this.maskedTextBox1.Name = "maskedTextBox1";
+            this.maskedTextBox1.Size = new System.Drawing.Size(97, 23);
+            this.maskedTextBox1.TabIndex = 17;
+            // 
             // VendedorForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1064, 681);
+            this.Controls.Add(this.maskedTextBox1);
             this.Controls.Add(this.comboBoxCliente);
             this.Controls.Add(this.checkBoxConsertos);
             this.Controls.Add(this.checkBoxAlugueis);
@@ -237,7 +239,6 @@
             this.Controls.Add(this.radioButtonSim);
             this.Controls.Add(this.textBoxNomeFantasia);
             this.Controls.Add(this.textBoxRazaoSocial);
-            this.Controls.Add(this.textBoxCnpj);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.buttonLimparCampos);
             this.Controls.Add(this.buttonEditar);
@@ -260,7 +261,6 @@
         #endregion
 
         private TextBox textBoxRazaoSocial;
-        private TextBox textBoxCnpj;
         private DataGridView dataGridView1;
         private Button buttonLimparCampos;
         private Button buttonEditar;
@@ -278,5 +278,6 @@
         private CheckBox checkBoxConsertos;
         private ComboBox comboBoxCliente;
         private Label labelSelecioneSeuPerfil;
+        private MaskedTextBox maskedTextBox1;
     }
 }
