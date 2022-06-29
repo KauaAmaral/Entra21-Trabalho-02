@@ -6,8 +6,7 @@ using System.Threading.Tasks;
 
 namespace TrabalhoWindowsForm
 {
-    internal class Carros
+    internal class Carro
     {
-
     }
 }
