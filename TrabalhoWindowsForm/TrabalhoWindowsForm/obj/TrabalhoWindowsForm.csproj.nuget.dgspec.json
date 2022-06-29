@@ -1,6 +1,7 @@
 {
   "format": 1,
   "restore": {
+<<<<<<< HEAD
     "C:\\Users\\Guilherme.Mueller\\Source\\Repos\\KauaAmaral\\Entra21-Trabalho-02\\TrabalhoWindowsForm\\TrabalhoWindowsForm\\TrabalhoWindowsForm.csproj": {}
   },
   "projects": {
@@ -15,6 +16,22 @@
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "\\\\Server\\c#-noturno\\Guilherme.Mueller\\AppData\\Roaming\\NuGet\\NuGet.Config",
+=======
+    "C:\\Users\\felipe.correa\\Source\\Repos\\KauaAmaral\\Entra21-Trabalho-02\\TrabalhoWindowsForm\\TrabalhoWindowsForm\\TrabalhoWindowsForm.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\felipe.correa\\Source\\Repos\\KauaAmaral\\Entra21-Trabalho-02\\TrabalhoWindowsForm\\TrabalhoWindowsForm\\TrabalhoWindowsForm.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\felipe.correa\\Source\\Repos\\KauaAmaral\\Entra21-Trabalho-02\\TrabalhoWindowsForm\\TrabalhoWindowsForm\\TrabalhoWindowsForm.csproj",
+        "projectName": "TrabalhoWindowsForm",
+        "projectPath": "C:\\Users\\felipe.correa\\Source\\Repos\\KauaAmaral\\Entra21-Trabalho-02\\TrabalhoWindowsForm\\TrabalhoWindowsForm\\TrabalhoWindowsForm.csproj",
+        "packagesPath": "C:\\Users\\felipe.correa\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\felipe.correa\\Source\\Repos\\KauaAmaral\\Entra21-Trabalho-02\\TrabalhoWindowsForm\\TrabalhoWindowsForm\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "\\\\Server\\c#-noturno\\felipe.correa\\AppData\\Roaming\\NuGet\\NuGet.Config",
+>>>>>>> 1a956fb7b94275b1ba972d284c90a53b51bc1ee4
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -63,7 +80,11 @@
               "privateAssets": "none"
             }
           },
+<<<<<<< HEAD
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
+=======
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
+>>>>>>> 1a956fb7b94275b1ba972d284c90a53b51bc1ee4
         }
       }
     }

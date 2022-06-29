@@ -48,11 +48,16 @@
     ]
   },
   "packageFolders": {
+<<<<<<< HEAD
     "C:\\Users\\Guilherme.Mueller\\.nuget\\packages\\": {}
+=======
+    "C:\\Users\\felipe.correa\\.nuget\\packages\\": {}
+>>>>>>> 1a956fb7b94275b1ba972d284c90a53b51bc1ee4
   },
   "project": {
     "version": "1.0.0",
     "restore": {
+<<<<<<< HEAD
       "projectUniqueName": "C:\\Users\\Guilherme.Mueller\\Source\\Repos\\KauaAmaral\\Entra21-Trabalho-02\\TrabalhoWindowsForm\\TrabalhoWindowsForm\\TrabalhoWindowsForm.csproj",
       "projectName": "TrabalhoWindowsForm",
       "projectPath": "C:\\Users\\Guilherme.Mueller\\Source\\Repos\\KauaAmaral\\Entra21-Trabalho-02\\TrabalhoWindowsForm\\TrabalhoWindowsForm\\TrabalhoWindowsForm.csproj",
@@ -61,6 +66,16 @@
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "\\\\Server\\c#-noturno\\Guilherme.Mueller\\AppData\\Roaming\\NuGet\\NuGet.Config",
+=======
+      "projectUniqueName": "C:\\Users\\felipe.correa\\Source\\Repos\\KauaAmaral\\Entra21-Trabalho-02\\TrabalhoWindowsForm\\TrabalhoWindowsForm\\TrabalhoWindowsForm.csproj",
+      "projectName": "TrabalhoWindowsForm",
+      "projectPath": "C:\\Users\\felipe.correa\\Source\\Repos\\KauaAmaral\\Entra21-Trabalho-02\\TrabalhoWindowsForm\\TrabalhoWindowsForm\\TrabalhoWindowsForm.csproj",
+      "packagesPath": "C:\\Users\\felipe.correa\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\felipe.correa\\Source\\Repos\\KauaAmaral\\Entra21-Trabalho-02\\TrabalhoWindowsForm\\TrabalhoWindowsForm\\obj\\",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "\\\\Server\\c#-noturno\\felipe.correa\\AppData\\Roaming\\NuGet\\NuGet.Config",
+>>>>>>> 1a956fb7b94275b1ba972d284c90a53b51bc1ee4
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -109,8 +124,20 @@
             "privateAssets": "none"
           }
         },
+<<<<<<< HEAD
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
+=======
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
+>>>>>>> 1a956fb7b94275b1ba972d284c90a53b51bc1ee4
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problem reading the cache file C:\\Users\\felipe.correa\\Source\\Repos\\KauaAmaral\\Entra21-Trabalho-02\\TrabalhoWindowsForm\\TrabalhoWindowsForm\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
 }
