@@ -89,6 +89,19 @@ namespace TrabalhoWindowsForm
             return null;
         }
 
+        public int ObterUltimoCodigo()
+        {
+            int ultimoCodigo = 0;
+
+            for (int i = 0; i < clientes.Count; i++)
+            {
+                var cliente = clientes[i];
+
+                ultimoCodigo = cliente.Codigo;
+            }
+            return ultimoCodigo;
+        }
+
         private void SalvarArquivo()
         {
             var concessionariaJson = JsonConvert.SerializeObject(clientes);
