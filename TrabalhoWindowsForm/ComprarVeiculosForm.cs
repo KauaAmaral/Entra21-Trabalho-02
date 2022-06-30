@@ -50,5 +50,10 @@ namespace TrabalhoWindowsForm
             //var paciente = cliente[i];
             //comboBoxClientesCompra.Items.Add(cliente.Nome);
         }
+
+        private void buttonClear_Click(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

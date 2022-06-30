@@ -17,11 +17,6 @@ namespace TrabalhoWindowsForm
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("COMPRA EFETUADA COM SUCESSO");
-        }
-
         private void buttonFinalizarCompra_Click(object sender, EventArgs e)
         {
             maskedTextBoxNumeroCartao.Enabled = false;
@@ -30,6 +25,50 @@ namespace TrabalhoWindowsForm
             maskedTextBoxValidade.Enabled = false;
             maskedTextBoxCodSeguranca.Enabled = false;
             comboBoxParcelas.Text = "";
+        }
+
+        private void buttonFinalizarCompra_Click_1(object sender, EventArgs e)
+        {
+            var dadosCartao = maskedTextBoxNumeroCartao.Text;
+            var cpfCliente = maskedTextBoxCpfCartao.Text; 
+
+            var dadosCliente = ValidarDados(dadosCartao);
+
+            if (dadosCliente == false)
+            {
+                return;
+            }
+
+            MessageBox.Show("COMPRA EFETUADA COM SUCESSO");
+        }
+
+        private void buttonCancelarOp_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void ObterDados()
+        {
+            var dadosCartao = maskedTextBoxNumeroCartao.Text.Replace(".", "");
+
+            if (dadosCartao.Length != 16)
+            {
+                return;
+            }
+        }
+
+        private bool ValidarDados(string dadosCartao)
+        {
+            if (dadosCartao.Replace(".", "").Trim().Length != 16)
+            {
+                MessageBox.Show("Número do Cartão Inválido");
+
+                maskedTextBoxNumeroCartao.Focus();
+
+                return false;
+            }
+
+            return true;
         }
     }
 }
