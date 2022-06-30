@@ -1,8 +1,8 @@
 ﻿namespace TrabalhoWindowsForm
 {
-    public partial class VendedorForm : Form
+    public partial class LojasForm : Form
     {
-        public VendedorForm()
+        public LojasForm()
         {
             InitializeComponent();
         }

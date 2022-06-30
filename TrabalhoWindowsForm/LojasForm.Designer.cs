@@ -1,6 +1,6 @@
 ﻿namespace TrabalhoWindowsForm
 {
-    partial class VendedorForm
+    partial class LojasForm
     {
         /// <summary>
         /// Required designer variable.
