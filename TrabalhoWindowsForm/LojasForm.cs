@@ -41,7 +41,22 @@
             dataGridView1.ClearSelection();
         }
 
+        //public void ListarLojas()
+        //{
+        //    var lojas = lojaServico.ObterTodas();
 
+        //    dataGridView1.Rows.Clear();
+
+        //    for (var i = 0; i < lojas.Count; i++)
+        //    {
+        //        var loja = lojas[i];
+
+        //        dataGridView1.Rows.Add(new object
+        //        {
+
+        //        })
+        //    }
+        //}
 
     }
 }
