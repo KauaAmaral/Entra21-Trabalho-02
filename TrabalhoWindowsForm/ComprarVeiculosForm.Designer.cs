@@ -29,6 +29,9 @@
         private void InitializeComponent()
         {
             this.dataGridViewAbaComprar = new System.Windows.Forms.DataGridView();
+            this.ColumnVeiculo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnMarca = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnValorVeiculo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.button1 = new System.Windows.Forms.Button();
             this.textBoxContato = new System.Windows.Forms.TextBox();
             this.textBoxEndereco = new System.Windows.Forms.TextBox();
@@ -45,9 +48,7 @@
             this.comboBoxClientesCompra = new System.Windows.Forms.ComboBox();
             this.maskedTextBoxCpf = new System.Windows.Forms.MaskedTextBox();
             this.maskedTextBoxCep = new System.Windows.Forms.MaskedTextBox();
-            this.ColumnVeiculo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnMarca = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnValorVeiculo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAbaComprar)).BeginInit();
             this.SuspendLayout();
             // 
@@ -60,19 +61,37 @@
             this.ColumnVeiculo,
             this.ColumnMarca,
             this.ColumnValorVeiculo});
-            this.dataGridViewAbaComprar.Location = new System.Drawing.Point(34, 41);
-            this.dataGridViewAbaComprar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataGridViewAbaComprar.Location = new System.Drawing.Point(11, 57);
+            this.dataGridViewAbaComprar.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridViewAbaComprar.Name = "dataGridViewAbaComprar";
             this.dataGridViewAbaComprar.ReadOnly = true;
             this.dataGridViewAbaComprar.RowHeadersWidth = 51;
             this.dataGridViewAbaComprar.RowTemplate.Height = 29;
-            this.dataGridViewAbaComprar.Size = new System.Drawing.Size(354, 333);
+            this.dataGridViewAbaComprar.Size = new System.Drawing.Size(378, 333);
             this.dataGridViewAbaComprar.TabIndex = 2;
+            // 
+            // ColumnVeiculo
+            // 
+            this.ColumnVeiculo.HeaderText = "Veiculo";
+            this.ColumnVeiculo.Name = "ColumnVeiculo";
+            this.ColumnVeiculo.ReadOnly = true;
+            // 
+            // ColumnMarca
+            // 
+            this.ColumnMarca.HeaderText = "Marca";
+            this.ColumnMarca.Name = "ColumnMarca";
+            this.ColumnMarca.ReadOnly = true;
+            // 
+            // ColumnValorVeiculo
+            // 
+            this.ColumnValorVeiculo.HeaderText = "Valor";
+            this.ColumnValorVeiculo.Name = "ColumnValorVeiculo";
+            this.ColumnValorVeiculo.ReadOnly = true;
             // 
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(11, 394);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 3;
@@ -166,7 +185,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label5.Location = new System.Drawing.Point(525, 249);
+            this.label5.Location = new System.Drawing.Point(524, 217);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(93, 20);
@@ -176,7 +195,7 @@
             // checkBox1
             // 
             this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(493, 282);
+            this.checkBox1.Location = new System.Drawing.Point(492, 250);
             this.checkBox1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(58, 19);
@@ -187,7 +206,7 @@
             // checkBox2
             // 
             this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(551, 282);
+            this.checkBox2.Location = new System.Drawing.Point(550, 250);
             this.checkBox2.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.checkBox2.Name = "checkBox2";
             this.checkBox2.Size = new System.Drawing.Size(47, 19);
@@ -198,7 +217,7 @@
             // checkBox3
             // 
             this.checkBox3.AutoSize = true;
-            this.checkBox3.Location = new System.Drawing.Point(610, 282);
+            this.checkBox3.Location = new System.Drawing.Point(609, 250);
             this.checkBox3.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.checkBox3.Name = "checkBox3";
             this.checkBox3.Size = new System.Drawing.Size(58, 19);
@@ -233,29 +252,19 @@
             this.maskedTextBoxCep.Size = new System.Drawing.Size(195, 23);
             this.maskedTextBoxCep.TabIndex = 20;
             // 
-            // ColumnVeiculo
+            // textBox1
             // 
-            this.ColumnVeiculo.HeaderText = "Veiculo";
-            this.ColumnVeiculo.Name = "ColumnVeiculo";
-            this.ColumnVeiculo.ReadOnly = true;
-            // 
-            // ColumnMarca
-            // 
-            this.ColumnMarca.HeaderText = "Marca";
-            this.ColumnMarca.Name = "ColumnMarca";
-            this.ColumnMarca.ReadOnly = true;
-            // 
-            // ColumnValorVeiculo
-            // 
-            this.ColumnValorVeiculo.HeaderText = "Valor";
-            this.ColumnValorVeiculo.Name = "ColumnValorVeiculo";
-            this.ColumnValorVeiculo.ReadOnly = true;
+            this.textBox1.Location = new System.Drawing.Point(75, 29);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(218, 23);
+            this.textBox1.TabIndex = 21;
             // 
             // ComprarVeiculosForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.ClientSize = new System.Drawing.Size(689, 433);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.maskedTextBoxCep);
             this.Controls.Add(this.maskedTextBoxCpf);
             this.Controls.Add(this.comboBoxClientesCompra);
@@ -274,7 +283,7 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.dataGridViewAbaComprar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "ComprarVeiculosForm";
             this.Text = "ComprarVeiculosForm";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAbaComprar)).EndInit();
@@ -306,5 +315,6 @@
         private DataGridViewTextBoxColumn ColumnVeiculo;
         private DataGridViewTextBoxColumn ColumnMarca;
         private DataGridViewTextBoxColumn ColumnValorVeiculo;
+        private TextBox textBox1;
     }
 }

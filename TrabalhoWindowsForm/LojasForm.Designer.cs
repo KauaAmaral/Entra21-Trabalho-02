@@ -30,6 +30,11 @@
         {
             this.textBoxRazaoSocial = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.ColumnCodigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnCliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnCnpj = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnNomeFantasia = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnAtiva = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.buttonLimparCampos = new System.Windows.Forms.Button();
             this.buttonSalvar = new System.Windows.Forms.Button();
             this.labelNomeFantasia = new System.Windows.Forms.Label();
@@ -48,17 +53,12 @@
             this.maskedTextBoxCnpj = new System.Windows.Forms.MaskedTextBox();
             this.buttonApagar = new System.Windows.Forms.Button();
             this.buttonEditar = new System.Windows.Forms.Button();
-            this.ColumnCodigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnCliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnCnpj = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnNomeFantasia = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnAtiva = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // textBoxRazaoSocial
             // 
-            this.textBoxRazaoSocial.Location = new System.Drawing.Point(49, 229);
+            this.textBoxRazaoSocial.Location = new System.Drawing.Point(25, 113);
             this.textBoxRazaoSocial.Name = "textBoxRazaoSocial";
             this.textBoxRazaoSocial.Size = new System.Drawing.Size(350, 23);
             this.textBoxRazaoSocial.TabIndex = 12;
@@ -74,183 +74,14 @@
             this.ColumnCnpj,
             this.ColumnNomeFantasia,
             this.ColumnAtiva});
-            this.dataGridView1.Location = new System.Drawing.Point(440, 39);
+            this.dataGridView1.Location = new System.Drawing.Point(381, 39);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 25;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(576, 525);
+            this.dataGridView1.Size = new System.Drawing.Size(475, 490);
             this.dataGridView1.TabIndex = 11;
-            // 
-            // buttonLimparCampos
-            // 
-            this.buttonLimparCampos.Location = new System.Drawing.Point(49, 618);
-            this.buttonLimparCampos.Name = "buttonLimparCampos";
-            this.buttonLimparCampos.Size = new System.Drawing.Size(210, 23);
-            this.buttonLimparCampos.TabIndex = 8;
-            this.buttonLimparCampos.Text = "Limpar Campos";
-            this.buttonLimparCampos.UseVisualStyleBackColor = true;
-            this.buttonLimparCampos.Click += new System.EventHandler(this.buttonLimparCampos_Click);
-            // 
-            // buttonSalvar
-            // 
-            this.buttonSalvar.Location = new System.Drawing.Point(806, 618);
-            this.buttonSalvar.Name = "buttonSalvar";
-            this.buttonSalvar.Size = new System.Drawing.Size(210, 23);
-            this.buttonSalvar.TabIndex = 10;
-            this.buttonSalvar.Text = "Salvar";
-            this.buttonSalvar.UseVisualStyleBackColor = true;
-            this.buttonSalvar.Click += new System.EventHandler(this.buttonSalvar_Click);
-            // 
-            // labelNomeFantasia
-            // 
-            this.labelNomeFantasia.AutoSize = true;
-            this.labelNomeFantasia.Location = new System.Drawing.Point(49, 282);
-            this.labelNomeFantasia.Name = "labelNomeFantasia";
-            this.labelNomeFantasia.Size = new System.Drawing.Size(86, 15);
-            this.labelNomeFantasia.TabIndex = 5;
-            this.labelNomeFantasia.Text = "Nome Fantasia";
-            // 
-            // labelRazaoSocial
-            // 
-            this.labelRazaoSocial.AutoSize = true;
-            this.labelRazaoSocial.Location = new System.Drawing.Point(49, 211);
-            this.labelRazaoSocial.Name = "labelRazaoSocial";
-            this.labelRazaoSocial.Size = new System.Drawing.Size(72, 15);
-            this.labelRazaoSocial.TabIndex = 6;
-            this.labelRazaoSocial.Text = "Razão Social";
-            // 
-            // labelCnpj
-            // 
-            this.labelCnpj.AutoSize = true;
-            this.labelCnpj.Location = new System.Drawing.Point(49, 145);
-            this.labelCnpj.Name = "labelCnpj";
-            this.labelCnpj.Size = new System.Drawing.Size(34, 15);
-            this.labelCnpj.TabIndex = 7;
-            this.labelCnpj.Text = "CNPJ";
-            // 
-            // textBoxNomeFantasia
-            // 
-            this.textBoxNomeFantasia.Location = new System.Drawing.Point(49, 300);
-            this.textBoxNomeFantasia.Name = "textBoxNomeFantasia";
-            this.textBoxNomeFantasia.Size = new System.Drawing.Size(350, 23);
-            this.textBoxNomeFantasia.TabIndex = 12;
-            // 
-            // labelAtiva
-            // 
-            this.labelAtiva.AutoSize = true;
-            this.labelAtiva.Location = new System.Drawing.Point(49, 354);
-            this.labelAtiva.Name = "labelAtiva";
-            this.labelAtiva.Size = new System.Drawing.Size(34, 15);
-            this.labelAtiva.TabIndex = 5;
-            this.labelAtiva.Text = "Ativa";
-            // 
-            // radioButtonSim
-            // 
-            this.radioButtonSim.AutoSize = true;
-            this.radioButtonSim.Location = new System.Drawing.Point(49, 372);
-            this.radioButtonSim.Name = "radioButtonSim";
-            this.radioButtonSim.Size = new System.Drawing.Size(45, 19);
-            this.radioButtonSim.TabIndex = 14;
-            this.radioButtonSim.TabStop = true;
-            this.radioButtonSim.Text = "Sim";
-            this.radioButtonSim.UseVisualStyleBackColor = true;
-            // 
-            // radioButtonNao
-            // 
-            this.radioButtonNao.AutoSize = true;
-            this.radioButtonNao.Location = new System.Drawing.Point(112, 372);
-            this.radioButtonNao.Name = "radioButtonNao";
-            this.radioButtonNao.Size = new System.Drawing.Size(47, 19);
-            this.radioButtonNao.TabIndex = 14;
-            this.radioButtonNao.TabStop = true;
-            this.radioButtonNao.Text = "Não";
-            this.radioButtonNao.UseVisualStyleBackColor = true;
-            // 
-            // labelServicos
-            // 
-            this.labelServicos.AutoSize = true;
-            this.labelServicos.Location = new System.Drawing.Point(49, 420);
-            this.labelServicos.Name = "labelServicos";
-            this.labelServicos.Size = new System.Drawing.Size(50, 15);
-            this.labelServicos.TabIndex = 5;
-            this.labelServicos.Text = "Serviços";
-            // 
-            // checkBoxVendas
-            // 
-            this.checkBoxVendas.AutoSize = true;
-            this.checkBoxVendas.Location = new System.Drawing.Point(51, 442);
-            this.checkBoxVendas.Name = "checkBoxVendas";
-            this.checkBoxVendas.Size = new System.Drawing.Size(63, 19);
-            this.checkBoxVendas.TabIndex = 15;
-            this.checkBoxVendas.Text = "Vendas";
-            this.checkBoxVendas.UseVisualStyleBackColor = true;
-            // 
-            // checkBoxAlugueis
-            // 
-            this.checkBoxAlugueis.AutoSize = true;
-            this.checkBoxAlugueis.Location = new System.Drawing.Point(129, 442);
-            this.checkBoxAlugueis.Name = "checkBoxAlugueis";
-            this.checkBoxAlugueis.Size = new System.Drawing.Size(72, 19);
-            this.checkBoxAlugueis.TabIndex = 15;
-            this.checkBoxAlugueis.Text = "Alugueis";
-            this.checkBoxAlugueis.UseVisualStyleBackColor = true;
-            // 
-            // checkBoxConsertos
-            // 
-            this.checkBoxConsertos.AutoSize = true;
-            this.checkBoxConsertos.Location = new System.Drawing.Point(216, 442);
-            this.checkBoxConsertos.Name = "checkBoxConsertos";
-            this.checkBoxConsertos.Size = new System.Drawing.Size(79, 19);
-            this.checkBoxConsertos.TabIndex = 15;
-            this.checkBoxConsertos.Text = "Consertos";
-            this.checkBoxConsertos.UseVisualStyleBackColor = true;
-            // 
-            // comboBoxCliente
-            // 
-            this.comboBoxCliente.FormattingEnabled = true;
-            this.comboBoxCliente.Location = new System.Drawing.Point(49, 541);
-            this.comboBoxCliente.Name = "comboBoxCliente";
-            this.comboBoxCliente.Size = new System.Drawing.Size(350, 23);
-            this.comboBoxCliente.TabIndex = 16;
-            // 
-            // labelSelecioneSeuPerfil
-            // 
-            this.labelSelecioneSeuPerfil.AutoSize = true;
-            this.labelSelecioneSeuPerfil.Location = new System.Drawing.Point(49, 523);
-            this.labelSelecioneSeuPerfil.Name = "labelSelecioneSeuPerfil";
-            this.labelSelecioneSeuPerfil.Size = new System.Drawing.Size(109, 15);
-            this.labelSelecioneSeuPerfil.TabIndex = 5;
-            this.labelSelecioneSeuPerfil.Text = "Selecione Seu Perfil";
-            // 
-            // maskedTextBoxCnpj
-            // 
-            this.maskedTextBoxCnpj.Location = new System.Drawing.Point(49, 163);
-            this.maskedTextBoxCnpj.Mask = "99.999.999/9999-99";
-            this.maskedTextBoxCnpj.Name = "maskedTextBoxCnpj";
-            this.maskedTextBoxCnpj.Size = new System.Drawing.Size(97, 23);
-            this.maskedTextBoxCnpj.TabIndex = 17;
-            // 
-            // buttonApagar
-            // 
-            this.buttonApagar.Location = new System.Drawing.Point(578, 618);
-            this.buttonApagar.Name = "buttonApagar";
-            this.buttonApagar.Size = new System.Drawing.Size(129, 23);
-            this.buttonApagar.TabIndex = 18;
-            this.buttonApagar.Text = "Apagar";
-            this.buttonApagar.UseVisualStyleBackColor = true;
-            this.buttonApagar.Click += new System.EventHandler(this.buttonApagar_Click);
-            // 
-            // buttonEditar
-            // 
-            this.buttonEditar.Location = new System.Drawing.Point(441, 617);
-            this.buttonEditar.Name = "buttonEditar";
-            this.buttonEditar.Size = new System.Drawing.Size(129, 23);
-            this.buttonEditar.TabIndex = 19;
-            this.buttonEditar.Text = "Editar";
-            this.buttonEditar.UseVisualStyleBackColor = true;
-            this.buttonEditar.Click += new System.EventHandler(this.buttonEditar_Click);
             // 
             // ColumnCodigo
             // 
@@ -273,7 +104,6 @@
             this.ColumnCnpj.MinimumWidth = 6;
             this.ColumnCnpj.Name = "ColumnCnpj";
             this.ColumnCnpj.ReadOnly = true;
-            this.ColumnCnpj.Width = 125;
             // 
             // ColumnNomeFantasia
             // 
@@ -289,13 +119,181 @@
             this.ColumnAtiva.MinimumWidth = 6;
             this.ColumnAtiva.Name = "ColumnAtiva";
             this.ColumnAtiva.ReadOnly = true;
-            this.ColumnAtiva.Width = 125;
+            // 
+            // buttonLimparCampos
+            // 
+            this.buttonLimparCampos.Location = new System.Drawing.Point(23, 357);
+            this.buttonLimparCampos.Name = "buttonLimparCampos";
+            this.buttonLimparCampos.Size = new System.Drawing.Size(112, 23);
+            this.buttonLimparCampos.TabIndex = 8;
+            this.buttonLimparCampos.Text = "Limpar Campos";
+            this.buttonLimparCampos.UseVisualStyleBackColor = true;
+            this.buttonLimparCampos.Click += new System.EventHandler(this.buttonLimparCampos_Click);
+            // 
+            // buttonSalvar
+            // 
+            this.buttonSalvar.Location = new System.Drawing.Point(141, 357);
+            this.buttonSalvar.Name = "buttonSalvar";
+            this.buttonSalvar.Size = new System.Drawing.Size(125, 23);
+            this.buttonSalvar.TabIndex = 10;
+            this.buttonSalvar.Text = "Salvar";
+            this.buttonSalvar.UseVisualStyleBackColor = true;
+            this.buttonSalvar.Click += new System.EventHandler(this.buttonSalvar_Click);
+            // 
+            // labelNomeFantasia
+            // 
+            this.labelNomeFantasia.AutoSize = true;
+            this.labelNomeFantasia.Location = new System.Drawing.Point(25, 144);
+            this.labelNomeFantasia.Name = "labelNomeFantasia";
+            this.labelNomeFantasia.Size = new System.Drawing.Size(86, 15);
+            this.labelNomeFantasia.TabIndex = 5;
+            this.labelNomeFantasia.Text = "Nome Fantasia";
+            // 
+            // labelRazaoSocial
+            // 
+            this.labelRazaoSocial.AutoSize = true;
+            this.labelRazaoSocial.Location = new System.Drawing.Point(25, 95);
+            this.labelRazaoSocial.Name = "labelRazaoSocial";
+            this.labelRazaoSocial.Size = new System.Drawing.Size(72, 15);
+            this.labelRazaoSocial.TabIndex = 6;
+            this.labelRazaoSocial.Text = "Razão Social";
+            // 
+            // labelCnpj
+            // 
+            this.labelCnpj.AutoSize = true;
+            this.labelCnpj.Location = new System.Drawing.Point(25, 41);
+            this.labelCnpj.Name = "labelCnpj";
+            this.labelCnpj.Size = new System.Drawing.Size(34, 15);
+            this.labelCnpj.TabIndex = 7;
+            this.labelCnpj.Text = "CNPJ";
+            // 
+            // textBoxNomeFantasia
+            // 
+            this.textBoxNomeFantasia.Location = new System.Drawing.Point(25, 162);
+            this.textBoxNomeFantasia.Name = "textBoxNomeFantasia";
+            this.textBoxNomeFantasia.Size = new System.Drawing.Size(350, 23);
+            this.textBoxNomeFantasia.TabIndex = 12;
+            // 
+            // labelAtiva
+            // 
+            this.labelAtiva.AutoSize = true;
+            this.labelAtiva.Location = new System.Drawing.Point(25, 194);
+            this.labelAtiva.Name = "labelAtiva";
+            this.labelAtiva.Size = new System.Drawing.Size(34, 15);
+            this.labelAtiva.TabIndex = 5;
+            this.labelAtiva.Text = "Ativa";
+            // 
+            // radioButtonSim
+            // 
+            this.radioButtonSim.AutoSize = true;
+            this.radioButtonSim.Location = new System.Drawing.Point(25, 212);
+            this.radioButtonSim.Name = "radioButtonSim";
+            this.radioButtonSim.Size = new System.Drawing.Size(45, 19);
+            this.radioButtonSim.TabIndex = 14;
+            this.radioButtonSim.TabStop = true;
+            this.radioButtonSim.Text = "Sim";
+            this.radioButtonSim.UseVisualStyleBackColor = true;
+            // 
+            // radioButtonNao
+            // 
+            this.radioButtonNao.AutoSize = true;
+            this.radioButtonNao.Location = new System.Drawing.Point(88, 212);
+            this.radioButtonNao.Name = "radioButtonNao";
+            this.radioButtonNao.Size = new System.Drawing.Size(47, 19);
+            this.radioButtonNao.TabIndex = 14;
+            this.radioButtonNao.TabStop = true;
+            this.radioButtonNao.Text = "Não";
+            this.radioButtonNao.UseVisualStyleBackColor = true;
+            // 
+            // labelServicos
+            // 
+            this.labelServicos.AutoSize = true;
+            this.labelServicos.Location = new System.Drawing.Point(23, 244);
+            this.labelServicos.Name = "labelServicos";
+            this.labelServicos.Size = new System.Drawing.Size(50, 15);
+            this.labelServicos.TabIndex = 5;
+            this.labelServicos.Text = "Serviços";
+            // 
+            // checkBoxVendas
+            // 
+            this.checkBoxVendas.AutoSize = true;
+            this.checkBoxVendas.Location = new System.Drawing.Point(25, 266);
+            this.checkBoxVendas.Name = "checkBoxVendas";
+            this.checkBoxVendas.Size = new System.Drawing.Size(63, 19);
+            this.checkBoxVendas.TabIndex = 15;
+            this.checkBoxVendas.Text = "Vendas";
+            this.checkBoxVendas.UseVisualStyleBackColor = true;
+            // 
+            // checkBoxAlugueis
+            // 
+            this.checkBoxAlugueis.AutoSize = true;
+            this.checkBoxAlugueis.Location = new System.Drawing.Point(103, 266);
+            this.checkBoxAlugueis.Name = "checkBoxAlugueis";
+            this.checkBoxAlugueis.Size = new System.Drawing.Size(72, 19);
+            this.checkBoxAlugueis.TabIndex = 15;
+            this.checkBoxAlugueis.Text = "Alugueis";
+            this.checkBoxAlugueis.UseVisualStyleBackColor = true;
+            // 
+            // checkBoxConsertos
+            // 
+            this.checkBoxConsertos.AutoSize = true;
+            this.checkBoxConsertos.Location = new System.Drawing.Point(190, 266);
+            this.checkBoxConsertos.Name = "checkBoxConsertos";
+            this.checkBoxConsertos.Size = new System.Drawing.Size(79, 19);
+            this.checkBoxConsertos.TabIndex = 15;
+            this.checkBoxConsertos.Text = "Consertos";
+            this.checkBoxConsertos.UseVisualStyleBackColor = true;
+            // 
+            // comboBoxCliente
+            // 
+            this.comboBoxCliente.FormattingEnabled = true;
+            this.comboBoxCliente.Location = new System.Drawing.Point(23, 316);
+            this.comboBoxCliente.Name = "comboBoxCliente";
+            this.comboBoxCliente.Size = new System.Drawing.Size(349, 23);
+            this.comboBoxCliente.TabIndex = 16;
+            // 
+            // labelSelecioneSeuPerfil
+            // 
+            this.labelSelecioneSeuPerfil.AutoSize = true;
+            this.labelSelecioneSeuPerfil.Location = new System.Drawing.Point(23, 298);
+            this.labelSelecioneSeuPerfil.Name = "labelSelecioneSeuPerfil";
+            this.labelSelecioneSeuPerfil.Size = new System.Drawing.Size(109, 15);
+            this.labelSelecioneSeuPerfil.TabIndex = 5;
+            this.labelSelecioneSeuPerfil.Text = "Selecione Seu Perfil";
+            // 
+            // maskedTextBoxCnpj
+            // 
+            this.maskedTextBoxCnpj.Location = new System.Drawing.Point(25, 59);
+            this.maskedTextBoxCnpj.Mask = "99.999.999/9999-99";
+            this.maskedTextBoxCnpj.Name = "maskedTextBoxCnpj";
+            this.maskedTextBoxCnpj.Size = new System.Drawing.Size(97, 23);
+            this.maskedTextBoxCnpj.TabIndex = 17;
+            // 
+            // buttonApagar
+            // 
+            this.buttonApagar.Location = new System.Drawing.Point(516, 10);
+            this.buttonApagar.Name = "buttonApagar";
+            this.buttonApagar.Size = new System.Drawing.Size(129, 23);
+            this.buttonApagar.TabIndex = 18;
+            this.buttonApagar.Text = "Apagar";
+            this.buttonApagar.UseVisualStyleBackColor = true;
+            this.buttonApagar.Click += new System.EventHandler(this.buttonApagar_Click);
+            // 
+            // buttonEditar
+            // 
+            this.buttonEditar.Location = new System.Drawing.Point(381, 10);
+            this.buttonEditar.Name = "buttonEditar";
+            this.buttonEditar.Size = new System.Drawing.Size(129, 23);
+            this.buttonEditar.TabIndex = 19;
+            this.buttonEditar.Text = "Editar";
+            this.buttonEditar.UseVisualStyleBackColor = true;
+            this.buttonEditar.Click += new System.EventHandler(this.buttonEditar_Click);
             // 
             // LojasForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1064, 681);
+            this.ClientSize = new System.Drawing.Size(862, 532);
             this.Controls.Add(this.buttonApagar);
             this.Controls.Add(this.buttonEditar);
             this.Controls.Add(this.maskedTextBoxCnpj);
@@ -316,6 +314,7 @@
             this.Controls.Add(this.labelNomeFantasia);
             this.Controls.Add(this.labelRazaoSocial);
             this.Controls.Add(this.labelCnpj);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "LojasForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cadastro de Vendedor";

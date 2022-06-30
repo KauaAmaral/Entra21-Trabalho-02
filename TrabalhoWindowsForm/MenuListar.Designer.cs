@@ -51,7 +51,7 @@
             this.panelCabecalho.Location = new System.Drawing.Point(0, 0);
             this.panelCabecalho.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelCabecalho.Name = "panelCabecalho";
-            this.panelCabecalho.Size = new System.Drawing.Size(965, 30);
+            this.panelCabecalho.Size = new System.Drawing.Size(985, 30);
             this.panelCabecalho.TabIndex = 0;
             // 
             // buttonSair
@@ -60,7 +60,7 @@
             this.buttonSair.FlatAppearance.BorderSize = 0;
             this.buttonSair.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonSair.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.buttonSair.Location = new System.Drawing.Point(925, 2);
+            this.buttonSair.Location = new System.Drawing.Point(947, 1);
             this.buttonSair.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonSair.Name = "buttonSair";
             this.buttonSair.Size = new System.Drawing.Size(35, 28);
@@ -82,20 +82,19 @@
             this.panelMenu.Location = new System.Drawing.Point(0, 30);
             this.panelMenu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelMenu.Name = "panelMenu";
-            this.panelMenu.Size = new System.Drawing.Size(212, 406);
+            this.panelMenu.Size = new System.Drawing.Size(164, 500);
             this.panelMenu.TabIndex = 1;
-            this.panelMenu.Paint += new System.Windows.Forms.PaintEventHandler(this.panelMenu_Paint);
             // 
             // buttonCadastrarVeiculos
             // 
             this.buttonCadastrarVeiculos.AutoSize = true;
-            this.buttonCadastrarVeiculos.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.buttonCadastrarVeiculos.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.buttonCadastrarVeiculos.Image = global::TrabalhoWindowsForm.Properties.Resources.carros;
             this.buttonCadastrarVeiculos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonCadastrarVeiculos.Location = new System.Drawing.Point(0, 166);
             this.buttonCadastrarVeiculos.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonCadastrarVeiculos.Name = "buttonCadastrarVeiculos";
-            this.buttonCadastrarVeiculos.Size = new System.Drawing.Size(206, 39);
+            this.buttonCadastrarVeiculos.Size = new System.Drawing.Size(167, 39);
             this.buttonCadastrarVeiculos.TabIndex = 5;
             this.buttonCadastrarVeiculos.Text = "Cadastrar Veiculos";
             this.buttonCadastrarVeiculos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -112,7 +111,7 @@
             this.button4.Location = new System.Drawing.Point(0, 277);
             this.button4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(206, 39);
+            this.button4.Size = new System.Drawing.Size(167, 39);
             this.button4.TabIndex = 4;
             this.button4.Text = "Clientes";
             this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -128,23 +127,24 @@
             this.button3.Location = new System.Drawing.Point(0, 240);
             this.button3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(206, 39);
+            this.button3.Size = new System.Drawing.Size(167, 39);
             this.button3.TabIndex = 3;
             this.button3.Text = "Venda";
             this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // buttonCadastroClientes
             // 
             this.buttonCadastroClientes.AutoSize = true;
-            this.buttonCadastroClientes.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.buttonCadastroClientes.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.buttonCadastroClientes.Image = global::TrabalhoWindowsForm.Properties.Resources.carros;
             this.buttonCadastroClientes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonCadastroClientes.Location = new System.Drawing.Point(0, 129);
             this.buttonCadastroClientes.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonCadastroClientes.Name = "buttonCadastroClientes";
-            this.buttonCadastroClientes.Size = new System.Drawing.Size(206, 39);
+            this.buttonCadastroClientes.Size = new System.Drawing.Size(167, 39);
             this.buttonCadastroClientes.TabIndex = 2;
             this.buttonCadastroClientes.Text = "Cadastro Cliente";
             this.buttonCadastroClientes.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -161,7 +161,7 @@
             this.buttonComprar.Location = new System.Drawing.Point(0, 203);
             this.buttonComprar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonComprar.Name = "buttonComprar";
-            this.buttonComprar.Size = new System.Drawing.Size(206, 39);
+            this.buttonComprar.Size = new System.Drawing.Size(167, 39);
             this.buttonComprar.TabIndex = 0;
             this.buttonComprar.Text = "Comprar";
             this.buttonComprar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -174,7 +174,7 @@
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.pictureBox1.Image = global::TrabalhoWindowsForm.Properties.Resources.new_car;
-            this.pictureBox1.Location = new System.Drawing.Point(39, 16);
+            this.pictureBox1.Location = new System.Drawing.Point(23, 28);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(121, 73);
@@ -185,11 +185,12 @@
             // panelForm
             // 
             this.panelForm.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelForm.Location = new System.Drawing.Point(212, 30);
+            this.panelForm.Location = new System.Drawing.Point(164, 30);
             this.panelForm.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelForm.Name = "panelForm";
-            this.panelForm.Size = new System.Drawing.Size(753, 406);
+            this.panelForm.Size = new System.Drawing.Size(821, 500);
             this.panelForm.TabIndex = 3;
+            this.panelForm.Paint += new System.Windows.Forms.PaintEventHandler(this.panelForm_Paint);
             // 
             // MenuListar
             // 
@@ -197,7 +198,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.ClientSize = new System.Drawing.Size(965, 436);
+            this.ClientSize = new System.Drawing.Size(985, 530);
             this.Controls.Add(this.panelForm);
             this.Controls.Add(this.panelMenu);
             this.Controls.Add(this.panelCabecalho);

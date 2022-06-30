@@ -12,6 +12,7 @@ namespace TrabalhoWindowsForm
 {
     public partial class ComprarVeiculosForm : Form
     {
+        DataTable dt = new DataTable();
         private ClienteServico clienteServico;
         private SetorPagamentoForm setorPagamento;
         public ComprarVeiculosForm()
@@ -24,6 +25,13 @@ namespace TrabalhoWindowsForm
 
             // Preencher a Lista dos colaboradores
             PreencherComboBoxComOsNomesDosPacientes();
+        }
+
+        private void CarregarDados()
+        {
+            dt.Columns.Add("Marca", typeof(string));
+            dt.Columns.Add("Modelo", typeof(string));
+            dt.Columns.Add("Ano", typeof(string));
         }
 
         private void button1_Click(object sender, EventArgs e)

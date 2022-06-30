@@ -45,9 +45,14 @@
             FormShow(new CadastroCarrosForm());
         }
 
-        private void panelMenu_Paint(object sender, PaintEventArgs e)
+        private void button3_Click(object sender, EventArgs e)
         {
             FormShow(new LojasForm());
+        }
+
+        private void panelForm_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
