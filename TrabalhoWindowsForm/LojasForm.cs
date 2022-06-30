@@ -22,7 +22,7 @@
         {
             var loja = new Loja();
             loja.Codigo = lojaServico.ObterUltimoCodigo() + 1;
-            loja.Cliente.Nome = cliente;
+            loja.Cliente = clienteServico.ObterPorNomeCliente(cliente);
             loja.Cnpj = cnpj;
             loja.RazaoSocial = razaoSocial;
             loja.NomeFantasia = nomeFantasia;

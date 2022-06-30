@@ -3,6 +3,7 @@
     internal class Loja
     {
         public int Codigo;
+        public Cliente Cliente;
         public string Cnpj;
         public string RazaoSocial;
         public string NomeFantasia;
@@ -10,6 +11,5 @@
         public bool Vendas;
         public bool Alugueis;
         public bool Consertos;
-        public Cliente Cliente;
     }
 }
