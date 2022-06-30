@@ -30,7 +30,7 @@ namespace TrabalhoWindowsForm
             //comprarVeiculo.WindowState = FormWindowState.Maximized;
         }
 
-        private void button_Click(object sender, EventArgs e)
+        private void button5_Click(object sender, EventArgs e)
         {
             var cadastroCarros = new CadastroCarrosForm();
             //cadastroCarros.MdiParent = this;
