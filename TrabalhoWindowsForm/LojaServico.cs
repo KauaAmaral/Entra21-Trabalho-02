@@ -13,16 +13,48 @@ namespace TrabalhoWindowsForm
             LerArquivo();
         }
 
-        public List<Loja> ObterTodas()
-        {
-            return lojas;
-        }
 
         public void Cadastrar(Loja loja)
         {
             lojas.Add(loja);
 
             SalvarArquivo();
+        }
+
+        public void Editar(Loja lojaEditar)
+        {
+            for (int i = 0; i < lojas.Count; i++)
+            {
+                var loja = lojas[i];
+
+                if (loja.Codigo == lojaEditar.Codigo)
+                {
+                    loja.Cnpj = lojaEditar.Cnpj;
+                    loja.RazaoSocial = lojaEditar.RazaoSocial;
+                    loja.NomeFantasia = lojaEditar.NomeFantasia;
+                    loja.Ativa = lojaEditar.Ativa;
+                    loja.Vendas = lojaEditar.Vendas;
+                    loja.Alugueis = lojaEditar.Alugueis;
+                    loja.Consertos = lojaEditar.Consertos;
+
+                    SalvarArquivo();
+                }
+            }
+        }
+
+        public void Apagar(Loja lojaApagar)
+        {
+            for (int i = 0; i < lojas.Count; i++)
+            {
+                var loja = lojas[i];
+
+                if (loja.Codigo == lojaApagar.Codigo)
+                {
+                    lojas.Remove(loja);
+
+                    SalvarArquivo();
+                }
+            }
         }
 
         private void SalvarArquivo()
@@ -40,6 +72,11 @@ namespace TrabalhoWindowsForm
             lojas = JsonConvert.DeserializeObject<List<Loja>>(lojaJson);
         }
 
+        public List<Loja> ObterTodas()
+        {
+            return lojas;
+        }
+
         public int ObterUltimoCodigo()
         {
             int ultimoCodigo = 0;
@@ -53,16 +90,16 @@ namespace TrabalhoWindowsForm
             return ultimoCodigo;
         }
 
-        //public Cliente ObterPorCodigo(int codigo)
-        //{
-        //    for (var i = 0; i < lojas.Count; i++)
-        //    {
-        //        var loja = lojas[i];
+        public Loja ObterPorCodigo(int codigo)
+        {
+            for (var i = 0; i < lojas.Count; i++)
+            {
+                var loja = lojas[i];
 
-        //        if (loja.Codigo == codigo)
-        //            return loja;
-        //    }
-        //    return null;
-        //}
+                if (loja.Codigo == codigo)
+                    return loja;
+            }
+            return null;
+        }
     }
 }
