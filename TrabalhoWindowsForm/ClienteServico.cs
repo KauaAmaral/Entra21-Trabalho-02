@@ -34,10 +34,10 @@ namespace TrabalhoWindowsForm
 
         private void LerArquivo()
         {
-            if (File.Exists("concessionaria.json") == false)
+            if (File.Exists("cliente.json") == false)
                 return;
 
-            var concessionariaJson = File.ReadAllText("concessionaria.json");
+            var concessionariaJson = File.ReadAllText("cliente.json");
 
             clientes = JsonConvert.DeserializeObject<List<Cliente>>(concessionariaJson);
         }
@@ -105,7 +105,7 @@ namespace TrabalhoWindowsForm
         private void SalvarArquivo()
         {
             var concessionariaJson = JsonConvert.SerializeObject(clientes);
-            File.WriteAllText("concessionaria.json", concessionariaJson);
+            File.WriteAllText("cliente.json", concessionariaJson);
         }
     }
 }

@@ -2,14 +2,13 @@
 {
     internal class Loja
     {
+        public int Codigo;
         public string Cnpj;
         public string RazaoSocial;
         public string NomeFantasia;
-        public DateTime DataDeAbertura;
-        public string Cep;
-        public string Logradouro;
-        public string Telefone;
-        public string NomeContato;
-        public string EMail;
+        public bool Ativa;
+        public bool Vendas;
+        public bool Alugueis;
+        public bool Consertos;
     }
 }

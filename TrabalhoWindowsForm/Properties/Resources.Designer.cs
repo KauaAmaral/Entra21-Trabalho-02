@@ -83,6 +83,16 @@ namespace TrabalhoWindowsForm.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap bandeira_dos_cartoes_de_credito {
+            get {
+                object obj = ResourceManager.GetObject("bandeira-dos-cartoes-de-credito", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap carros {
             get {
                 object obj = ResourceManager.GetObject("carros", resourceCulture);

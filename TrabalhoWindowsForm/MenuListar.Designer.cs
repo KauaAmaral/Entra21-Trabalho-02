@@ -31,12 +31,12 @@
             this.panelCabecalho = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
             this.panelMenu = new System.Windows.Forms.Panel();
+            this.buttonCadastrarVeiculos = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.buttonCadastroClientes = new System.Windows.Forms.Button();
             this.buttonComprar = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.button5 = new System.Windows.Forms.Button();
             this.panelCabecalho.SuspendLayout();
             this.panelMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -71,10 +71,10 @@
             // panelMenu
             // 
             this.panelMenu.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.panelMenu.Controls.Add(this.button5);
+            this.panelMenu.Controls.Add(this.buttonCadastrarVeiculos);
             this.panelMenu.Controls.Add(this.button4);
             this.panelMenu.Controls.Add(this.button3);
-            this.panelMenu.Controls.Add(this.button2);
+            this.panelMenu.Controls.Add(this.buttonCadastroClientes);
             this.panelMenu.Controls.Add(this.buttonComprar);
             this.panelMenu.Controls.Add(this.pictureBox1);
             this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
@@ -83,6 +83,21 @@
             this.panelMenu.Name = "panelMenu";
             this.panelMenu.Size = new System.Drawing.Size(212, 406);
             this.panelMenu.TabIndex = 1;
+            // 
+            // buttonCadastrarVeiculos
+            // 
+            this.buttonCadastrarVeiculos.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.buttonCadastrarVeiculos.Image = global::TrabalhoWindowsForm.Properties.Resources.carros;
+            this.buttonCadastrarVeiculos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonCadastrarVeiculos.Location = new System.Drawing.Point(0, 166);
+            this.buttonCadastrarVeiculos.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.buttonCadastrarVeiculos.Name = "buttonCadastrarVeiculos";
+            this.buttonCadastrarVeiculos.Size = new System.Drawing.Size(212, 39);
+            this.buttonCadastrarVeiculos.TabIndex = 5;
+            this.buttonCadastrarVeiculos.Text = "Cadastrar Veiculos";
+            this.buttonCadastrarVeiculos.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.buttonCadastrarVeiculos.UseVisualStyleBackColor = true;
+            this.buttonCadastrarVeiculos.Click += new System.EventHandler(this.button5_Click);
             // 
             // button4
             // 
@@ -112,20 +127,20 @@
             this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button3.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // buttonCadastroClientes
             // 
-            this.button2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button2.Image = global::TrabalhoWindowsForm.Properties.Resources.carros;
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(0, 129);
-            this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(212, 39);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "Cadastro Cliente";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.buttonCadastroClientes.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.buttonCadastroClientes.Image = global::TrabalhoWindowsForm.Properties.Resources.carros;
+            this.buttonCadastroClientes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonCadastroClientes.Location = new System.Drawing.Point(0, 129);
+            this.buttonCadastroClientes.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.buttonCadastroClientes.Name = "buttonCadastroClientes";
+            this.buttonCadastroClientes.Size = new System.Drawing.Size(212, 39);
+            this.buttonCadastroClientes.TabIndex = 2;
+            this.buttonCadastroClientes.Text = "Cadastro Cliente";
+            this.buttonCadastroClientes.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.buttonCadastroClientes.UseVisualStyleBackColor = true;
+            this.buttonCadastroClientes.Click += new System.EventHandler(this.button2_Click);
             // 
             // buttonComprar
             // 
@@ -154,21 +169,6 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
-            // 
-            // button5
-            // 
-            this.button5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button5.Image = global::TrabalhoWindowsForm.Properties.Resources.carros;
-            this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button5.Location = new System.Drawing.Point(0, 166);
-            this.button5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(212, 39);
-            this.button5.TabIndex = 5;
-            this.button5.Text = "Cadastrar Veiculos";
-            this.button5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // MenuListar
             // 
@@ -202,7 +202,7 @@
         private Button buttonComprar;
         private Button button4;
         private Button button3;
-        private Button button2;
-        private Button button5;
+        private Button buttonCadastroClientes;
+        private Button buttonCadastrarVeiculos;
     }
 }

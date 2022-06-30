@@ -1,6 +1,6 @@
 ﻿namespace TrabalhoWindowsForm
 {
-    partial class VendedorForm
+    partial class LojasForm
     {
         /// <summary>
         /// Required designer variable.
@@ -49,7 +49,7 @@
             this.checkBoxConsertos = new System.Windows.Forms.CheckBox();
             this.comboBoxCliente = new System.Windows.Forms.ComboBox();
             this.labelSelecioneSeuPerfil = new System.Windows.Forms.Label();
-            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
+            this.maskedTextBoxCnpj = new System.Windows.Forms.MaskedTextBox();
             this.buttonApagar = new System.Windows.Forms.Button();
             this.buttonEditar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -264,14 +264,14 @@
             this.labelSelecioneSeuPerfil.TabIndex = 5;
             this.labelSelecioneSeuPerfil.Text = "Selecione Seu Perfil";
             // 
-            // maskedTextBox1
+            // maskedTextBoxCnpj
             // 
-            this.maskedTextBox1.Location = new System.Drawing.Point(56, 217);
-            this.maskedTextBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.maskedTextBox1.Mask = "99.999.999/9999-99";
-            this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(110, 27);
-            this.maskedTextBox1.TabIndex = 17;
+            this.maskedTextBoxCnpj.Location = new System.Drawing.Point(56, 217);
+            this.maskedTextBoxCnpj.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.maskedTextBoxCnpj.Mask = "99.999.999/9999-99";
+            this.maskedTextBoxCnpj.Name = "maskedTextBoxCnpj";
+            this.maskedTextBoxCnpj.Size = new System.Drawing.Size(110, 27);
+            this.maskedTextBoxCnpj.TabIndex = 17;
             // 
             // buttonApagar
             // 
@@ -293,14 +293,14 @@
             this.buttonEditar.Text = "Editar";
             this.buttonEditar.UseVisualStyleBackColor = true;
             // 
-            // VendedorForm
+            // LojasForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1216, 908);
             this.Controls.Add(this.buttonApagar);
             this.Controls.Add(this.buttonEditar);
-            this.Controls.Add(this.maskedTextBox1);
+            this.Controls.Add(this.maskedTextBoxCnpj);
             this.Controls.Add(this.comboBoxCliente);
             this.Controls.Add(this.checkBoxConsertos);
             this.Controls.Add(this.checkBoxAlugueis);
@@ -319,7 +319,7 @@
             this.Controls.Add(this.labelRazaoSocial);
             this.Controls.Add(this.labelCnpj);
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.Name = "VendedorForm";
+            this.Name = "LojasForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cadastro de Vendedor";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -347,7 +347,7 @@
         private CheckBox checkBoxConsertos;
         private ComboBox comboBoxCliente;
         private Label labelSelecioneSeuPerfil;
-        private MaskedTextBox maskedTextBox1;
+        private MaskedTextBox maskedTextBoxCnpj;
         private DataGridViewTextBoxColumn ColumnCodigo;
         private DataGridViewTextBoxColumn ColumnCnpj;
         private DataGridViewTextBoxColumn ColumnNomeFantasia;

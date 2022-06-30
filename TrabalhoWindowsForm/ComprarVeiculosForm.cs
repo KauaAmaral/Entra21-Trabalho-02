@@ -13,11 +13,17 @@ namespace TrabalhoWindowsForm
     public partial class ComprarVeiculosForm : Form
     {
         private ClienteServico clienteServico;
+        private SetorPagamentoForm setorPagamento;
         public ComprarVeiculosForm()
         {
             InitializeComponent();
 
             clienteServico = new ClienteServico();
+
+            setorPagamento = new SetorPagamentoForm();
+
+            // Preencher a Lista dos colaboradores
+            PreencherComboBoxComOsNomesDosPacientes();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -33,6 +39,14 @@ namespace TrabalhoWindowsForm
             //Percorrer todos os pacientes adicionando no ComboBox
             for (int i = 0; i < cliente.Count; i++)
             {
+                var clientes = cliente[i];
+                comboBoxClientesCompra.Items.Add(clientes.Nome);
+            }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            setorPagamento.SetorPagamento();
                 var paciente = cliente[i];
                 //comboBoxClientesCompra.Items.Add(cliente.Nome);
             }
