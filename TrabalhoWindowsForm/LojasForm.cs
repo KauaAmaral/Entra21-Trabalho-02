@@ -137,13 +137,26 @@
 
         private void buttonSalvar_Click(object sender, EventArgs e)
         {
+            var cliente = Convert.ToString(comboBoxCliente.SelectedItem);
             var cnpj = maskedTextBoxCnpj.Text;
             var razaoSocial = textBoxRazaoSocial.Text.Trim();
             var nomeFantasia = textBoxNomeFantasia.Text.Trim();
             var ativa = radioButtonSim.Checked;
-            var Vendas = checkBoxVendas.Checked;
+            var vendas = checkBoxVendas.Checked;
             var alugueis = checkBoxAlugueis.Checked;
             var consertos = checkBoxConsertos.Checked;
+
+            var dadosValidos = ValidarDados(cnpj, razaoSocial, nomeFantasia);
+
+            if (dadosValidos = false)
+            {
+                return;
+            }
+
+            if (dataGridView1.SelectedRows.Count == 0)
+                CadastrarLoja(cliente, cnpj, razaoSocial, nomeFantasia, ativa, vendas, alugueis, consertos);
+            else
+                EditarLoja(cliente, cnpj, razaoSocial, nomeFantasia, ativa, vendas, alugueis, consertos);
 
             ListarLojas();
 
@@ -179,7 +192,7 @@
             dataGridView1.ClearSelection();
         }
 
-        private bool ValidarDados(string cnpj, string razaoSocial, string nomeFantasia, bool ativa, bool vendas, bool alugueis, bool consertos)
+        private bool ValidarDados(string cnpj, string razaoSocial, string nomeFantasia)
         {
             if (cnpj.Replace("-", "").Trim().Length != 14)
             {
