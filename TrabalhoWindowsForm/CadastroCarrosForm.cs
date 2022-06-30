@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -33,9 +34,15 @@ namespace TrabalhoWindowsForm
         private DataGridViewTextBoxColumn ColumnPreco;
         private Button buttonEditar;
 
+        private List<Carro> carros;
+        private int codigo = 0;
+        private int indiceLinhaSelecionada = -1;
+        private int codigoSelecionado = -1;
+        private CarroServico carroServico;
         public CadastroCarrosForm()
         {
             InitializeComponent();
+            carroServico = new CarroServico();
         }
 
         private void InitializeComponent()
@@ -43,6 +50,11 @@ namespace TrabalhoWindowsForm
             this.buttonEditar = new System.Windows.Forms.Button();
             this.buttonLimparCampos = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.ColumnModelo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnPlaca = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnMarca = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnCategoria = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnPreco = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.labelModelo = new System.Windows.Forms.Label();
             this.textBoxNome = new System.Windows.Forms.TextBox();
             this.labelPlaca = new System.Windows.Forms.Label();
@@ -55,11 +67,6 @@ namespace TrabalhoWindowsForm
             this.labelPreco = new System.Windows.Forms.Label();
             this.textBoxPreco = new System.Windows.Forms.TextBox();
             this.buttonSalvar = new System.Windows.Forms.Button();
-            this.ColumnModelo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnPlaca = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnMarca = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnCategoria = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnPreco = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -71,6 +78,7 @@ namespace TrabalhoWindowsForm
             this.buttonEditar.TabIndex = 0;
             this.buttonEditar.Text = "Editar";
             this.buttonEditar.UseVisualStyleBackColor = true;
+            this.buttonEditar.Click += new System.EventHandler(this.buttonEditar_Click);
             // 
             // buttonLimparCampos
             // 
@@ -99,6 +107,36 @@ namespace TrabalhoWindowsForm
             this.dataGridView1.RowTemplate.Height = 25;
             this.dataGridView1.Size = new System.Drawing.Size(596, 285);
             this.dataGridView1.TabIndex = 2;
+            // 
+            // ColumnModelo
+            // 
+            this.ColumnModelo.HeaderText = "Modelo";
+            this.ColumnModelo.Name = "ColumnModelo";
+            this.ColumnModelo.ReadOnly = true;
+            // 
+            // ColumnPlaca
+            // 
+            this.ColumnPlaca.HeaderText = "Placa";
+            this.ColumnPlaca.Name = "ColumnPlaca";
+            this.ColumnPlaca.ReadOnly = true;
+            // 
+            // ColumnMarca
+            // 
+            this.ColumnMarca.HeaderText = "Marca";
+            this.ColumnMarca.Name = "ColumnMarca";
+            this.ColumnMarca.ReadOnly = true;
+            // 
+            // ColumnCategoria
+            // 
+            this.ColumnCategoria.HeaderText = "Categoria";
+            this.ColumnCategoria.Name = "ColumnCategoria";
+            this.ColumnCategoria.ReadOnly = true;
+            // 
+            // ColumnPreco
+            // 
+            this.ColumnPreco.HeaderText = "Preço";
+            this.ColumnPreco.Name = "ColumnPreco";
+            this.ColumnPreco.ReadOnly = true;
             // 
             // labelModelo
             // 
@@ -205,36 +243,6 @@ namespace TrabalhoWindowsForm
             this.buttonSalvar.UseVisualStyleBackColor = true;
             this.buttonSalvar.Click += new System.EventHandler(this.buttonSalvar_Click);
             // 
-            // ColumnModelo
-            // 
-            this.ColumnModelo.HeaderText = "Modelo";
-            this.ColumnModelo.Name = "ColumnModelo";
-            this.ColumnModelo.ReadOnly = true;
-            // 
-            // ColumnPlaca
-            // 
-            this.ColumnPlaca.HeaderText = "Placa";
-            this.ColumnPlaca.Name = "ColumnPlaca";
-            this.ColumnPlaca.ReadOnly = true;
-            // 
-            // ColumnMarca
-            // 
-            this.ColumnMarca.HeaderText = "Marca";
-            this.ColumnMarca.Name = "ColumnMarca";
-            this.ColumnMarca.ReadOnly = true;
-            // 
-            // ColumnCategoria
-            // 
-            this.ColumnCategoria.HeaderText = "Categoria";
-            this.ColumnCategoria.Name = "ColumnCategoria";
-            this.ColumnCategoria.ReadOnly = true;
-            // 
-            // ColumnPreco
-            // 
-            this.ColumnPreco.HeaderText = "Preço";
-            this.ColumnPreco.Name = "ColumnPreco";
-            this.ColumnPreco.ReadOnly = true;
-            // 
             // CadastroCarrosForm
             // 
             this.ClientSize = new System.Drawing.Size(900, 351);
@@ -263,6 +271,11 @@ namespace TrabalhoWindowsForm
 
         private void buttonLimparCampos_Click(object sender, EventArgs e)
         {
+            LimparCampos();
+        }
+
+        private void LimparCampos()
+        {
             textBoxNome.Text = "";
             textBoxPlaca.Text = "";
             comboBoxMarca.Text = "";
@@ -272,7 +285,26 @@ namespace TrabalhoWindowsForm
 
         private void buttonSalvar_Click(object sender, EventArgs e)
         {
-            
+
+        }
+
+        public void buttonEditar_Click(object sender, EventArgs e)
+        {
+            AlteraCarro();
+            var editarCarro = new EditarCarro();
+        }
+
+        private void AlteraCarro()
+        {
+            indiceLinhaSelecionada = dataGridView1.SelectedRows[0].Index;
+
+            if (indiceLinhaSelecionada == -1)
+            {
+                MessageBox.Show("Selecione um carro.");
+                return;
+            }
+            // Obter a linha que o usuário selecionou
+            var linhaSelecionada = dataGridView1.SelectedRows[0];
         }
     }
 }

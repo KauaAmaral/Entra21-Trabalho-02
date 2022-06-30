@@ -34,7 +34,7 @@ namespace TrabalhoWindowsForm
             for (int i = 0; i < cliente.Count; i++)
             {
                 var paciente = cliente[i];
-                comboBoxClientesCompra.Items.Add(cliente.Nome);
+                //comboBoxClientesCompra.Items.Add(cliente.Nome);
             }
         }
     }

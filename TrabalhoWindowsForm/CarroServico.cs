@@ -26,7 +26,7 @@ namespace TrabalhoWindowsForm
 
             SalvarArquivo();
         }
-        private void SalvarArquivo()
+        public void SalvarArquivo()
         {
             var carroJson = JsonConvert.SerializeObject(carros);
             File.WriteAllText("carro.json", carroJson);

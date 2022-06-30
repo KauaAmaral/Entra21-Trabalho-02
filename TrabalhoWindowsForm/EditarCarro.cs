@@ -24,9 +24,16 @@ namespace TrabalhoWindowsForm
         private TextBox textBoxPreco;
         private Button buttonAlterar;
 
+        private List<Carro> carros;
+        private int codigo = 0;
+        private int indiceLinhaSelecionada = -1;
+        private int codigoSelecionado = -1;
+        private CarroServico carroServico;
+        
         public RepararInformacaoCarro()
         {
             InitializeComponent();
+            carroServico = new CarroServico();
         }
 
         private void InitializeComponent()
@@ -159,11 +166,24 @@ namespace TrabalhoWindowsForm
 
         private void buttonAlterar_Click(object sender, EventArgs e)
         {
-            textBoxModelo.Text = "";
-            textBoxPlaca.Text = "";
-            comboBoxMarca.Text = "";
-            comboBoxCategoria.Text = "";
-            textBoxPreco.Text = "";
+
+            textBoxModelo.Text = modelo;
+            textBoxPlaca.Text = placa;
+            comboBoxMarca.Text = marca;
+            comboBoxCategoria.Text = categoria;
+            textBoxPreco.Text = preco.ToString();
+        }
+        private void EditarDados(string modelo, string placa, string marca, string categoria, double preco)
+        {
+            carros[indiceLinhaSelecionada].Modelo = modelo;
+            carros[indiceLinhaSelecionada].Placa = placa;
+            carros[indiceLinhaSelecionada].Marca = marca;
+            carros[indiceLinhaSelecionada].Categoria = categoria;
+            carros[indiceLinhaSelecionada].Preco = preco;
+
+            carroServico.SalvarArquivo();
+
+            LimparCampos();
         }
     }
 }
