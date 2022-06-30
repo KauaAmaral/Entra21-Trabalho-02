@@ -186,6 +186,7 @@
             // radioButtonSim
             // 
             this.radioButtonSim.AutoSize = true;
+            this.radioButtonSim.Checked = true;
             this.radioButtonSim.Location = new System.Drawing.Point(25, 212);
             this.radioButtonSim.Name = "radioButtonSim";
             this.radioButtonSim.Size = new System.Drawing.Size(45, 19);
@@ -201,7 +202,6 @@
             this.radioButtonNao.Name = "radioButtonNao";
             this.radioButtonNao.Size = new System.Drawing.Size(47, 19);
             this.radioButtonNao.TabIndex = 14;
-            this.radioButtonNao.TabStop = true;
             this.radioButtonNao.Text = "Não";
             this.radioButtonNao.UseVisualStyleBackColor = true;
             // 
