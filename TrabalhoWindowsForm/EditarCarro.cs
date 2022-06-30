@@ -167,11 +167,11 @@ namespace TrabalhoWindowsForm
         private void buttonAlterar_Click(object sender, EventArgs e)
         {
 
-            textBoxModelo.Text = modelo;
-            textBoxPlaca.Text = placa;
-            comboBoxMarca.Text = marca;
-            comboBoxCategoria.Text = categoria;
-            textBoxPreco.Text = preco.ToString();
+            //textBoxModelo.Text = modelo;
+            //textBoxPlaca.Text = placa;
+            //comboBoxMarca.Text = marca;
+            //comboBoxCategoria.Text = categoria;
+            //textBoxPreco.Text = preco.ToString();
         }
         private void EditarDados(string modelo, string placa, string marca, string categoria, double preco)
         {
@@ -183,7 +183,7 @@ namespace TrabalhoWindowsForm
 
             carroServico.SalvarArquivo();
 
-            LimparCampos();
+            //LimparCampos();
         }
     }
 }

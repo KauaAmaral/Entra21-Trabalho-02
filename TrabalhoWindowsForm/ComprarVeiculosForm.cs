@@ -46,10 +46,9 @@ namespace TrabalhoWindowsForm
 
         private void button3_Click(object sender, EventArgs e)
         {
-            setorPagamento.SetorPagamento();
-                var paciente = cliente[i];
-                //comboBoxClientesCompra.Items.Add(cliente.Nome);
-            }
+            //setorPagamento.SetorPagamento();
+            //var paciente = cliente[i];
+            //comboBoxClientesCompra.Items.Add(cliente.Nome);
         }
     }
 }

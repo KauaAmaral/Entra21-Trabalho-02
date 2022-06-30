@@ -291,7 +291,7 @@ namespace TrabalhoWindowsForm
         public void buttonEditar_Click(object sender, EventArgs e)
         {
             AlteraCarro();
-            var editarCarro = new EditarCarro();
+            //var editarCarro = new EditarCarro();
         }
 
         private void AlteraCarro()
