@@ -31,12 +31,12 @@
             this.panelCabecalho = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
             this.panelMenu = new System.Windows.Forms.Panel();
+            this.buttonCadastrarVeiculos = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.buttonComprar = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.button5 = new System.Windows.Forms.Button();
             this.panelCabecalho.SuspendLayout();
             this.panelMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -71,7 +71,7 @@
             // panelMenu
             // 
             this.panelMenu.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.panelMenu.Controls.Add(this.button5);
+            this.panelMenu.Controls.Add(this.buttonCadastrarVeiculos);
             this.panelMenu.Controls.Add(this.button4);
             this.panelMenu.Controls.Add(this.button3);
             this.panelMenu.Controls.Add(this.button2);
@@ -83,6 +83,21 @@
             this.panelMenu.Name = "panelMenu";
             this.panelMenu.Size = new System.Drawing.Size(212, 406);
             this.panelMenu.TabIndex = 1;
+            // 
+            // buttonCadastrarVeiculos
+            // 
+            this.buttonCadastrarVeiculos.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.buttonCadastrarVeiculos.Image = global::TrabalhoWindowsForm.Properties.Resources.carros;
+            this.buttonCadastrarVeiculos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonCadastrarVeiculos.Location = new System.Drawing.Point(0, 166);
+            this.buttonCadastrarVeiculos.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.buttonCadastrarVeiculos.Name = "buttonCadastrarVeiculos";
+            this.buttonCadastrarVeiculos.Size = new System.Drawing.Size(212, 39);
+            this.buttonCadastrarVeiculos.TabIndex = 5;
+            this.buttonCadastrarVeiculos.Text = "Cadastrar Veiculos";
+            this.buttonCadastrarVeiculos.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.buttonCadastrarVeiculos.UseVisualStyleBackColor = true;
+            this.buttonCadastrarVeiculos.Click += new System.EventHandler(this.button5_Click);
             // 
             // button4
             // 
@@ -155,21 +170,6 @@
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
-            // button5
-            // 
-            this.button5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button5.Image = global::TrabalhoWindowsForm.Properties.Resources.carros;
-            this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button5.Location = new System.Drawing.Point(0, 166);
-            this.button5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(212, 39);
-            this.button5.TabIndex = 5;
-            this.button5.Text = "Cadastrar Veiculos";
-            this.button5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
-            // 
             // MenuListar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -203,6 +203,6 @@
         private Button button4;
         private Button button3;
         private Button button2;
-        private Button button5;
+        private Button buttonCadastrarVeiculos;
     }
 }
