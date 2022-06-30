@@ -45,7 +45,9 @@
             this.comboBoxClientesCompra = new System.Windows.Forms.ComboBox();
             this.maskedTextBoxCpf = new System.Windows.Forms.MaskedTextBox();
             this.maskedTextBoxCep = new System.Windows.Forms.MaskedTextBox();
-            this.ColumnColaborador = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnVeiculo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnMarca = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnValorVeiculo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAbaComprar)).BeginInit();
             this.SuspendLayout();
             // 
@@ -55,20 +57,24 @@
             this.dataGridViewAbaComprar.AllowUserToDeleteRows = false;
             this.dataGridViewAbaComprar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewAbaComprar.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.ColumnColaborador});
-            this.dataGridViewAbaComprar.Location = new System.Drawing.Point(42, 51);
+            this.ColumnVeiculo,
+            this.ColumnMarca,
+            this.ColumnValorVeiculo});
+            this.dataGridViewAbaComprar.Location = new System.Drawing.Point(34, 41);
+            this.dataGridViewAbaComprar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dataGridViewAbaComprar.Name = "dataGridViewAbaComprar";
             this.dataGridViewAbaComprar.ReadOnly = true;
             this.dataGridViewAbaComprar.RowHeadersWidth = 51;
             this.dataGridViewAbaComprar.RowTemplate.Height = 29;
-            this.dataGridViewAbaComprar.Size = new System.Drawing.Size(357, 416);
+            this.dataGridViewAbaComprar.Size = new System.Drawing.Size(354, 333);
             this.dataGridViewAbaComprar.TabIndex = 2;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(14, 493);
+            this.button1.Location = new System.Drawing.Point(11, 394);
+            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(94, 29);
+            this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 3;
             this.button1.Text = "Sair";
             this.button1.UseVisualStyleBackColor = true;
@@ -76,27 +82,28 @@
             // 
             // textBoxContato
             // 
-            this.textBoxContato.Location = new System.Drawing.Point(583, 140);
-            this.textBoxContato.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.textBoxContato.Location = new System.Drawing.Point(466, 112);
+            this.textBoxContato.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.textBoxContato.Name = "textBoxContato";
-            this.textBoxContato.Size = new System.Drawing.Size(243, 27);
+            this.textBoxContato.Size = new System.Drawing.Size(195, 23);
             this.textBoxContato.TabIndex = 5;
             // 
             // textBoxEndereco
             // 
-            this.textBoxEndereco.Location = new System.Drawing.Point(583, 220);
-            this.textBoxEndereco.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.textBoxEndereco.Location = new System.Drawing.Point(466, 176);
+            this.textBoxEndereco.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.textBoxEndereco.Name = "textBoxEndereco";
-            this.textBoxEndereco.Size = new System.Drawing.Size(243, 27);
+            this.textBoxEndereco.Size = new System.Drawing.Size(195, 23);
             this.textBoxEndereco.TabIndex = 6;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Location = new System.Drawing.Point(547, 107);
+            this.label1.Location = new System.Drawing.Point(438, 86);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(33, 20);
+            this.label1.Size = new System.Drawing.Size(28, 15);
             this.label1.TabIndex = 8;
             this.label1.Text = "CPF";
             // 
@@ -104,9 +111,10 @@
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Location = new System.Drawing.Point(515, 144);
+            this.label2.Location = new System.Drawing.Point(412, 115);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(66, 20);
+            this.label2.Size = new System.Drawing.Size(51, 15);
             this.label2.TabIndex = 9;
             this.label2.Text = "Telefone";
             // 
@@ -114,9 +122,10 @@
             // 
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Location = new System.Drawing.Point(508, 224);
+            this.label3.Location = new System.Drawing.Point(406, 179);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(71, 20);
+            this.label3.Size = new System.Drawing.Size(56, 15);
             this.label3.TabIndex = 11;
             this.label3.Text = "Endereço";
             // 
@@ -124,18 +133,19 @@
             // 
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Location = new System.Drawing.Point(547, 185);
+            this.label4.Location = new System.Drawing.Point(438, 148);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(34, 20);
+            this.label4.Size = new System.Drawing.Size(28, 15);
             this.label4.TabIndex = 10;
             this.label4.Text = "CEP";
             // 
             // buttonClear
             // 
-            this.buttonClear.Location = new System.Drawing.Point(610, 479);
-            this.buttonClear.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.buttonClear.Location = new System.Drawing.Point(488, 383);
+            this.buttonClear.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.buttonClear.Name = "buttonClear";
-            this.buttonClear.Size = new System.Drawing.Size(112, 43);
+            this.buttonClear.Size = new System.Drawing.Size(90, 34);
             this.buttonClear.TabIndex = 12;
             this.buttonClear.Text = "Limpar";
             this.buttonClear.UseVisualStyleBackColor = true;
@@ -143,10 +153,10 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(729, 479);
-            this.button3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.button3.Location = new System.Drawing.Point(583, 383);
+            this.button3.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(112, 43);
+            this.button3.Size = new System.Drawing.Size(90, 34);
             this.button3.TabIndex = 13;
             this.button3.Text = "Avançar";
             this.button3.UseVisualStyleBackColor = true;
@@ -156,19 +166,20 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label5.Location = new System.Drawing.Point(656, 311);
+            this.label5.Location = new System.Drawing.Point(525, 249);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(116, 25);
+            this.label5.Size = new System.Drawing.Size(93, 20);
             this.label5.TabIndex = 14;
             this.label5.Text = "CATEGORIA";
             // 
             // checkBox1
             // 
             this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(616, 353);
-            this.checkBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.checkBox1.Location = new System.Drawing.Point(493, 282);
+            this.checkBox1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(70, 24);
+            this.checkBox1.Size = new System.Drawing.Size(58, 19);
             this.checkBox1.TabIndex = 15;
             this.checkBox1.Text = "Hatch";
             this.checkBox1.UseVisualStyleBackColor = true;
@@ -176,10 +187,10 @@
             // checkBox2
             // 
             this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(689, 353);
-            this.checkBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.checkBox2.Location = new System.Drawing.Point(551, 282);
+            this.checkBox2.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(58, 24);
+            this.checkBox2.Size = new System.Drawing.Size(47, 19);
             this.checkBox2.TabIndex = 16;
             this.checkBox2.Text = "SUV";
             this.checkBox2.UseVisualStyleBackColor = true;
@@ -187,10 +198,10 @@
             // checkBox3
             // 
             this.checkBox3.AutoSize = true;
-            this.checkBox3.Location = new System.Drawing.Point(762, 353);
-            this.checkBox3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.checkBox3.Location = new System.Drawing.Point(610, 282);
+            this.checkBox3.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(72, 24);
+            this.checkBox3.Size = new System.Drawing.Size(58, 19);
             this.checkBox3.TabIndex = 17;
             this.checkBox3.Text = "Sedan";
             this.checkBox3.UseVisualStyleBackColor = true;
@@ -198,43 +209,53 @@
             // comboBoxClientesCompra
             // 
             this.comboBoxClientesCompra.FormattingEnabled = true;
-            this.comboBoxClientesCompra.Location = new System.Drawing.Point(536, 51);
-            this.comboBoxClientesCompra.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.comboBoxClientesCompra.Location = new System.Drawing.Point(429, 41);
+            this.comboBoxClientesCompra.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.comboBoxClientesCompra.Name = "comboBoxClientesCompra";
-            this.comboBoxClientesCompra.Size = new System.Drawing.Size(290, 28);
+            this.comboBoxClientesCompra.Size = new System.Drawing.Size(233, 23);
             this.comboBoxClientesCompra.TabIndex = 18;
             // 
             // maskedTextBoxCpf
             // 
-            this.maskedTextBoxCpf.Location = new System.Drawing.Point(583, 103);
-            this.maskedTextBoxCpf.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.maskedTextBoxCpf.Location = new System.Drawing.Point(466, 82);
+            this.maskedTextBoxCpf.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.maskedTextBoxCpf.Mask = "999.999.999-99";
             this.maskedTextBoxCpf.Name = "maskedTextBoxCpf";
-            this.maskedTextBoxCpf.Size = new System.Drawing.Size(243, 27);
+            this.maskedTextBoxCpf.Size = new System.Drawing.Size(195, 23);
             this.maskedTextBoxCpf.TabIndex = 19;
             // 
             // maskedTextBoxCep
             // 
-            this.maskedTextBoxCep.Location = new System.Drawing.Point(583, 179);
-            this.maskedTextBoxCep.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.maskedTextBoxCep.Location = new System.Drawing.Point(466, 143);
+            this.maskedTextBoxCep.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.maskedTextBoxCep.Mask = "99999-999";
             this.maskedTextBoxCep.Name = "maskedTextBoxCep";
-            this.maskedTextBoxCep.Size = new System.Drawing.Size(243, 27);
+            this.maskedTextBoxCep.Size = new System.Drawing.Size(195, 23);
             this.maskedTextBoxCep.TabIndex = 20;
             // 
-            // ColumnColaborador
+            // ColumnVeiculo
             // 
-            this.ColumnColaborador.HeaderText = "Nome do Colaborador";
-            this.ColumnColaborador.MinimumWidth = 6;
-            this.ColumnColaborador.Name = "ColumnColaborador";
-            this.ColumnColaborador.ReadOnly = true;
-            this.ColumnColaborador.Width = 300;
+            this.ColumnVeiculo.HeaderText = "Veiculo";
+            this.ColumnVeiculo.Name = "ColumnVeiculo";
+            this.ColumnVeiculo.ReadOnly = true;
+            // 
+            // ColumnMarca
+            // 
+            this.ColumnMarca.HeaderText = "Marca";
+            this.ColumnMarca.Name = "ColumnMarca";
+            this.ColumnMarca.ReadOnly = true;
+            // 
+            // ColumnValorVeiculo
+            // 
+            this.ColumnValorVeiculo.HeaderText = "Valor";
+            this.ColumnValorVeiculo.Name = "ColumnValorVeiculo";
+            this.ColumnValorVeiculo.ReadOnly = true;
             // 
             // ComprarVeiculosForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
-            this.ClientSize = new System.Drawing.Size(861, 541);
+            this.ClientSize = new System.Drawing.Size(689, 433);
             this.Controls.Add(this.maskedTextBoxCep);
             this.Controls.Add(this.maskedTextBoxCpf);
             this.Controls.Add(this.comboBoxClientesCompra);
@@ -253,6 +274,7 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.dataGridViewAbaComprar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "ComprarVeiculosForm";
             this.Text = "ComprarVeiculosForm";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAbaComprar)).EndInit();
@@ -281,6 +303,8 @@
         private MaskedTextBox maskedTextBoxCpf;
         private MaskedTextBox maskedTextBoxCep;
         private DataGridViewTextBoxColumn ColumnNomeEmpresa;
-        private DataGridViewTextBoxColumn ColumnColaborador;
+        private DataGridViewTextBoxColumn ColumnVeiculo;
+        private DataGridViewTextBoxColumn ColumnMarca;
+        private DataGridViewTextBoxColumn ColumnValorVeiculo;
     }
 }
