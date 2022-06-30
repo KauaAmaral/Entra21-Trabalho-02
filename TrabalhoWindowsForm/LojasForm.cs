@@ -138,7 +138,7 @@
         private void buttonSalvar_Click(object sender, EventArgs e)
         {
             var cliente = Convert.ToString(comboBoxCliente.SelectedItem);
-            var cnpj = maskedTextBoxCnpj.Text;
+            var cnpj = maskedTextBoxCnpj.Text.Trim();
             var razaoSocial = textBoxRazaoSocial.Text.Trim();
             var nomeFantasia = textBoxNomeFantasia.Text.Trim();
             var ativa = radioButtonSim.Checked;
@@ -146,12 +146,12 @@
             var alugueis = checkBoxAlugueis.Checked;
             var consertos = checkBoxConsertos.Checked;
 
-            var dadosValidos = ValidarDados(cnpj, razaoSocial, nomeFantasia);
+            //var dadosValidos = ValidarDados(cnpj, razaoSocial, nomeFantasia);
 
-            if (dadosValidos = false)
-            {
-                return;
-            }
+            //if (dadosValidos = false)
+            //{
+            //    return;
+            //}
 
             if (dataGridView1.SelectedRows.Count == 0)
                 CadastrarLoja(cliente, cnpj, razaoSocial, nomeFantasia, ativa, vendas, alugueis, consertos);
@@ -192,43 +192,43 @@
             dataGridView1.ClearSelection();
         }
 
-        private bool ValidarDados(string cnpj, string razaoSocial, string nomeFantasia)
-        {
-            if (cnpj.Replace("-", "").Trim().Length != 14)
-            {
-                MessageBox.Show("CNPJ inválido");
+        //private bool ValidarDados(string cnpj, string razaoSocial, string nomeFantasia)
+        //{
+        //    if (cnpj.Replace("-", "").Trim().Length != 14)
+        //    {
+        //        MessageBox.Show("CNPJ inválido");
 
-                maskedTextBoxCnpj.Focus();
+        //        maskedTextBoxCnpj.Focus();
 
-                return false;
-            }
+        //        return false;
+        //    }
 
-            if (razaoSocial.Trim().Length < 10)
-            {
-                MessageBox.Show("Razão Social deeve conter no mínimo 10 caracteres");
+        //    if (razaoSocial.Trim().Length < 10)
+        //    {
+        //        MessageBox.Show("Razão Social deeve conter no mínimo 10 caracteres");
 
-                textBoxRazaoSocial.Focus();
+        //        textBoxRazaoSocial.Focus();
 
-                return false;
-            }
+        //        return false;
+        //    }
 
-            if (nomeFantasia.Trim().Length < 5)
-            {
-                MessageBox.Show("Nome Fantasia deve conter no mínimo 5 caracteres");
+        //    if (nomeFantasia.Trim().Length < 5)
+        //    {
+        //        MessageBox.Show("Nome Fantasia deve conter no mínimo 5 caracteres");
 
-                textBoxNomeFantasia.Focus();
+        //        textBoxNomeFantasia.Focus();
 
-                return false;
-            }
+        //        return false;
+        //    }
 
-            if (checkBoxVendas.Checked == false && checkBoxAlugueis.Checked == false && checkBoxAlugueis.Checked == false)
-            {
-                MessageBox.Show("Selecione um searviço");
+        //    if (checkBoxVendas.Checked == false && checkBoxAlugueis.Checked == false && checkBoxAlugueis.Checked == false)
+        //    {
+        //        MessageBox.Show("Selecione um searviço");
 
-                return false;
-            }
-            return true;
-        }
+        //        return false;
+        //    }
+        //    return true;
+        //}
 
         private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
