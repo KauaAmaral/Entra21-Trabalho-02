@@ -20,9 +20,7 @@ namespace TrabalhoWindowsForm
         private Label labelPlaca;
         private TextBox textBoxPlaca;
         private Label labelMarca;
-        private Label labelCategoria;
         private Button buttonVoltar;
-        private ComboBox comboBoxCategoria;
         private ComboBox comboBoxMarca;
         private Label labelPreco;
         private TextBox textBoxPreco;
@@ -33,11 +31,17 @@ namespace TrabalhoWindowsForm
         private int codigo = 0;
         private int indiceLinhaSelecionada = -1;
         private int codigoSelecionado = -1;
+        private string classe;
+
         private DataGridViewTextBoxColumn ColumnModelo;
         private DataGridViewTextBoxColumn ColumnPlaca;
         private DataGridViewTextBoxColumn ColumnMarca;
         private DataGridViewTextBoxColumn ColumnCategoria;
         private DataGridViewTextBoxColumn ColumnPreco;
+        private Label labelCategoria;
+        private RadioButton radioButtonSuv;
+        private RadioButton radioButtonSedam;
+        private RadioButton radioButtonHatch;
         private CarroServico carroServico;
         public CadastroCarrosForm()
         {
@@ -50,31 +54,33 @@ namespace TrabalhoWindowsForm
             this.buttonEditar = new System.Windows.Forms.Button();
             this.buttonLimparCampos = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.labelModelo = new System.Windows.Forms.Label();
-            this.textBoxNome = new System.Windows.Forms.TextBox();
-            this.labelPlaca = new System.Windows.Forms.Label();
-            this.textBoxPlaca = new System.Windows.Forms.TextBox();
-            this.labelMarca = new System.Windows.Forms.Label();
-            this.labelCategoria = new System.Windows.Forms.Label();
-            this.buttonVoltar = new System.Windows.Forms.Button();
-            this.comboBoxCategoria = new System.Windows.Forms.ComboBox();
-            this.comboBoxMarca = new System.Windows.Forms.ComboBox();
-            this.labelPreco = new System.Windows.Forms.Label();
-            this.textBoxPreco = new System.Windows.Forms.TextBox();
-            this.buttonSalvar = new System.Windows.Forms.Button();
             this.ColumnModelo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnPlaca = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnMarca = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnCategoria = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnPreco = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.labelModelo = new System.Windows.Forms.Label();
+            this.textBoxNome = new System.Windows.Forms.TextBox();
+            this.labelPlaca = new System.Windows.Forms.Label();
+            this.textBoxPlaca = new System.Windows.Forms.TextBox();
+            this.labelMarca = new System.Windows.Forms.Label();
+            this.buttonVoltar = new System.Windows.Forms.Button();
+            this.comboBoxMarca = new System.Windows.Forms.ComboBox();
+            this.labelPreco = new System.Windows.Forms.Label();
+            this.textBoxPreco = new System.Windows.Forms.TextBox();
+            this.buttonSalvar = new System.Windows.Forms.Button();
+            this.labelCategoria = new System.Windows.Forms.Label();
+            this.radioButtonSuv = new System.Windows.Forms.RadioButton();
+            this.radioButtonSedam = new System.Windows.Forms.RadioButton();
+            this.radioButtonHatch = new System.Windows.Forms.RadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // buttonEditar
             // 
-            this.buttonEditar.Location = new System.Drawing.Point(393, 7);
+            this.buttonEditar.Location = new System.Drawing.Point(322, 7);
             this.buttonEditar.Name = "buttonEditar";
-            this.buttonEditar.Size = new System.Drawing.Size(75, 28);
+            this.buttonEditar.Size = new System.Drawing.Size(146, 28);
             this.buttonEditar.TabIndex = 0;
             this.buttonEditar.Text = "Editar";
             this.buttonEditar.UseVisualStyleBackColor = true;
@@ -82,9 +88,9 @@ namespace TrabalhoWindowsForm
             // 
             // buttonLimparCampos
             // 
-            this.buttonLimparCampos.Location = new System.Drawing.Point(488, 7);
+            this.buttonLimparCampos.Location = new System.Drawing.Point(486, 7);
             this.buttonLimparCampos.Name = "buttonLimparCampos";
-            this.buttonLimparCampos.Size = new System.Drawing.Size(103, 28);
+            this.buttonLimparCampos.Size = new System.Drawing.Size(156, 28);
             this.buttonLimparCampos.TabIndex = 1;
             this.buttonLimparCampos.Text = "Limpar Campos";
             this.buttonLimparCampos.UseVisualStyleBackColor = true;
@@ -108,6 +114,46 @@ namespace TrabalhoWindowsForm
             this.dataGridView1.RowTemplate.Height = 25;
             this.dataGridView1.Size = new System.Drawing.Size(579, 488);
             this.dataGridView1.TabIndex = 2;
+            // 
+            // ColumnModelo
+            // 
+            this.ColumnModelo.HeaderText = "Modelo";
+            this.ColumnModelo.MinimumWidth = 6;
+            this.ColumnModelo.Name = "ColumnModelo";
+            this.ColumnModelo.ReadOnly = true;
+            this.ColumnModelo.Width = 125;
+            // 
+            // ColumnPlaca
+            // 
+            this.ColumnPlaca.HeaderText = "Placa";
+            this.ColumnPlaca.MinimumWidth = 6;
+            this.ColumnPlaca.Name = "ColumnPlaca";
+            this.ColumnPlaca.ReadOnly = true;
+            this.ColumnPlaca.Width = 125;
+            // 
+            // ColumnMarca
+            // 
+            this.ColumnMarca.HeaderText = "Marca";
+            this.ColumnMarca.MinimumWidth = 6;
+            this.ColumnMarca.Name = "ColumnMarca";
+            this.ColumnMarca.ReadOnly = true;
+            this.ColumnMarca.Width = 125;
+            // 
+            // ColumnCategoria
+            // 
+            this.ColumnCategoria.HeaderText = "Categoria";
+            this.ColumnCategoria.MinimumWidth = 6;
+            this.ColumnCategoria.Name = "ColumnCategoria";
+            this.ColumnCategoria.ReadOnly = true;
+            this.ColumnCategoria.Width = 125;
+            // 
+            // ColumnPreco
+            // 
+            this.ColumnPreco.HeaderText = "Preço";
+            this.ColumnPreco.MinimumWidth = 6;
+            this.ColumnPreco.Name = "ColumnPreco";
+            this.ColumnPreco.ReadOnly = true;
+            this.ColumnPreco.Width = 125;
             // 
             // labelModelo
             // 
@@ -153,16 +199,6 @@ namespace TrabalhoWindowsForm
             this.labelMarca.TabIndex = 7;
             this.labelMarca.Text = "Marca";
             // 
-            // labelCategoria
-            // 
-            this.labelCategoria.AutoSize = true;
-            this.labelCategoria.BackColor = System.Drawing.Color.Transparent;
-            this.labelCategoria.Location = new System.Drawing.Point(609, 198);
-            this.labelCategoria.Name = "labelCategoria";
-            this.labelCategoria.Size = new System.Drawing.Size(74, 20);
-            this.labelCategoria.TabIndex = 8;
-            this.labelCategoria.Text = "Categoria";
-            // 
             // buttonVoltar
             // 
             this.buttonVoltar.Location = new System.Drawing.Point(770, 499);
@@ -171,18 +207,6 @@ namespace TrabalhoWindowsForm
             this.buttonVoltar.TabIndex = 9;
             this.buttonVoltar.Text = "Voltar";
             this.buttonVoltar.UseVisualStyleBackColor = true;
-            // 
-            // comboBoxCategoria
-            // 
-            this.comboBoxCategoria.FormattingEnabled = true;
-            this.comboBoxCategoria.Items.AddRange(new object[] {
-            "SUV",
-            "Sedam",
-            "SportBack"});
-            this.comboBoxCategoria.Location = new System.Drawing.Point(613, 221);
-            this.comboBoxCategoria.Name = "comboBoxCategoria";
-            this.comboBoxCategoria.Size = new System.Drawing.Size(236, 28);
-            this.comboBoxCategoria.TabIndex = 10;
             // 
             // comboBoxMarca
             // 
@@ -196,7 +220,7 @@ namespace TrabalhoWindowsForm
             // 
             this.labelPreco.AutoSize = true;
             this.labelPreco.BackColor = System.Drawing.Color.Transparent;
-            this.labelPreco.Location = new System.Drawing.Point(613, 252);
+            this.labelPreco.Location = new System.Drawing.Point(613, 209);
             this.labelPreco.Name = "labelPreco";
             this.labelPreco.Size = new System.Drawing.Size(46, 20);
             this.labelPreco.TabIndex = 12;
@@ -204,7 +228,7 @@ namespace TrabalhoWindowsForm
             // 
             // textBoxPreco
             // 
-            this.textBoxPreco.Location = new System.Drawing.Point(613, 275);
+            this.textBoxPreco.Location = new System.Drawing.Point(613, 232);
             this.textBoxPreco.Name = "textBoxPreco";
             this.textBoxPreco.Size = new System.Drawing.Size(236, 27);
             this.textBoxPreco.TabIndex = 13;
@@ -219,52 +243,61 @@ namespace TrabalhoWindowsForm
             this.buttonSalvar.UseVisualStyleBackColor = true;
             this.buttonSalvar.Click += new System.EventHandler(this.buttonSalvar_Click);
             // 
-            // ColumnModelo
+            // labelCategoria
             // 
-            this.ColumnModelo.HeaderText = "Modelo";
-            this.ColumnModelo.MinimumWidth = 6;
-            this.ColumnModelo.Name = "ColumnModelo";
-            this.ColumnModelo.ReadOnly = true;
+            this.labelCategoria.AutoSize = true;
+            this.labelCategoria.Font = new System.Drawing.Font("Arial Narrow", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.labelCategoria.Location = new System.Drawing.Point(634, 298);
+            this.labelCategoria.Name = "labelCategoria";
+            this.labelCategoria.Size = new System.Drawing.Size(135, 40);
+            this.labelCategoria.TabIndex = 15;
+            this.labelCategoria.Text = "Categoria";
             // 
-            // ColumnPlaca
+            // radioButtonSuv
             // 
-            this.ColumnPlaca.HeaderText = "Placa";
-            this.ColumnPlaca.MinimumWidth = 6;
-            this.ColumnPlaca.Name = "ColumnPlaca";
-            this.ColumnPlaca.ReadOnly = true;
+            this.radioButtonSuv.AutoSize = true;
+            this.radioButtonSuv.Location = new System.Drawing.Point(634, 341);
+            this.radioButtonSuv.Name = "radioButtonSuv";
+            this.radioButtonSuv.Size = new System.Drawing.Size(57, 24);
+            this.radioButtonSuv.TabIndex = 16;
+            this.radioButtonSuv.TabStop = true;
+            this.radioButtonSuv.Text = "SUV";
+            this.radioButtonSuv.UseVisualStyleBackColor = true;
             // 
-            // ColumnMarca
+            // radioButtonSedam
             // 
-            this.ColumnMarca.HeaderText = "Marca";
-            this.ColumnMarca.MinimumWidth = 6;
-            this.ColumnMarca.Name = "ColumnMarca";
-            this.ColumnMarca.ReadOnly = true;
+            this.radioButtonSedam.AutoSize = true;
+            this.radioButtonSedam.Location = new System.Drawing.Point(634, 371);
+            this.radioButtonSedam.Name = "radioButtonSedam";
+            this.radioButtonSedam.Size = new System.Drawing.Size(76, 24);
+            this.radioButtonSedam.TabIndex = 17;
+            this.radioButtonSedam.TabStop = true;
+            this.radioButtonSedam.Text = "Sedam";
+            this.radioButtonSedam.UseVisualStyleBackColor = true;
             // 
-            // ColumnCategoria
+            // radioButtonHatch
             // 
-            this.ColumnCategoria.HeaderText = "Categoria";
-            this.ColumnCategoria.MinimumWidth = 6;
-            this.ColumnCategoria.Name = "ColumnCategoria";
-            this.ColumnCategoria.ReadOnly = true;
-            this.ColumnCategoria.Width = 125;
-            // 
-            // ColumnPreco
-            // 
-            this.ColumnPreco.HeaderText = "Preço";
-            this.ColumnPreco.MinimumWidth = 6;
-            this.ColumnPreco.Name = "ColumnPreco";
-            this.ColumnPreco.ReadOnly = true;
+            this.radioButtonHatch.AutoSize = true;
+            this.radioButtonHatch.Location = new System.Drawing.Point(634, 401);
+            this.radioButtonHatch.Name = "radioButtonHatch";
+            this.radioButtonHatch.Size = new System.Drawing.Size(74, 24);
+            this.radioButtonHatch.TabIndex = 18;
+            this.radioButtonHatch.TabStop = true;
+            this.radioButtonHatch.Text = "Hatcht";
+            this.radioButtonHatch.UseVisualStyleBackColor = true;
             // 
             // CadastroCarrosForm
             // 
-            this.ClientSize = new System.Drawing.Size(861, 541);
+            this.ClientSize = new System.Drawing.Size(950, 541);
+            this.Controls.Add(this.radioButtonHatch);
+            this.Controls.Add(this.radioButtonSedam);
+            this.Controls.Add(this.radioButtonSuv);
+            this.Controls.Add(this.labelCategoria);
             this.Controls.Add(this.buttonSalvar);
             this.Controls.Add(this.textBoxPreco);
             this.Controls.Add(this.labelPreco);
             this.Controls.Add(this.comboBoxMarca);
-            this.Controls.Add(this.comboBoxCategoria);
             this.Controls.Add(this.buttonVoltar);
-            this.Controls.Add(this.labelCategoria);
             this.Controls.Add(this.labelMarca);
             this.Controls.Add(this.textBoxPlaca);
             this.Controls.Add(this.labelPlaca);
@@ -288,18 +321,52 @@ namespace TrabalhoWindowsForm
             LimparCampos();
         }
 
-        private void LimparCampos()
+        public void LimparCampos()
         {
             textBoxNome.Text = "";
             textBoxPlaca.Text = "";
             comboBoxMarca.Text = "";
-            comboBoxCategoria.Text = "";
+            radioButtonSuv.Checked = false;
+            radioButtonSedam.Checked = false;
+            radioButtonHatch.Checked = false;
             textBoxPreco = null;
         }
 
         private void buttonSalvar_Click(object sender, EventArgs e)
         {
+            var modelo = textBoxNome.Text.Trim();
+            var placa = textBoxPlaca.Text.Trim();
+            var marca = comboBoxMarca.Text.Trim();
+            var preco = Convert.ToDouble(textBoxPreco.Text.Trim());
+            var categoria = classe;
 
+            if (textBoxNome.Text == "")
+            {
+                MessageBox.Show("Insira o modelo do carro.");
+                return;
+            }
+            else if (textBoxPlaca.Text == "")
+            {
+                MessageBox.Show("Insira a placa do carro.");
+                return;
+            }
+            else if (comboBoxMarca.Text == "")
+            {
+                MessageBox.Show("Insira a marca do carro.");
+                return;
+            }
+            else if (textBoxPreco.Text == "")
+            {
+                MessageBox.Show("Insira o Preço do carro.");
+                return;
+            }
+            else if ((radioButtonSuv.Checked == false) && (radioButtonSedam.Checked == false) && (radioButtonHatch.Checked == false))
+            {
+                MessageBox.Show("Informe a categoria.");
+                return;
+            }
+
+            AdicionarCarroSalvandoArquivo(modelo, placa, marca, preco, classe);
         }
 
         public void buttonEditar_Click(object sender, EventArgs e)
@@ -324,6 +391,40 @@ namespace TrabalhoWindowsForm
         private void buttonVoltar_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void AdicionarCarroSalvandoArquivo(string modelo, string placa, string marca, double preco, string classe)
+        {
+            var carro = new Carro
+            {
+                Modelo = modelo,
+                Placa = placa,
+                Marca = marca,
+                Preco = preco,
+                Categoria = classe
+            };
+            carros.Add(carro);
+
+            SalvarArquivo();
+
+            LimparCampos();
+        }
+        private void SalvarArquivo()
+        {
+            var carroJson = JsonConvert.SerializeObject(carros);
+            File.WriteAllText("carro.json", carroJson);
+        }
+
+        private void ValidarSuvSedamHatch()
+        {
+            if (radioButtonSuv.Checked == true)
+                classe = "SUV";
+
+            else if (radioButtonSedam.Checked == true)
+                classe = "Sedam";
+
+            else if (radioButtonHatch.Checked == true)
+                classe = "Hatch";
         }
     }
 }

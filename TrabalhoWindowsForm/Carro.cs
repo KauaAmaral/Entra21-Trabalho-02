@@ -9,6 +9,7 @@ namespace TrabalhoWindowsForm
     internal class Carro
     {
         public string Marca, Modelo, Categoria,Placa;
-        public double Quilometros, Preco;
+        public double Preco;
+        public bool Classe;
     }
 }
