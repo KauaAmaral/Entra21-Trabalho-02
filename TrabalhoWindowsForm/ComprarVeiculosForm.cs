@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -27,11 +28,32 @@ namespace TrabalhoWindowsForm
             PreencherComboBoxComOsNomesDosPacientes();
         }
 
-        private void CarregarDados()
+        private void ObterDadosCep()
         {
-            dt.Columns.Add("Marca", typeof(string));
-            dt.Columns.Add("Modelo", typeof(string));
-            dt.Columns.Add("Ano", typeof(string));
+            var cep = maskedTextBoxCep.Text.Replace("-", "");
+
+            if (cep.Length != 8)
+            {
+                return;
+            }
+
+            // HttpCliente permite fazer requisições para obter ou enviar dados para outros sistemas
+            var httpClient = new HttpClient();
+
+            // Executando a requisição para o Site ViaCep para obter dados de enderço de cep
+            var resultado = httpClient.GetAsync(
+                $"https://viacep.com.br/ws/{cep}/json/").Result;
+
+            // Verificar se a requisição deu certo
+            if (resultado.StatusCode == System.Net.HttpStatusCode.OK)
+            {
+                // Obter a resposta da requisição
+                var resposta = resultado.Content.ReadAsStringAsync().Result;
+
+                var dadosEndereco = JsonConvert.DeserializeObject<EnderecoLocalidade>(resposta);
+
+                textBoxEnderecoCompleto.Text = $"{dadosEndereco.Uf} - {dadosEndereco.Localidade} - {dadosEndereco.Bairro} - {dadosEndereco.Logradouro}";
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -52,16 +74,14 @@ namespace TrabalhoWindowsForm
             }
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void textBoxEnderecoCompleto_TextChanged(object sender, EventArgs e)
         {
-            //setorPagamento.SetorPagamento();
-            //var paciente = cliente[i];
-            //comboBoxClientesCompra.Items.Add(cliente.Nome);
+            //ObterDadosCep();
         }
 
-        private void buttonClear_Click(object sender, EventArgs e)
+        private void maskedTextBoxCep_Leave(object sender, EventArgs e)
         {
-            
+            ObterDadosCep();
         }
     }
 }
