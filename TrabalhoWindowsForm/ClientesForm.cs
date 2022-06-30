@@ -28,6 +28,10 @@
             var eMail = textBoxEMail.Text.Trim();
             var dataNascimento = dateTimePickerDataNascimento.Value;
 
+            var dadosValidar = ValidarDados(nome, eMail, dataNascimento);
+
+            if (dadosValidar == false)
+                return;
 
             if (dataGridView1.SelectedRows.Count == 0)
             {
@@ -36,6 +40,10 @@
                 return;
             }
             EditarDados(nome, eMail, dataNascimento);
+
+            ListarClientes();
+
+            LimparCampos();
         }
 
         private void buttonEditar_Click(object sender, EventArgs e)
@@ -160,7 +168,7 @@
                 return false;
             }
 
-            if (eMail.Replace("-", "").Contains("#"))
+            if (eMail.Replace("-", "").Contains("@") == false)
             {
                 MessageBox.Show("E-Mail inválido");
 

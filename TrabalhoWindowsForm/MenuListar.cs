@@ -1,14 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-
-namespace TrabalhoWindowsForm
+﻿namespace TrabalhoWindowsForm
 {
     public partial class MenuListar : Form
     {
@@ -53,6 +43,11 @@ namespace TrabalhoWindowsForm
         private void buttonCadastrarVeiculos_Click(object sender, EventArgs e)
         {
             FormShow(new CadastroCarrosForm());
+        }
+
+        private void panelMenu_Paint(object sender, PaintEventArgs e)
+        {
+            FormShow(new LojasForm());
         }
     }
 }
