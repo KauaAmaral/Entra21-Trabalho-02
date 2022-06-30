@@ -18,6 +18,42 @@
             ListarLojas();
         }
 
+        private void CadastrarLoja(string cliente, string cnpj, string razaoSocial, string nomeFantasia, bool ativa, bool vendas, bool alugueis, bool consertos)
+        {
+            var loja = new Loja();
+            loja.Codigo = lojaServico.ObterUltimoCodigo() + 1;
+            loja.Cliente.Nome = cliente;
+            loja.Cnpj = cnpj;
+            loja.RazaoSocial = razaoSocial;
+            loja.NomeFantasia = nomeFantasia;
+            loja.Ativa = ativa;
+            loja.Vendas = vendas;
+            loja.Alugueis = alugueis;
+            loja.Consertos = consertos;
+
+            lojaServico.Cadastrar(loja);
+        }
+
+        private void EditarLoja(string cliente, string cnpj, string razaoSocial, string nomeFantasia, bool ativa, bool vendas, bool alugueis, bool consertos)
+        {
+            var linhaSelecionada = dataGridView1.SelectedRows[0];
+
+            var codigoSelecionado = Convert.ToInt32(linhaSelecionada.Cells[0].Value);
+
+            var loja = new Loja();
+            loja.Codigo = codigoSelecionado;
+            loja.Cliente = clienteServico.ObterPorNomeCliente(cliente);
+            loja.Cnpj = cnpj;
+            loja.RazaoSocial = razaoSocial;
+            loja.NomeFantasia = nomeFantasia;
+            loja.Ativa = ativa;
+            loja.Vendas = vendas;
+            loja.Alugueis = alugueis;
+            loja.Consertos = consertos;
+
+            lojaServico.Editar(loja);
+        }
+
         private void PreencherComboBoxComCliente()
         {
             var clientes = clienteServico.ObterTodos();
@@ -56,6 +92,7 @@
                 dataGridView1.Rows.Add(new object[]
                 {
                     loja.Codigo,
+                    loja.Cliente.Nome,
                     loja.Cnpj,
                     loja.NomeFantasia,
                     loja.Ativa
@@ -142,14 +179,57 @@
             dataGridView1.ClearSelection();
         }
 
-        public bool ValidarAtiva()
+        private bool ValidarDados(string cnpj, string razaoSocial, string nomeFantasia, bool ativa, bool vendas, bool alugueis, bool consertos)
         {
-            if (radioButtonSim.Checked == true)
+            if (cnpj.Replace("-", "").Trim().Length != 14)
             {
-                return true;
+                MessageBox.Show("CNPJ inválido");
+
+                maskedTextBoxCnpj.Focus();
+
+                return false;
             }
-            return false;
+
+            if (razaoSocial.Trim().Length < 10)
+            {
+                MessageBox.Show("Razão Social deeve conter no mínimo 10 caracteres");
+
+                textBoxRazaoSocial.Focus();
+
+                return false;
+            }
+
+            if (nomeFantasia.Trim().Length < 5)
+            {
+                MessageBox.Show("Nome Fantasia deve conter no mínimo 5 caracteres");
+
+                textBoxNomeFantasia.Focus();
+
+                return false;
+            }
+
+            if (checkBoxVendas.Checked == false && checkBoxAlugueis.Checked == false && checkBoxAlugueis.Checked == false)
+            {
+                MessageBox.Show("Selecione um searviço");
+
+                return false;
+            }
+            return true;
         }
+
+        private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            PreencherComboBoxComCliente();
+        }
+
+        //public bool ValidarAtiva()
+        //{
+        //    if (radioButtonSim.Checked == true)
+        //    {
+        //        return true;
+        //    }
+        //    return false;
+        //}
 
     }
 }

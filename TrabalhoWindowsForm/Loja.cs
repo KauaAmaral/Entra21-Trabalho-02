@@ -10,5 +10,6 @@
         public bool Vendas;
         public bool Alugueis;
         public bool Consertos;
+        public Cliente Cliente;
     }
 }

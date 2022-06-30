@@ -27,7 +27,7 @@
             var nome = textBoxNome.Text.Trim();
             var eMail = textBoxEMail.Text.Trim();
             var dataNascimento = dateTimePickerDataNascimento.Value;
-            
+
 
             if (dataGridView1.SelectedRows.Count == 0)
             {
@@ -147,6 +147,35 @@
                 });
             }
             dataGridView1.ClearSelection();
+        }
+
+        private bool ValidarDados(string nome, string eMail, DateTime dataNascimento)
+        {
+            if (nome.Replace("-", "").Trim().Length < 7)
+            {
+                MessageBox.Show("Nome deve conter no mínomo 7 caracteres");
+
+                textBoxNome.Focus();
+
+                return false;
+            }
+
+            if (eMail.Replace("-", "").Contains("#"))
+            {
+                MessageBox.Show("E-Mail inválido");
+
+                textBoxEMail.Focus();
+
+                return false;
+            }
+
+            if (dataNascimento > DateTime.Now.Date.AddYears(-12))
+            {
+                MessageBox.Show("Apenas para maiores de 12 anos");
+
+                return false;
+            }
+            return true;
         }
 
     }

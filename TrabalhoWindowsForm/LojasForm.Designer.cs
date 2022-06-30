@@ -30,10 +30,6 @@
         {
             this.textBoxRazaoSocial = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.ColumnCodigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnCnpj = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnNomeFantasia = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnAtiva = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.buttonLimparCampos = new System.Windows.Forms.Button();
             this.buttonSalvar = new System.Windows.Forms.Button();
             this.labelNomeFantasia = new System.Windows.Forms.Label();
@@ -52,6 +48,11 @@
             this.maskedTextBoxCnpj = new System.Windows.Forms.MaskedTextBox();
             this.buttonApagar = new System.Windows.Forms.Button();
             this.buttonEditar = new System.Windows.Forms.Button();
+            this.ColumnCodigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnCliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnCnpj = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnNomeFantasia = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnAtiva = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -69,6 +70,7 @@
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ColumnCodigo,
+            this.ColumnCliente,
             this.ColumnCnpj,
             this.ColumnNomeFantasia,
             this.ColumnAtiva});
@@ -80,39 +82,6 @@
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(576, 525);
             this.dataGridView1.TabIndex = 11;
-            // 
-            // ColumnCodigo
-            // 
-            this.ColumnCodigo.HeaderText = "Código";
-            this.ColumnCodigo.MinimumWidth = 6;
-            this.ColumnCodigo.Name = "ColumnCodigo";
-            this.ColumnCodigo.ReadOnly = true;
-            this.ColumnCodigo.Visible = false;
-            this.ColumnCodigo.Width = 125;
-            // 
-            // ColumnCnpj
-            // 
-            this.ColumnCnpj.HeaderText = "CNPJ";
-            this.ColumnCnpj.MinimumWidth = 6;
-            this.ColumnCnpj.Name = "ColumnCnpj";
-            this.ColumnCnpj.ReadOnly = true;
-            this.ColumnCnpj.Width = 125;
-            // 
-            // ColumnNomeFantasia
-            // 
-            this.ColumnNomeFantasia.HeaderText = "Nome Fantasia";
-            this.ColumnNomeFantasia.MinimumWidth = 6;
-            this.ColumnNomeFantasia.Name = "ColumnNomeFantasia";
-            this.ColumnNomeFantasia.ReadOnly = true;
-            this.ColumnNomeFantasia.Width = 125;
-            // 
-            // ColumnAtiva
-            // 
-            this.ColumnAtiva.HeaderText = "Ativa";
-            this.ColumnAtiva.MinimumWidth = 6;
-            this.ColumnAtiva.Name = "ColumnAtiva";
-            this.ColumnAtiva.ReadOnly = true;
-            this.ColumnAtiva.Width = 125;
             // 
             // buttonLimparCampos
             // 
@@ -283,6 +252,45 @@
             this.buttonEditar.UseVisualStyleBackColor = true;
             this.buttonEditar.Click += new System.EventHandler(this.buttonEditar_Click);
             // 
+            // ColumnCodigo
+            // 
+            this.ColumnCodigo.HeaderText = "Código";
+            this.ColumnCodigo.MinimumWidth = 6;
+            this.ColumnCodigo.Name = "ColumnCodigo";
+            this.ColumnCodigo.ReadOnly = true;
+            this.ColumnCodigo.Visible = false;
+            this.ColumnCodigo.Width = 125;
+            // 
+            // ColumnCliente
+            // 
+            this.ColumnCliente.HeaderText = "Cliente";
+            this.ColumnCliente.Name = "ColumnCliente";
+            this.ColumnCliente.ReadOnly = true;
+            // 
+            // ColumnCnpj
+            // 
+            this.ColumnCnpj.HeaderText = "CNPJ";
+            this.ColumnCnpj.MinimumWidth = 6;
+            this.ColumnCnpj.Name = "ColumnCnpj";
+            this.ColumnCnpj.ReadOnly = true;
+            this.ColumnCnpj.Width = 125;
+            // 
+            // ColumnNomeFantasia
+            // 
+            this.ColumnNomeFantasia.HeaderText = "Nome Fantasia";
+            this.ColumnNomeFantasia.MinimumWidth = 6;
+            this.ColumnNomeFantasia.Name = "ColumnNomeFantasia";
+            this.ColumnNomeFantasia.ReadOnly = true;
+            this.ColumnNomeFantasia.Width = 125;
+            // 
+            // ColumnAtiva
+            // 
+            this.ColumnAtiva.HeaderText = "Ativa";
+            this.ColumnAtiva.MinimumWidth = 6;
+            this.ColumnAtiva.Name = "ColumnAtiva";
+            this.ColumnAtiva.ReadOnly = true;
+            this.ColumnAtiva.Width = 125;
+            // 
             // LojasForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -338,11 +346,12 @@
         private ComboBox comboBoxCliente;
         private Label labelSelecioneSeuPerfil;
         private MaskedTextBox maskedTextBoxCnpj;
+        private Button buttonApagar;
+        private Button buttonEditar;
         private DataGridViewTextBoxColumn ColumnCodigo;
+        private DataGridViewTextBoxColumn ColumnCliente;
         private DataGridViewTextBoxColumn ColumnCnpj;
         private DataGridViewTextBoxColumn ColumnNomeFantasia;
         private DataGridViewTextBoxColumn ColumnAtiva;
-        private Button buttonApagar;
-        private Button buttonEditar;
     }
 }
