@@ -20,11 +20,7 @@ namespace TrabalhoWindowsForm
         private Label labelPlaca;
         private TextBox textBoxPlaca;
         private Label labelMarca;
-<<<<<<< HEAD
-        private ComboBox comboBoxMarca;
-=======
         private Button buttonVoltar;
->>>>>>> d6015fd232f38da1b314580e9d9a363e25d6bfb9
         private Label labelPreco;
         private Button buttonSalvar;
         private Button buttonEditar;
@@ -34,24 +30,18 @@ namespace TrabalhoWindowsForm
         private int indiceLinhaSelecionada = -1;
         private int codigoSelecionado = -1;
         private string classe;
-        private Label labelCategoria;
-        private RadioButton radioButtonSuv;
-        private RadioButton radioButtonSedam;
-        private RadioButton radioButtonHatch;
+
         private DataGridViewTextBoxColumn ColumnModelo;
         private DataGridViewTextBoxColumn ColumnPlaca;
         private DataGridViewTextBoxColumn ColumnMarca;
         private DataGridViewTextBoxColumn ColumnCategoria;
         private DataGridViewTextBoxColumn ColumnPreco;
-<<<<<<< HEAD
-=======
         private Label labelCategoria;
         private RadioButton radioButtonSuv;
         private RadioButton radioButtonSedam;
         private RadioButton radioButtonHatch;
         private TextBox textBoxMarca;
         private MaskedTextBox maskedTextBoxPreco;
->>>>>>> d6015fd232f38da1b314580e9d9a363e25d6bfb9
         private CarroServico carroServico;
         public CadastroCarrosForm()
         {
@@ -74,11 +64,7 @@ namespace TrabalhoWindowsForm
             this.labelPlaca = new System.Windows.Forms.Label();
             this.textBoxPlaca = new System.Windows.Forms.TextBox();
             this.labelMarca = new System.Windows.Forms.Label();
-<<<<<<< HEAD
-            this.comboBoxMarca = new System.Windows.Forms.ComboBox();
-=======
             this.buttonVoltar = new System.Windows.Forms.Button();
->>>>>>> d6015fd232f38da1b314580e9d9a363e25d6bfb9
             this.labelPreco = new System.Windows.Forms.Label();
             this.buttonSalvar = new System.Windows.Forms.Button();
             this.labelCategoria = new System.Windows.Forms.Label();
@@ -126,7 +112,7 @@ namespace TrabalhoWindowsForm
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 25;
-            this.dataGridView1.Size = new System.Drawing.Size(505, 400);
+            this.dataGridView1.Size = new System.Drawing.Size(579, 488);
             this.dataGridView1.TabIndex = 2;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -136,7 +122,7 @@ namespace TrabalhoWindowsForm
             this.ColumnModelo.MinimumWidth = 6;
             this.ColumnModelo.Name = "ColumnModelo";
             this.ColumnModelo.ReadOnly = true;
-            this.ColumnModelo.Width = 90;
+            this.ColumnModelo.Width = 125;
             // 
             // ColumnPlaca
             // 
@@ -144,7 +130,7 @@ namespace TrabalhoWindowsForm
             this.ColumnPlaca.MinimumWidth = 6;
             this.ColumnPlaca.Name = "ColumnPlaca";
             this.ColumnPlaca.ReadOnly = true;
-            this.ColumnPlaca.Width = 90;
+            this.ColumnPlaca.Width = 125;
             // 
             // ColumnMarca
             // 
@@ -152,7 +138,7 @@ namespace TrabalhoWindowsForm
             this.ColumnMarca.MinimumWidth = 6;
             this.ColumnMarca.Name = "ColumnMarca";
             this.ColumnMarca.ReadOnly = true;
-            this.ColumnMarca.Width = 90;
+            this.ColumnMarca.Width = 125;
             // 
             // ColumnCategoria
             // 
@@ -160,7 +146,7 @@ namespace TrabalhoWindowsForm
             this.ColumnCategoria.MinimumWidth = 6;
             this.ColumnCategoria.Name = "ColumnCategoria";
             this.ColumnCategoria.ReadOnly = true;
-            this.ColumnCategoria.Width = 90;
+            this.ColumnCategoria.Width = 125;
             // 
             // ColumnPreco
             // 
@@ -168,61 +154,52 @@ namespace TrabalhoWindowsForm
             this.ColumnPreco.MinimumWidth = 6;
             this.ColumnPreco.Name = "ColumnPreco";
             this.ColumnPreco.ReadOnly = true;
-            this.ColumnPreco.Width = 90;
+            this.ColumnPreco.Width = 125;
             // 
             // labelModelo
             // 
             this.labelModelo.AutoSize = true;
             this.labelModelo.BackColor = System.Drawing.Color.Transparent;
-            this.labelModelo.Location = new System.Drawing.Point(538, 66);
+            this.labelModelo.Location = new System.Drawing.Point(613, 43);
             this.labelModelo.Name = "labelModelo";
-            this.labelModelo.Size = new System.Drawing.Size(48, 15);
+            this.labelModelo.Size = new System.Drawing.Size(61, 20);
             this.labelModelo.TabIndex = 3;
             this.labelModelo.Text = "Modelo";
             // 
             // textBoxNome
             // 
-            this.textBoxNome.Location = new System.Drawing.Point(538, 89);
+            this.textBoxNome.Location = new System.Drawing.Point(613, 66);
             this.textBoxNome.Name = "textBoxNome";
-            this.textBoxNome.Size = new System.Drawing.Size(236, 23);
+            this.textBoxNome.Size = new System.Drawing.Size(236, 27);
             this.textBoxNome.TabIndex = 4;
             // 
             // labelPlaca
             // 
             this.labelPlaca.AutoSize = true;
             this.labelPlaca.BackColor = System.Drawing.Color.Transparent;
-            this.labelPlaca.Location = new System.Drawing.Point(534, 116);
+            this.labelPlaca.Location = new System.Drawing.Point(609, 93);
             this.labelPlaca.Name = "labelPlaca";
-            this.labelPlaca.Size = new System.Drawing.Size(35, 15);
+            this.labelPlaca.Size = new System.Drawing.Size(44, 20);
             this.labelPlaca.TabIndex = 5;
             this.labelPlaca.Text = "Placa";
             // 
             // textBoxPlaca
             // 
-            this.textBoxPlaca.Location = new System.Drawing.Point(538, 136);
+            this.textBoxPlaca.Location = new System.Drawing.Point(613, 113);
             this.textBoxPlaca.Name = "textBoxPlaca";
-            this.textBoxPlaca.Size = new System.Drawing.Size(236, 23);
+            this.textBoxPlaca.Size = new System.Drawing.Size(236, 27);
             this.textBoxPlaca.TabIndex = 6;
             // 
             // labelMarca
             // 
             this.labelMarca.AutoSize = true;
             this.labelMarca.BackColor = System.Drawing.Color.Transparent;
-            this.labelMarca.Location = new System.Drawing.Point(534, 172);
+            this.labelMarca.Location = new System.Drawing.Point(609, 149);
             this.labelMarca.Name = "labelMarca";
-            this.labelMarca.Size = new System.Drawing.Size(40, 15);
+            this.labelMarca.Size = new System.Drawing.Size(50, 20);
             this.labelMarca.TabIndex = 7;
             this.labelMarca.Text = "Marca";
             // 
-<<<<<<< HEAD
-            // comboBoxMarca
-            // 
-            this.comboBoxMarca.FormattingEnabled = true;
-            this.comboBoxMarca.Location = new System.Drawing.Point(538, 190);
-            this.comboBoxMarca.Name = "comboBoxMarca";
-            this.comboBoxMarca.Size = new System.Drawing.Size(236, 23);
-            this.comboBoxMarca.TabIndex = 11;
-=======
             // buttonVoltar
             // 
             this.buttonVoltar.Location = new System.Drawing.Point(770, 499);
@@ -231,31 +208,20 @@ namespace TrabalhoWindowsForm
             this.buttonVoltar.TabIndex = 9;
             this.buttonVoltar.Text = "Voltar";
             this.buttonVoltar.UseVisualStyleBackColor = true;
->>>>>>> d6015fd232f38da1b314580e9d9a363e25d6bfb9
             // 
             // labelPreco
             // 
             this.labelPreco.AutoSize = true;
             this.labelPreco.BackColor = System.Drawing.Color.Transparent;
-            this.labelPreco.Location = new System.Drawing.Point(538, 232);
+            this.labelPreco.Location = new System.Drawing.Point(613, 209);
             this.labelPreco.Name = "labelPreco";
-            this.labelPreco.Size = new System.Drawing.Size(37, 15);
+            this.labelPreco.Size = new System.Drawing.Size(46, 20);
             this.labelPreco.TabIndex = 12;
             this.labelPreco.Text = "Preço";
             // 
-<<<<<<< HEAD
-            // textBoxPreco
-            // 
-            this.textBoxPreco.Location = new System.Drawing.Point(538, 255);
-            this.textBoxPreco.Name = "textBoxPreco";
-            this.textBoxPreco.Size = new System.Drawing.Size(236, 23);
-            this.textBoxPreco.TabIndex = 13;
-            // 
-=======
->>>>>>> d6015fd232f38da1b314580e9d9a363e25d6bfb9
             // buttonSalvar
             // 
-            this.buttonSalvar.Location = new System.Drawing.Point(720, 414);
+            this.buttonSalvar.Location = new System.Drawing.Point(665, 499);
             this.buttonSalvar.Name = "buttonSalvar";
             this.buttonSalvar.Size = new System.Drawing.Size(75, 30);
             this.buttonSalvar.TabIndex = 14;
@@ -267,18 +233,18 @@ namespace TrabalhoWindowsForm
             // 
             this.labelCategoria.AutoSize = true;
             this.labelCategoria.Font = new System.Drawing.Font("Arial Narrow", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.labelCategoria.Location = new System.Drawing.Point(538, 284);
+            this.labelCategoria.Location = new System.Drawing.Point(634, 298);
             this.labelCategoria.Name = "labelCategoria";
-            this.labelCategoria.Size = new System.Drawing.Size(108, 31);
+            this.labelCategoria.Size = new System.Drawing.Size(135, 40);
             this.labelCategoria.TabIndex = 15;
             this.labelCategoria.Text = "Categoria";
             // 
             // radioButtonSuv
             // 
             this.radioButtonSuv.AutoSize = true;
-            this.radioButtonSuv.Location = new System.Drawing.Point(538, 320);
+            this.radioButtonSuv.Location = new System.Drawing.Point(634, 341);
             this.radioButtonSuv.Name = "radioButtonSuv";
-            this.radioButtonSuv.Size = new System.Drawing.Size(46, 19);
+            this.radioButtonSuv.Size = new System.Drawing.Size(57, 24);
             this.radioButtonSuv.TabIndex = 16;
             this.radioButtonSuv.TabStop = true;
             this.radioButtonSuv.Text = "SUV";
@@ -287,23 +253,23 @@ namespace TrabalhoWindowsForm
             // radioButtonSedam
             // 
             this.radioButtonSedam.AutoSize = true;
-            this.radioButtonSedam.Location = new System.Drawing.Point(538, 350);
+            this.radioButtonSedam.Location = new System.Drawing.Point(634, 371);
             this.radioButtonSedam.Name = "radioButtonSedam";
-            this.radioButtonSedam.Size = new System.Drawing.Size(57, 19);
+            this.radioButtonSedam.Size = new System.Drawing.Size(76, 24);
             this.radioButtonSedam.TabIndex = 17;
             this.radioButtonSedam.TabStop = true;
-            this.radioButtonSedam.Text = "Sedan";
+            this.radioButtonSedam.Text = "Sedam";
             this.radioButtonSedam.UseVisualStyleBackColor = true;
             // 
             // radioButtonHatch
             // 
             this.radioButtonHatch.AutoSize = true;
-            this.radioButtonHatch.Location = new System.Drawing.Point(538, 380);
+            this.radioButtonHatch.Location = new System.Drawing.Point(634, 401);
             this.radioButtonHatch.Name = "radioButtonHatch";
-            this.radioButtonHatch.Size = new System.Drawing.Size(57, 19);
+            this.radioButtonHatch.Size = new System.Drawing.Size(74, 24);
             this.radioButtonHatch.TabIndex = 18;
             this.radioButtonHatch.TabStop = true;
-            this.radioButtonHatch.Text = "Hatch";
+            this.radioButtonHatch.Text = "Hatcht";
             this.radioButtonHatch.UseVisualStyleBackColor = true;
             // 
             // textBoxMarca
@@ -323,24 +289,16 @@ namespace TrabalhoWindowsForm
             // 
             // CadastroCarrosForm
             // 
-<<<<<<< HEAD
-            this.ClientSize = new System.Drawing.Size(807, 456);
-=======
             this.ClientSize = new System.Drawing.Size(950, 541);
             this.Controls.Add(this.maskedTextBoxPreco);
             this.Controls.Add(this.textBoxMarca);
->>>>>>> d6015fd232f38da1b314580e9d9a363e25d6bfb9
             this.Controls.Add(this.radioButtonHatch);
             this.Controls.Add(this.radioButtonSedam);
             this.Controls.Add(this.radioButtonSuv);
             this.Controls.Add(this.labelCategoria);
             this.Controls.Add(this.buttonSalvar);
             this.Controls.Add(this.labelPreco);
-<<<<<<< HEAD
-            this.Controls.Add(this.comboBoxMarca);
-=======
             this.Controls.Add(this.buttonVoltar);
->>>>>>> d6015fd232f38da1b314580e9d9a363e25d6bfb9
             this.Controls.Add(this.labelMarca);
             this.Controls.Add(this.textBoxPlaca);
             this.Controls.Add(this.labelPlaca);
