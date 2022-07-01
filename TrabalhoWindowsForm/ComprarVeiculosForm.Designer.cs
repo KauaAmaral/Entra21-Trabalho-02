@@ -29,12 +29,6 @@
         private void InitializeComponent()
         {
             this.dataGridViewAbaComprar = new System.Windows.Forms.DataGridView();
-            this.ColumnCodigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnModelo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnMarca = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnPlaca = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnCategoria = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnPreco = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.textBoxContato = new System.Windows.Forms.TextBox();
             this.textBoxEnderecoCompleto = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -50,6 +44,12 @@
             this.comboBoxClientesCompra = new System.Windows.Forms.ComboBox();
             this.maskedTextBoxCpf = new System.Windows.Forms.MaskedTextBox();
             this.maskedTextBoxCep = new System.Windows.Forms.MaskedTextBox();
+            this.ColumnCodigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnModelo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnPlaca = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnMarca = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnCategoria = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnPreco = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAbaComprar)).BeginInit();
             this.SuspendLayout();
             // 
@@ -61,8 +61,8 @@
             this.dataGridViewAbaComprar.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ColumnCodigo,
             this.ColumnModelo,
-            this.ColumnMarca,
             this.ColumnPlaca,
+            this.ColumnMarca,
             this.ColumnCategoria,
             this.ColumnPreco});
             this.dataGridViewAbaComprar.Location = new System.Drawing.Point(14, 71);
@@ -71,61 +71,12 @@
             this.dataGridViewAbaComprar.ReadOnly = true;
             this.dataGridViewAbaComprar.RowHeadersWidth = 51;
             this.dataGridViewAbaComprar.RowTemplate.Height = 29;
-            this.dataGridViewAbaComprar.Size = new System.Drawing.Size(472, 416);
+            this.dataGridViewAbaComprar.Size = new System.Drawing.Size(483, 416);
             this.dataGridViewAbaComprar.TabIndex = 2;
-            // 
-            // ColumnCodigo
-            // 
-            this.ColumnCodigo.HeaderText = "Codigo";
-            this.ColumnCodigo.MinimumWidth = 6;
-            this.ColumnCodigo.Name = "ColumnCodigo";
-            this.ColumnCodigo.ReadOnly = true;
-            this.ColumnCodigo.Visible = false;
-            this.ColumnCodigo.Width = 125;
-            // 
-            // ColumnModelo
-            // 
-            this.ColumnModelo.HeaderText = "Modelo";
-            this.ColumnModelo.MinimumWidth = 6;
-            this.ColumnModelo.Name = "ColumnModelo";
-            this.ColumnModelo.ReadOnly = true;
-            this.ColumnModelo.Width = 125;
-            // 
-            // ColumnMarca
-            // 
-            this.ColumnMarca.HeaderText = "Marca";
-            this.ColumnMarca.MinimumWidth = 6;
-            this.ColumnMarca.Name = "ColumnMarca";
-            this.ColumnMarca.ReadOnly = true;
-            this.ColumnMarca.Width = 125;
-            // 
-            // ColumnPlaca
-            // 
-            this.ColumnPlaca.HeaderText = "Placa";
-            this.ColumnPlaca.MinimumWidth = 6;
-            this.ColumnPlaca.Name = "ColumnPlaca";
-            this.ColumnPlaca.ReadOnly = true;
-            this.ColumnPlaca.Width = 125;
-            // 
-            // ColumnCategoria
-            // 
-            this.ColumnCategoria.HeaderText = "Categoria";
-            this.ColumnCategoria.MinimumWidth = 6;
-            this.ColumnCategoria.Name = "ColumnCategoria";
-            this.ColumnCategoria.ReadOnly = true;
-            this.ColumnCategoria.Width = 125;
-            // 
-            // ColumnPreco
-            // 
-            this.ColumnPreco.HeaderText = "Preço";
-            this.ColumnPreco.MinimumWidth = 6;
-            this.ColumnPreco.Name = "ColumnPreco";
-            this.ColumnPreco.ReadOnly = true;
-            this.ColumnPreco.Width = 125;
             // 
             // textBoxContato
             // 
-            this.textBoxContato.Location = new System.Drawing.Point(566, 141);
+            this.textBoxContato.Location = new System.Drawing.Point(568, 143);
             this.textBoxContato.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
             this.textBoxContato.Name = "textBoxContato";
             this.textBoxContato.Size = new System.Drawing.Size(274, 27);
@@ -133,7 +84,7 @@
             // 
             // textBoxEnderecoCompleto
             // 
-            this.textBoxEnderecoCompleto.Location = new System.Drawing.Point(566, 221);
+            this.textBoxEnderecoCompleto.Location = new System.Drawing.Point(568, 223);
             this.textBoxEnderecoCompleto.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
             this.textBoxEnderecoCompleto.Name = "textBoxEnderecoCompleto";
             this.textBoxEnderecoCompleto.Size = new System.Drawing.Size(274, 27);
@@ -143,7 +94,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Location = new System.Drawing.Point(531, 109);
+            this.label1.Location = new System.Drawing.Point(532, 109);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(33, 20);
@@ -154,7 +105,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Location = new System.Drawing.Point(499, 145);
+            this.label2.Location = new System.Drawing.Point(500, 145);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(66, 20);
@@ -165,7 +116,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Location = new System.Drawing.Point(491, 225);
+            this.label3.Location = new System.Drawing.Point(497, 225);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(71, 20);
@@ -176,7 +127,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Location = new System.Drawing.Point(531, 186);
+            this.label4.Location = new System.Drawing.Point(532, 186);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(34, 20);
@@ -260,7 +211,7 @@
             // 
             // maskedTextBoxCpf
             // 
-            this.maskedTextBoxCpf.Location = new System.Drawing.Point(566, 104);
+            this.maskedTextBoxCpf.Location = new System.Drawing.Point(568, 106);
             this.maskedTextBoxCpf.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
             this.maskedTextBoxCpf.Mask = "999.999.999-99";
             this.maskedTextBoxCpf.Name = "maskedTextBoxCpf";
@@ -269,13 +220,62 @@
             // 
             // maskedTextBoxCep
             // 
-            this.maskedTextBoxCep.Location = new System.Drawing.Point(566, 180);
+            this.maskedTextBoxCep.Location = new System.Drawing.Point(568, 182);
             this.maskedTextBoxCep.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
             this.maskedTextBoxCep.Mask = "99999-999";
             this.maskedTextBoxCep.Name = "maskedTextBoxCep";
             this.maskedTextBoxCep.Size = new System.Drawing.Size(274, 27);
             this.maskedTextBoxCep.TabIndex = 20;
             this.maskedTextBoxCep.Leave += new System.EventHandler(this.maskedTextBoxCep_Leave);
+            // 
+            // ColumnCodigo
+            // 
+            this.ColumnCodigo.HeaderText = "Codigo";
+            this.ColumnCodigo.MinimumWidth = 6;
+            this.ColumnCodigo.Name = "ColumnCodigo";
+            this.ColumnCodigo.ReadOnly = true;
+            this.ColumnCodigo.Visible = false;
+            this.ColumnCodigo.Width = 125;
+            // 
+            // ColumnModelo
+            // 
+            this.ColumnModelo.HeaderText = "Modelo";
+            this.ColumnModelo.MinimumWidth = 6;
+            this.ColumnModelo.Name = "ColumnModelo";
+            this.ColumnModelo.ReadOnly = true;
+            this.ColumnModelo.Width = 80;
+            // 
+            // ColumnPlaca
+            // 
+            this.ColumnPlaca.HeaderText = "Placa";
+            this.ColumnPlaca.MinimumWidth = 6;
+            this.ColumnPlaca.Name = "ColumnPlaca";
+            this.ColumnPlaca.ReadOnly = true;
+            this.ColumnPlaca.Width = 90;
+            // 
+            // ColumnMarca
+            // 
+            this.ColumnMarca.HeaderText = "Marca";
+            this.ColumnMarca.MinimumWidth = 6;
+            this.ColumnMarca.Name = "ColumnMarca";
+            this.ColumnMarca.ReadOnly = true;
+            this.ColumnMarca.Width = 90;
+            // 
+            // ColumnCategoria
+            // 
+            this.ColumnCategoria.HeaderText = "Categoria";
+            this.ColumnCategoria.MinimumWidth = 6;
+            this.ColumnCategoria.Name = "ColumnCategoria";
+            this.ColumnCategoria.ReadOnly = true;
+            this.ColumnCategoria.Width = 80;
+            // 
+            // ColumnPreco
+            // 
+            this.ColumnPreco.HeaderText = "Preço";
+            this.ColumnPreco.MinimumWidth = 6;
+            this.ColumnPreco.Name = "ColumnPreco";
+            this.ColumnPreco.ReadOnly = true;
+            this.ColumnPreco.Width = 90;
             // 
             // ComprarVeiculosForm
             // 
@@ -302,6 +302,7 @@
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "ComprarVeiculosForm";
             this.Text = "ComprarVeiculosForm";
+            this.Load += new System.EventHandler(this.ComprarVeiculosForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAbaComprar)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -329,8 +330,8 @@
         private DataGridViewTextBoxColumn ColumnNomeEmpresa;
         private DataGridViewTextBoxColumn ColumnCodigo;
         private DataGridViewTextBoxColumn ColumnModelo;
-        private DataGridViewTextBoxColumn ColumnMarca;
         private DataGridViewTextBoxColumn ColumnPlaca;
+        private DataGridViewTextBoxColumn ColumnMarca;
         private DataGridViewTextBoxColumn ColumnCategoria;
         private DataGridViewTextBoxColumn ColumnPreco;
     }
