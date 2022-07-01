@@ -28,8 +28,32 @@ namespace TrabalhoWindowsForm
             setorPagamento = new SetorPagamentoForm();
 
             PreencherComboBoxComOsNomesDosPacientes();
+
+            ListarCarros();
         }
 
+        private void ListarCarros()
+        {
+            var carros = carroServico.ObterTodos();
+
+            dataGridViewAbaComprar.Rows.Clear();
+
+            for (int i = 0; i < carros.Count; i++)
+            {
+                var carro = carros[i];
+
+                dataGridViewAbaComprar.Rows.Add(new object[]
+                {
+                    carro.Codigo,
+                    carro.Modelo,
+                    carro.Placa,
+                    carro.Marca,
+                    carro.Categoria,
+                    carro.Preco,
+                });
+            }
+            dataGridViewAbaComprar.ClearSelection();
+        }
         private void ObterDadosCep()
         {
             var cep = maskedTextBoxCep.Text.Replace("-", "");

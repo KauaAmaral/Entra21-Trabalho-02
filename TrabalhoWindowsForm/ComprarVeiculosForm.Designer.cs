@@ -302,7 +302,6 @@
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "ComprarVeiculosForm";
             this.Text = "ComprarVeiculosForm";
-            this.Load += new System.EventHandler(this.ComprarVeiculosForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAbaComprar)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
