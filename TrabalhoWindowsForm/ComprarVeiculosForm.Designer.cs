@@ -71,7 +71,7 @@
             this.dataGridViewAbaComprar.ReadOnly = true;
             this.dataGridViewAbaComprar.RowHeadersWidth = 51;
             this.dataGridViewAbaComprar.RowTemplate.Height = 29;
-            this.dataGridViewAbaComprar.Size = new System.Drawing.Size(483, 416);
+            this.dataGridViewAbaComprar.Size = new System.Drawing.Size(482, 450);
             this.dataGridViewAbaComprar.TabIndex = 2;
             // 
             // textBoxContato
@@ -268,7 +268,8 @@
             this.ColumnCategoria.MinimumWidth = 6;
             this.ColumnCategoria.Name = "ColumnCategoria";
             this.ColumnCategoria.ReadOnly = true;
-            this.ColumnCategoria.Width = 80;
+            this.ColumnCategoria.Visible = false;
+            this.ColumnCategoria.Width = 70;
             // 
             // ColumnPreco
             // 

@@ -37,7 +37,7 @@
 
         private void buttonSair_Click(object sender, EventArgs e)
         {
-            Close();
+            Application.Exit();
         }
 
         private void buttonCadastrarVeiculos_Click(object sender, EventArgs e)
