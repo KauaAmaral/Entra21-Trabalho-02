@@ -21,7 +21,6 @@ namespace TrabalhoWindowsForm
         private TextBox textBoxPlaca;
         private Label labelMarca;
         private Button buttonVoltar;
-        private ComboBox comboBoxMarca;
         private Label labelPreco;
         private TextBox textBoxPreco;
         private Button buttonSalvar;
@@ -42,6 +41,7 @@ namespace TrabalhoWindowsForm
         private RadioButton radioButtonSuv;
         private RadioButton radioButtonSedam;
         private RadioButton radioButtonHatch;
+        private TextBox textBoxMarca;
         private CarroServico carroServico;
         public CadastroCarrosForm()
         {
@@ -65,7 +65,6 @@ namespace TrabalhoWindowsForm
             this.textBoxPlaca = new System.Windows.Forms.TextBox();
             this.labelMarca = new System.Windows.Forms.Label();
             this.buttonVoltar = new System.Windows.Forms.Button();
-            this.comboBoxMarca = new System.Windows.Forms.ComboBox();
             this.labelPreco = new System.Windows.Forms.Label();
             this.textBoxPreco = new System.Windows.Forms.TextBox();
             this.buttonSalvar = new System.Windows.Forms.Button();
@@ -73,6 +72,7 @@ namespace TrabalhoWindowsForm
             this.radioButtonSuv = new System.Windows.Forms.RadioButton();
             this.radioButtonSedam = new System.Windows.Forms.RadioButton();
             this.radioButtonHatch = new System.Windows.Forms.RadioButton();
+            this.textBoxMarca = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -209,14 +209,6 @@ namespace TrabalhoWindowsForm
             this.buttonVoltar.Text = "Voltar";
             this.buttonVoltar.UseVisualStyleBackColor = true;
             // 
-            // comboBoxMarca
-            // 
-            this.comboBoxMarca.FormattingEnabled = true;
-            this.comboBoxMarca.Location = new System.Drawing.Point(613, 167);
-            this.comboBoxMarca.Name = "comboBoxMarca";
-            this.comboBoxMarca.Size = new System.Drawing.Size(236, 28);
-            this.comboBoxMarca.TabIndex = 11;
-            // 
             // labelPreco
             // 
             this.labelPreco.AutoSize = true;
@@ -287,9 +279,17 @@ namespace TrabalhoWindowsForm
             this.radioButtonHatch.Text = "Hatcht";
             this.radioButtonHatch.UseVisualStyleBackColor = true;
             // 
+            // textBoxMarca
+            // 
+            this.textBoxMarca.Location = new System.Drawing.Point(613, 172);
+            this.textBoxMarca.Name = "textBoxMarca";
+            this.textBoxMarca.Size = new System.Drawing.Size(232, 27);
+            this.textBoxMarca.TabIndex = 19;
+            // 
             // CadastroCarrosForm
             // 
             this.ClientSize = new System.Drawing.Size(950, 541);
+            this.Controls.Add(this.textBoxMarca);
             this.Controls.Add(this.radioButtonHatch);
             this.Controls.Add(this.radioButtonSedam);
             this.Controls.Add(this.radioButtonSuv);
@@ -297,7 +297,6 @@ namespace TrabalhoWindowsForm
             this.Controls.Add(this.buttonSalvar);
             this.Controls.Add(this.textBoxPreco);
             this.Controls.Add(this.labelPreco);
-            this.Controls.Add(this.comboBoxMarca);
             this.Controls.Add(this.buttonVoltar);
             this.Controls.Add(this.labelMarca);
             this.Controls.Add(this.textBoxPlaca);
@@ -326,7 +325,7 @@ namespace TrabalhoWindowsForm
         {
             textBoxNome.Text = "";
             textBoxPlaca.Text = "";
-            comboBoxMarca.Text = "";
+            textBoxMarca.Text = "";
             radioButtonSuv.Checked = false;
             radioButtonSedam.Checked = false;
             radioButtonHatch.Checked = false;
@@ -337,9 +336,25 @@ namespace TrabalhoWindowsForm
         {
             var modelo = textBoxNome.Text.Trim();
             var placa = textBoxPlaca.Text.Trim();
-            var marca = comboBoxMarca.Text.Trim();
+            var marca = textBoxMarca.Text.Trim();
             var preco = Convert.ToDouble(textBoxPreco.Text.Trim());
             var categoria = classe;
+
+            if (indiceLinhaSelecionada == -1)
+            {
+                dataGridView1.Rows.Add(new object[]
+                {
+                    ++codigo, modelo, placa, marca, preco, categoria
+                });
+
+                textBoxNome.Text = "";
+                textBoxPlaca.Text = "";
+                textBoxMarca.Text = "";
+                textBoxPreco.Text = "";
+                radioButtonSuv.Checked = false;
+                radioButtonSedam.Checked = false;
+                radioButtonHatch.Checked = false;
+            }
 
             if (textBoxNome.Text == "")
             {
@@ -351,7 +366,7 @@ namespace TrabalhoWindowsForm
                 MessageBox.Show("Insira a placa do carro.");
                 return;
             }
-            else if (comboBoxMarca.Text == "")
+            else if (textBoxMarca.Text == "")
             {
                 MessageBox.Show("Insira a marca do carro.");
                 return;
@@ -372,12 +387,11 @@ namespace TrabalhoWindowsForm
 
         public void buttonEditar_Click(object sender, EventArgs e)
         {
-            AlteraCarro();
-            
-        }
+            var modelo = textBoxNome.Text.Trim();
+            var placa = textBoxPlaca.Text.Trim();
+            var marca = textBoxMarca.Text.Trim();
+            var preco = textBoxPreco.Text.Trim();
 
-        private void AlteraCarro()
-        {
             indiceLinhaSelecionada = dataGridView1.SelectedRows[0].Index;
 
             if (indiceLinhaSelecionada == -1)
@@ -387,6 +401,18 @@ namespace TrabalhoWindowsForm
             }
             // Obter a linha que o usuário selecionou
             var linhaSelecionada = dataGridView1.SelectedRows[0];
+
+            // Obter a informação da linha selecionada passado a coluna desejada
+            codigoSelecionado = Convert.ToInt32(linhaSelecionada.Cells[0].Value);
+            var nome = linhaSelecionada.Cells[1].Value.ToString();
+            var altura = Convert.ToDouble(linhaSelecionada.Cells[2].Value);
+            var peso = Convert.ToDouble(linhaSelecionada.Cells[3].Value);
+
+            textBoxNome.Text = nome;
+            textBoxPlaca.Text = placa;
+            textBoxMarca.Text = marca;
+            var categoria = classe;
+            textBoxPreco.Text = preco;
         }
 
         private void buttonVoltar_Click(object sender, EventArgs e)
@@ -431,6 +457,18 @@ namespace TrabalhoWindowsForm
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+        private void EditarDados(string modelo, string placa, string marca, string categoria, double preco)
+        {
+            carros[indiceLinhaSelecionada].Modelo = modelo;
+            carros[indiceLinhaSelecionada].Placa = placa;
+            carros[indiceLinhaSelecionada].Marca = marca;
+            carros[indiceLinhaSelecionada].Categoria = categoria;
+            carros[indiceLinhaSelecionada].Preco = preco;
+
+            SalvarArquivo();
+
+            LimparCampos();
         }
     }
 }
