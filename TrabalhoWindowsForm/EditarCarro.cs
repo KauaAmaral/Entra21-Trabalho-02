@@ -29,6 +29,9 @@ namespace TrabalhoWindowsForm
         private int codigoSelecionado = -1;
         private Button buttonLimparCampos;
         private CarroServico carroServico;
+        private RadioButton radioButtonSuv;
+        private RadioButton radioButtonSedam;
+        private RadioButton radioButtonHatch;
         private CadastroCarrosForm cadastroCarroForm;
         
         public RepararInformacaoCarro()
@@ -50,6 +53,9 @@ namespace TrabalhoWindowsForm
             this.labelPreco = new System.Windows.Forms.Label();
             this.textBoxPreco = new System.Windows.Forms.TextBox();
             this.buttonLimparCampos = new System.Windows.Forms.Button();
+            this.radioButtonSuv = new System.Windows.Forms.RadioButton();
+            this.radioButtonSedam = new System.Windows.Forms.RadioButton();
+            this.radioButtonHatch = new System.Windows.Forms.RadioButton();
             this.SuspendLayout();
             // 
             // buttonAlterar
@@ -123,7 +129,7 @@ namespace TrabalhoWindowsForm
             // labelPreco
             // 
             this.labelPreco.AutoSize = true;
-            this.labelPreco.Location = new System.Drawing.Point(11, 241);
+            this.labelPreco.Location = new System.Drawing.Point(11, 311);
             this.labelPreco.Name = "labelPreco";
             this.labelPreco.Size = new System.Drawing.Size(46, 20);
             this.labelPreco.TabIndex = 10;
@@ -131,7 +137,7 @@ namespace TrabalhoWindowsForm
             // 
             // textBoxPreco
             // 
-            this.textBoxPreco.Location = new System.Drawing.Point(11, 259);
+            this.textBoxPreco.Location = new System.Drawing.Point(11, 334);
             this.textBoxPreco.Name = "textBoxPreco";
             this.textBoxPreco.Size = new System.Drawing.Size(202, 27);
             this.textBoxPreco.TabIndex = 11;
@@ -145,9 +151,45 @@ namespace TrabalhoWindowsForm
             this.buttonLimparCampos.Text = "Limpar os Campos";
             this.buttonLimparCampos.UseVisualStyleBackColor = true;
             // 
+            // radioButtonSuv
+            // 
+            this.radioButtonSuv.AutoSize = true;
+            this.radioButtonSuv.Location = new System.Drawing.Point(14, 216);
+            this.radioButtonSuv.Name = "radioButtonSuv";
+            this.radioButtonSuv.Size = new System.Drawing.Size(53, 24);
+            this.radioButtonSuv.TabIndex = 13;
+            this.radioButtonSuv.TabStop = true;
+            this.radioButtonSuv.Text = "Suv";
+            this.radioButtonSuv.UseVisualStyleBackColor = true;
+            // 
+            // radioButtonSedam
+            // 
+            this.radioButtonSedam.AutoSize = true;
+            this.radioButtonSedam.Location = new System.Drawing.Point(12, 251);
+            this.radioButtonSedam.Name = "radioButtonSedam";
+            this.radioButtonSedam.Size = new System.Drawing.Size(76, 24);
+            this.radioButtonSedam.TabIndex = 14;
+            this.radioButtonSedam.TabStop = true;
+            this.radioButtonSedam.Text = "Sedam";
+            this.radioButtonSedam.UseVisualStyleBackColor = true;
+            // 
+            // radioButtonHatch
+            // 
+            this.radioButtonHatch.AutoSize = true;
+            this.radioButtonHatch.Location = new System.Drawing.Point(13, 281);
+            this.radioButtonHatch.Name = "radioButtonHatch";
+            this.radioButtonHatch.Size = new System.Drawing.Size(69, 24);
+            this.radioButtonHatch.TabIndex = 15;
+            this.radioButtonHatch.TabStop = true;
+            this.radioButtonHatch.Text = "Hatch";
+            this.radioButtonHatch.UseVisualStyleBackColor = true;
+            // 
             // RepararInformacaoCarro
             // 
             this.ClientSize = new System.Drawing.Size(450, 415);
+            this.Controls.Add(this.radioButtonHatch);
+            this.Controls.Add(this.radioButtonSedam);
+            this.Controls.Add(this.radioButtonSuv);
             this.Controls.Add(this.buttonLimparCampos);
             this.Controls.Add(this.textBoxPreco);
             this.Controls.Add(this.labelPreco);
@@ -168,10 +210,13 @@ namespace TrabalhoWindowsForm
 
         private void buttonAlterar_Click(object sender, EventArgs e)
         {
-            var modelo = textBoxModelo.Text;
-            var placa = textBoxPlaca.Text;
-            var marca = comboBoxMarca.Text;
-            var preco = textBoxPreco.Text;
+            textBoxModelo.Text = "";
+            textBoxPlaca.Text = "";
+            comboBoxMarca.Text = "";
+            radioButtonSuv.Checked = false;
+            radioButtonSedam.Checked = false;
+            radioButtonHatch.Checked = false;
+            textBoxPreco.Text = "";
         }
         private void EditarDados(string modelo, string placa, string marca, string categoria, double preco)
         {

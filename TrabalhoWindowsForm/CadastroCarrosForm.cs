@@ -114,6 +114,7 @@ namespace TrabalhoWindowsForm
             this.dataGridView1.RowTemplate.Height = 25;
             this.dataGridView1.Size = new System.Drawing.Size(579, 488);
             this.dataGridView1.TabIndex = 2;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // ColumnModelo
             // 
@@ -372,7 +373,7 @@ namespace TrabalhoWindowsForm
         public void buttonEditar_Click(object sender, EventArgs e)
         {
             AlteraCarro();
-            //var editarCarro = new EditarCarro();
+            
         }
 
         private void AlteraCarro()
@@ -425,6 +426,11 @@ namespace TrabalhoWindowsForm
 
             else if (radioButtonHatch.Checked == true)
                 classe = "Hatch";
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }
