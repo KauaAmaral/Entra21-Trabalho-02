@@ -14,17 +14,19 @@ namespace TrabalhoWindowsForm
     public partial class ComprarVeiculosForm : Form
     {
         DataTable dt = new DataTable();
+        private CarroServico carroServico;
         private ClienteServico clienteServico;
         private SetorPagamentoForm setorPagamento;
         public ComprarVeiculosForm()
         {
             InitializeComponent();
 
+            carroServico = new CarroServico();
+
             clienteServico = new ClienteServico();
 
             setorPagamento = new SetorPagamentoForm();
 
-            // Preencher a Lista dos colaboradores
             PreencherComboBoxComOsNomesDosPacientes();
         }
 
@@ -56,11 +58,6 @@ namespace TrabalhoWindowsForm
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
         private void PreencherComboBoxComOsNomesDosPacientes()
         {
             // Obter lista dos pacientes, que foram cadastrados, ou senha, armazenados no JSON
@@ -72,11 +69,6 @@ namespace TrabalhoWindowsForm
                 var clientes = cliente[i];
                 comboBoxClientesCompra.Items.Add(clientes.Nome);
             }
-        }
-
-        private void textBoxEnderecoCompleto_TextChanged(object sender, EventArgs e)
-        {
-            //ObterDadosCep();
         }
 
         private void maskedTextBoxCep_Leave(object sender, EventArgs e)
@@ -106,6 +98,19 @@ namespace TrabalhoWindowsForm
         {
             var apresentarPagamento = new SetorPagamentoForm();
             apresentarPagamento.Show();
+        }
+
+        private void buttonClear_Click(object sender, EventArgs e)
+        {
+            comboBoxClientesCompra.SelectedIndex = -1;
+            maskedTextBoxCep.Text = "";
+            maskedTextBoxCpf.Text = "";
+            textBoxContato.Text = "";
+            textBoxEnderecoCompleto.Text = "";
+            checkBoxHatch.Checked = false;
+            checkBoxSedan.Checked = false;
+            checkBoxSuv.Checked = false;
+
         }
     }
 }

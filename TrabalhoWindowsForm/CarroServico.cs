@@ -18,39 +18,30 @@ namespace TrabalhoWindowsForm
             LerArquivo();
         }
 
-
-        //Método que expõe a lista de pacientes que tem o encapsulamento privado
         public List<Carro> ObterTodos()
         {
             return carros;
         }
         public Carro ObterPorNomePaciente(string modelo)
         {
-            // Percorrer a lista de pacientes para encontrar o paciente por nome
             for (int i = 0; i < carros.Count; i++)
             {
-                // Obter o paciente que esta sendo percorrido
                 var carro = carros[i];
 
-                // Verificar se o paciente atual contém o nome do paciente escolhido
                 if (carro.Modelo == modelo)
                     return carro;
             }
 
-            // Retorna null quando não encontrar nenhum paciente com o nome do paciente escolhido
             return null;
         }
 
         private void LerArquivo()
         {
-            //Verifica se o não arquivo existe
             if (File.Exists("carros.json") == false)
                 return;
 
-            //Ler arquivo JSON com a lista de pacientes
             var carrosJson = File.ReadAllText("carros.json");
 
-            //Converter JSON para lista de objetos de pacientes
             carros = JsonConvert.DeserializeObject<List<Carro>>(carrosJson);
         }
 

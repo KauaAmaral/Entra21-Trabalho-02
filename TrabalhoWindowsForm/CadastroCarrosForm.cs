@@ -13,6 +13,14 @@ namespace TrabalhoWindowsForm
 {
     public partial class CadastroCarrosForm : Form
     {
+        ///===================================================================================================================================
+        private CarroServico carroServico;
+        private ComprarVeiculosForm comprarVeiculosForm;
+        private List<Carro> carros;
+        private int indiceLinhaSelecionada = -1;
+        private int codigoSelecionado = -1;
+        private string classe;
+        ///===================================================================================================================================
         private Button buttonLimparCampos;
         private DataGridView dataGridViewVeiculos;
         private Label labelModelo;
@@ -20,21 +28,14 @@ namespace TrabalhoWindowsForm
         private Label labelPlaca;
         private TextBox textBoxPlaca;
         private Label labelMarca;
-        private Button buttonVoltar;
         private Label labelPreco;
         private Button buttonSalvar;
         private Button buttonEditar;
-
-        private List<Carro> carros;
-        private int indiceLinhaSelecionada = -1;
-        private int codigoSelecionado = -1;
-        private string classe;
         private Label labelCategoria;
         private RadioButton radioButtonSuv;
         private RadioButton radioButtonSedam;
         private RadioButton radioButtonHatch;
         private TextBox textBoxMarca;
-        private MaskedTextBox maskedTextBoxPreco;
         private DataGridViewTextBoxColumn ColumnCodigo;
         private DataGridViewTextBoxColumn ColumnModelo;
         private DataGridViewTextBoxColumn ColumnPlaca;
@@ -42,13 +43,11 @@ namespace TrabalhoWindowsForm
         private DataGridViewTextBoxColumn ColumnCategoria;
         private DataGridViewTextBoxColumn ColumnPreco;
         private Button buttonApagar;
-        private CarroServico carroServico;
-        ///===================================================================================================================================
+        private TextBox textBoxPreco;
         public CadastroCarrosForm()
         {
             InitializeComponent();
             carroServico = new CarroServico();
-
             ListarCarros();
         }
 
@@ -68,7 +67,6 @@ namespace TrabalhoWindowsForm
             this.labelPlaca = new System.Windows.Forms.Label();
             this.textBoxPlaca = new System.Windows.Forms.TextBox();
             this.labelMarca = new System.Windows.Forms.Label();
-            this.buttonVoltar = new System.Windows.Forms.Button();
             this.labelPreco = new System.Windows.Forms.Label();
             this.buttonSalvar = new System.Windows.Forms.Button();
             this.labelCategoria = new System.Windows.Forms.Label();
@@ -76,8 +74,8 @@ namespace TrabalhoWindowsForm
             this.radioButtonSedam = new System.Windows.Forms.RadioButton();
             this.radioButtonHatch = new System.Windows.Forms.RadioButton();
             this.textBoxMarca = new System.Windows.Forms.TextBox();
-            this.maskedTextBoxPreco = new System.Windows.Forms.MaskedTextBox();
             this.buttonApagar = new System.Windows.Forms.Button();
+            this.textBoxPreco = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewVeiculos)).BeginInit();
             this.SuspendLayout();
             // 
@@ -118,7 +116,7 @@ namespace TrabalhoWindowsForm
             this.dataGridViewVeiculos.ReadOnly = true;
             this.dataGridViewVeiculos.RowHeadersWidth = 51;
             this.dataGridViewVeiculos.RowTemplate.Height = 25;
-            this.dataGridViewVeiculos.Size = new System.Drawing.Size(579, 488);
+            this.dataGridViewVeiculos.Size = new System.Drawing.Size(680, 488);
             this.dataGridViewVeiculos.TabIndex = 2;
             // 
             // ColumnCodigo
@@ -174,7 +172,7 @@ namespace TrabalhoWindowsForm
             // 
             this.labelModelo.AutoSize = true;
             this.labelModelo.BackColor = System.Drawing.Color.Transparent;
-            this.labelModelo.Location = new System.Drawing.Point(613, 43);
+            this.labelModelo.Location = new System.Drawing.Point(702, 43);
             this.labelModelo.Name = "labelModelo";
             this.labelModelo.Size = new System.Drawing.Size(61, 20);
             this.labelModelo.TabIndex = 3;
@@ -182,7 +180,7 @@ namespace TrabalhoWindowsForm
             // 
             // textBoxModelo
             // 
-            this.textBoxModelo.Location = new System.Drawing.Point(613, 66);
+            this.textBoxModelo.Location = new System.Drawing.Point(702, 66);
             this.textBoxModelo.Name = "textBoxModelo";
             this.textBoxModelo.Size = new System.Drawing.Size(236, 27);
             this.textBoxModelo.TabIndex = 4;
@@ -191,7 +189,7 @@ namespace TrabalhoWindowsForm
             // 
             this.labelPlaca.AutoSize = true;
             this.labelPlaca.BackColor = System.Drawing.Color.Transparent;
-            this.labelPlaca.Location = new System.Drawing.Point(609, 93);
+            this.labelPlaca.Location = new System.Drawing.Point(698, 93);
             this.labelPlaca.Name = "labelPlaca";
             this.labelPlaca.Size = new System.Drawing.Size(44, 20);
             this.labelPlaca.TabIndex = 5;
@@ -199,7 +197,7 @@ namespace TrabalhoWindowsForm
             // 
             // textBoxPlaca
             // 
-            this.textBoxPlaca.Location = new System.Drawing.Point(613, 113);
+            this.textBoxPlaca.Location = new System.Drawing.Point(702, 113);
             this.textBoxPlaca.Name = "textBoxPlaca";
             this.textBoxPlaca.Size = new System.Drawing.Size(236, 27);
             this.textBoxPlaca.TabIndex = 6;
@@ -208,26 +206,17 @@ namespace TrabalhoWindowsForm
             // 
             this.labelMarca.AutoSize = true;
             this.labelMarca.BackColor = System.Drawing.Color.Transparent;
-            this.labelMarca.Location = new System.Drawing.Point(609, 149);
+            this.labelMarca.Location = new System.Drawing.Point(698, 149);
             this.labelMarca.Name = "labelMarca";
             this.labelMarca.Size = new System.Drawing.Size(50, 20);
             this.labelMarca.TabIndex = 7;
             this.labelMarca.Text = "Marca";
             // 
-            // buttonVoltar
-            // 
-            this.buttonVoltar.Location = new System.Drawing.Point(770, 499);
-            this.buttonVoltar.Name = "buttonVoltar";
-            this.buttonVoltar.Size = new System.Drawing.Size(75, 30);
-            this.buttonVoltar.TabIndex = 9;
-            this.buttonVoltar.Text = "Voltar";
-            this.buttonVoltar.UseVisualStyleBackColor = true;
-            // 
             // labelPreco
             // 
             this.labelPreco.AutoSize = true;
             this.labelPreco.BackColor = System.Drawing.Color.Transparent;
-            this.labelPreco.Location = new System.Drawing.Point(613, 209);
+            this.labelPreco.Location = new System.Drawing.Point(702, 209);
             this.labelPreco.Name = "labelPreco";
             this.labelPreco.Size = new System.Drawing.Size(46, 20);
             this.labelPreco.TabIndex = 12;
@@ -235,9 +224,9 @@ namespace TrabalhoWindowsForm
             // 
             // buttonSalvar
             // 
-            this.buttonSalvar.Location = new System.Drawing.Point(665, 499);
+            this.buttonSalvar.Location = new System.Drawing.Point(825, 499);
             this.buttonSalvar.Name = "buttonSalvar";
-            this.buttonSalvar.Size = new System.Drawing.Size(75, 30);
+            this.buttonSalvar.Size = new System.Drawing.Size(113, 30);
             this.buttonSalvar.TabIndex = 14;
             this.buttonSalvar.Text = "Salvar";
             this.buttonSalvar.UseVisualStyleBackColor = true;
@@ -247,7 +236,7 @@ namespace TrabalhoWindowsForm
             // 
             this.labelCategoria.AutoSize = true;
             this.labelCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.labelCategoria.Location = new System.Drawing.Point(634, 298);
+            this.labelCategoria.Location = new System.Drawing.Point(702, 287);
             this.labelCategoria.Name = "labelCategoria";
             this.labelCategoria.Size = new System.Drawing.Size(158, 38);
             this.labelCategoria.TabIndex = 15;
@@ -256,7 +245,7 @@ namespace TrabalhoWindowsForm
             // radioButtonSuv
             // 
             this.radioButtonSuv.AutoSize = true;
-            this.radioButtonSuv.Location = new System.Drawing.Point(634, 341);
+            this.radioButtonSuv.Location = new System.Drawing.Point(702, 330);
             this.radioButtonSuv.Name = "radioButtonSuv";
             this.radioButtonSuv.Size = new System.Drawing.Size(57, 24);
             this.radioButtonSuv.TabIndex = 16;
@@ -267,7 +256,7 @@ namespace TrabalhoWindowsForm
             // radioButtonSedam
             // 
             this.radioButtonSedam.AutoSize = true;
-            this.radioButtonSedam.Location = new System.Drawing.Point(634, 371);
+            this.radioButtonSedam.Location = new System.Drawing.Point(702, 360);
             this.radioButtonSedam.Name = "radioButtonSedam";
             this.radioButtonSedam.Size = new System.Drawing.Size(76, 24);
             this.radioButtonSedam.TabIndex = 17;
@@ -278,7 +267,7 @@ namespace TrabalhoWindowsForm
             // radioButtonHatch
             // 
             this.radioButtonHatch.AutoSize = true;
-            this.radioButtonHatch.Location = new System.Drawing.Point(634, 401);
+            this.radioButtonHatch.Location = new System.Drawing.Point(702, 390);
             this.radioButtonHatch.Name = "radioButtonHatch";
             this.radioButtonHatch.Size = new System.Drawing.Size(74, 24);
             this.radioButtonHatch.TabIndex = 18;
@@ -288,18 +277,10 @@ namespace TrabalhoWindowsForm
             // 
             // textBoxMarca
             // 
-            this.textBoxMarca.Location = new System.Drawing.Point(613, 172);
+            this.textBoxMarca.Location = new System.Drawing.Point(702, 172);
             this.textBoxMarca.Name = "textBoxMarca";
             this.textBoxMarca.Size = new System.Drawing.Size(236, 27);
             this.textBoxMarca.TabIndex = 19;
-            // 
-            // maskedTextBoxPreco
-            // 
-            this.maskedTextBoxPreco.Location = new System.Drawing.Point(613, 242);
-            this.maskedTextBoxPreco.Mask = "00.000";
-            this.maskedTextBoxPreco.Name = "maskedTextBoxPreco";
-            this.maskedTextBoxPreco.Size = new System.Drawing.Size(236, 27);
-            this.maskedTextBoxPreco.TabIndex = 20;
             // 
             // buttonApagar
             // 
@@ -311,11 +292,19 @@ namespace TrabalhoWindowsForm
             this.buttonApagar.UseVisualStyleBackColor = true;
             this.buttonApagar.Click += new System.EventHandler(this.buttonApagar_Click);
             // 
+            // textBoxPreco
+            // 
+            this.textBoxPreco.Location = new System.Drawing.Point(702, 232);
+            this.textBoxPreco.Multiline = true;
+            this.textBoxPreco.Name = "textBoxPreco";
+            this.textBoxPreco.Size = new System.Drawing.Size(236, 27);
+            this.textBoxPreco.TabIndex = 22;
+            // 
             // CadastroCarrosForm
             // 
             this.ClientSize = new System.Drawing.Size(950, 541);
+            this.Controls.Add(this.textBoxPreco);
             this.Controls.Add(this.buttonApagar);
-            this.Controls.Add(this.maskedTextBoxPreco);
             this.Controls.Add(this.textBoxMarca);
             this.Controls.Add(this.radioButtonHatch);
             this.Controls.Add(this.radioButtonSedam);
@@ -323,7 +312,6 @@ namespace TrabalhoWindowsForm
             this.Controls.Add(this.labelCategoria);
             this.Controls.Add(this.buttonSalvar);
             this.Controls.Add(this.labelPreco);
-            this.Controls.Add(this.buttonVoltar);
             this.Controls.Add(this.labelMarca);
             this.Controls.Add(this.textBoxPlaca);
             this.Controls.Add(this.labelPlaca);
@@ -350,7 +338,7 @@ namespace TrabalhoWindowsForm
             var modelo = textBoxModelo.Text.Trim();
             var placa = textBoxPlaca.Text.Trim();
             var marca = textBoxMarca.Text.Trim();
-            var preco = Convert.ToDouble(maskedTextBoxPreco.Text.Trim());
+            var preco = textBoxPreco.Text.Trim();
             var categoria = classe;
 
             if (dataGridViewVeiculos.SelectedRows.Count == 0)
@@ -367,16 +355,16 @@ namespace TrabalhoWindowsForm
             textBoxModelo.Text = "";
             textBoxPlaca.Text = "";
             textBoxMarca.Text = "";
+            textBoxPreco.Text = "";
             radioButtonSuv.Checked = false;
             radioButtonSedam.Checked = false;
             radioButtonHatch.Checked = false;
-            maskedTextBoxPreco = null;
         }
         private void buttonLimparCampos_Click(object sender, EventArgs e)
         {
             LimparCampos();
         }
-        private void EditarDados(string modelo, string placa, string marca, string categoria, double preco)
+        private void EditarDados(string modelo, string placa, string marca, string categoria, string preco)
         {
             var carro = new Carro();
             carro.Modelo = modelo;
@@ -397,19 +385,14 @@ namespace TrabalhoWindowsForm
         }
         private void ListarCarros()
         {
-            //Obter a lista dos pacientes e listar para o usuario
             var carros = carroServico.ObterTodos();
 
-            //Remover todos os itens do DataGridView, pois sera adicionado novamente
             dataGridViewVeiculos.Rows.Clear();
 
-            //percorre a lista de pacientes
             for (int i = 0; i < carros.Count; i++)
             {
-                //Obtem o paciente que esta sendo percorrido
                 var carro = carros[i];
 
-                //Adicionar o paciente que estava no arquivo json no DataGridView
                 dataGridViewVeiculos.Rows.Add(new object[]
                 {
                     carro.Codigo,
@@ -440,7 +423,7 @@ namespace TrabalhoWindowsForm
                 validar = false;
                 MessageBox.Show("Insira a marca do carro.");
             }
-            else if (maskedTextBoxPreco.Text == "")
+            else if (textBoxPreco.Text == "")
             {
                 validar = false;
                 MessageBox.Show("Insira o Preço do carro.");
@@ -474,13 +457,13 @@ namespace TrabalhoWindowsForm
             textBoxModelo.Text = modelo;
             textBoxPlaca.Text = placa;
             textBoxMarca.Text = marca;
-            maskedTextBoxPreco.Text = preco.ToString();
+            textBoxPreco.Text = preco.ToString();
             radioButtonHatch.Checked = false;
             radioButtonSedam.Checked = false;
             radioButtonSuv.Checked = false;
         }
 
-        private void AdicionarCarroSalvandoArquivo(string modelo, string placa, string marca, double preco, string classe)
+        private void AdicionarCarroSalvandoArquivo(string modelo, string placa, string marca, string preco, string classe)
         {
             var carro = new Carro
             {
@@ -492,7 +475,6 @@ namespace TrabalhoWindowsForm
                 Categoria = classe,
             };
 
-            //Adicionar a informação a lista e atualizar o arquivo JSON
             carroServico.Cadastrar(carro);
 
             LimparCampos();
@@ -513,7 +495,6 @@ namespace TrabalhoWindowsForm
 
         private void buttonApagar_Click(object sender, EventArgs e)
         {
-            // Obter a quantidade de linhas que o usuario selecionou no DataGridView
             var quantidadeLinhasSelecionadas = dataGridViewVeiculos.SelectedRows.Count;
 
             if (quantidadeLinhasSelecionadas == 0)
@@ -525,15 +506,12 @@ namespace TrabalhoWindowsForm
             var opcaoDesejada = MessageBox.Show(
                 "Deseja realmente apagar esse paciente?", "Aviso", MessageBoxButtons.YesNo);
 
-            //Verifica se o usuario escolheu realmente apagar o registro
             if (opcaoDesejada == DialogResult.Yes)
             {
 
-                //Obtem o codigo do paciente escolhido para apagar
                 var linhaSelecionada = dataGridViewVeiculos.SelectedRows[0];
                 var codigoSelecionado = Convert.ToInt32(linhaSelecionada.Cells[0].Value);
 
-                // Apaga o paciente da lista de pacientes atualizando o arquivo JSON
                 carroServico.Apagar(codigoSelecionado);
 
                 ListarCarros();
