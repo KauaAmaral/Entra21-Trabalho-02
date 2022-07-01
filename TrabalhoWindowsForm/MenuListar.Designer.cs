@@ -166,10 +166,10 @@
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.pictureBox1.Image = global::TrabalhoWindowsForm.Properties.Resources.new_car;
-            this.pictureBox1.Location = new System.Drawing.Point(26, 37);
+            this.pictureBox1.Image = global::TrabalhoWindowsForm.Properties.Resources.emp;
+            this.pictureBox1.Location = new System.Drawing.Point(-33, -37);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(138, 97);
+            this.pictureBox1.Size = new System.Drawing.Size(256, 265);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
@@ -181,7 +181,6 @@
             this.panelForm.Name = "panelForm";
             this.panelForm.Size = new System.Drawing.Size(939, 667);
             this.panelForm.TabIndex = 3;
-            this.panelForm.Paint += new System.Windows.Forms.PaintEventHandler(this.panelForm_Paint);
             // 
             // MenuListar
             // 

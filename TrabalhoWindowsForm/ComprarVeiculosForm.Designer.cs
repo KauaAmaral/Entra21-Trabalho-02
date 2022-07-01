@@ -239,11 +239,12 @@
             // 
             // ColumnModelo
             // 
+            this.ColumnModelo.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
             this.ColumnModelo.HeaderText = "Modelo";
             this.ColumnModelo.MinimumWidth = 6;
             this.ColumnModelo.Name = "ColumnModelo";
             this.ColumnModelo.ReadOnly = true;
-            this.ColumnModelo.Width = 80;
+            this.ColumnModelo.Width = 90;
             // 
             // ColumnPlaca
             // 

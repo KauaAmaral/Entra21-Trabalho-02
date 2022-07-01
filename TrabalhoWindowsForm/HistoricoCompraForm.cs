@@ -90,7 +90,7 @@ namespace TrabalhoWindowsForm
 
         private void ApresentarInformacoes()
         {
-            clientes.
+            //clientes.
         }
 
     }

@@ -50,11 +50,6 @@
             FormShow(new LojasForm());
         }
 
-        private void panelForm_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
         private void buttonHistorico_Click(object sender, EventArgs e)
         {
             FormShow(new ListarVendas());

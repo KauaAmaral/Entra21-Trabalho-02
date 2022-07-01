@@ -32,7 +32,7 @@ namespace TrabalhoWindowsForm
             var dadosCartao = maskedTextBoxNumeroCartao.Text;
             var cpfCliente = maskedTextBoxCpfCartao.Text; 
 
-            var dadosCliente = ValidarDados(dadosCartao);
+            var dadosCliente = ValidarDados(dadosCartao, cpfCliente);
 
             if (dadosCliente == false)
             {
@@ -57,11 +57,20 @@ namespace TrabalhoWindowsForm
             }
         }
 
-        private bool ValidarDados(string dadosCartao)
+        private bool ValidarDados(string dadosCartao, string cpfCliente)
         {
             if (dadosCartao.Replace(" ", "").Trim().Length != 16)
             {
                 MessageBox.Show("Número do Cartão Inválido");
+
+                maskedTextBoxNumeroCartao.Focus();
+
+                return false;
+            }
+
+            if (cpfCliente.Replace(".", "").Trim().Length != 14)
+            {
+                MessageBox.Show("Número do CPF Inválido");
 
                 maskedTextBoxNumeroCartao.Focus();
 
@@ -75,6 +84,26 @@ namespace TrabalhoWindowsForm
         {
             dateTimePickerVencParcela.CustomFormat = "MM/yy";
             dateTimePickerVencParcela.Format = DateTimePickerFormat.Custom;
+        }
+
+        private string DataVencimentoParcela()
+        {
+            var parcela = "";
+
+            if (radioButtonDataUm.Checked == true)
+            {
+                parcela = "08";
+            }
+            else if (radioButtonDataDois.Checked == true)
+            {
+                parcela = "17";
+            }
+            else if(radioButtonDataTres.Checked == true)
+            {
+                parcela = "26";
+            }
+
+            return parcela;
         }
     }
 }
