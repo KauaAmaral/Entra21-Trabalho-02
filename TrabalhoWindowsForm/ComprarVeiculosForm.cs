@@ -83,5 +83,29 @@ namespace TrabalhoWindowsForm
         {
             ObterDadosCep();
         }
+
+        private void ObterSelecaoCategoria()
+        {
+            if (checkBoxHatch.Checked != false)
+            {
+                var categoria = "Hatch";
+            }
+
+            if (checkBoxSedan.Checked != false)
+            {
+                var categoria = "Sedan";
+            }
+
+            if (checkBoxSuv.Checked != false)
+            {
+                var categoria = "SUV";
+            }
+        }
+
+        private void buttonAvancar_Click(object sender, EventArgs e)
+        {
+            var apresentarPagamento = new SetorPagamentoForm();
+            apresentarPagamento.Show();
+        }
     }
 }

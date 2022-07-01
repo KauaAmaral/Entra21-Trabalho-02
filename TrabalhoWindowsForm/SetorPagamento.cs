@@ -22,7 +22,7 @@ namespace TrabalhoWindowsForm
             maskedTextBoxNumeroCartao.Enabled = false;
             textBoxNomeCartao.Text = "";
             maskedTextBoxCpfCartao.Enabled = false;
-            maskedTextBoxValidade.Enabled = false;
+            dateTimePickerVencParcela.Enabled = false;
             maskedTextBoxCodSeguranca.Enabled = false;
             comboBoxParcelas.Text = "";
         }
@@ -59,7 +59,7 @@ namespace TrabalhoWindowsForm
 
         private bool ValidarDados(string dadosCartao)
         {
-            if (dadosCartao.Replace(".", "").Trim().Length != 16)
+            if (dadosCartao.Replace(" ", "").Trim().Length != 16)
             {
                 MessageBox.Show("Número do Cartão Inválido");
 
@@ -69,6 +69,12 @@ namespace TrabalhoWindowsForm
             }
 
             return true;
+        }
+
+        private void SetorPagamentoForm_Load(object sender, EventArgs e)
+        {
+            dateTimePickerVencParcela.CustomFormat = "MM/yy";
+            dateTimePickerVencParcela.Format = DateTimePickerFormat.Custom;
         }
     }
 }

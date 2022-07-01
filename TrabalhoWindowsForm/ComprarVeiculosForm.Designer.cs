@@ -42,9 +42,9 @@
             this.buttonClear = new System.Windows.Forms.Button();
             this.buttonAvancar = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.checkBox3 = new System.Windows.Forms.CheckBox();
+            this.checkBoxHatch = new System.Windows.Forms.CheckBox();
+            this.checkBoxSuv = new System.Windows.Forms.CheckBox();
+            this.checkBoxSedan = new System.Windows.Forms.CheckBox();
             this.comboBoxClientesCompra = new System.Windows.Forms.ComboBox();
             this.maskedTextBoxCpf = new System.Windows.Forms.MaskedTextBox();
             this.maskedTextBoxCep = new System.Windows.Forms.MaskedTextBox();
@@ -176,8 +176,9 @@
             this.buttonAvancar.Name = "buttonAvancar";
             this.buttonAvancar.Size = new System.Drawing.Size(90, 34);
             this.buttonAvancar.TabIndex = 13;
-            this.buttonAvancar.Text = "Avançar";
+            this.buttonAvancar.Text = "Comprar";
             this.buttonAvancar.UseVisualStyleBackColor = true;
+            this.buttonAvancar.Click += new System.EventHandler(this.buttonAvancar_Click);
             // 
             // label5
             // 
@@ -190,38 +191,38 @@
             this.label5.TabIndex = 14;
             this.label5.Text = "CATEGORIA";
             // 
-            // checkBox1
+            // checkBoxHatch
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(492, 250);
-            this.checkBox1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(58, 19);
-            this.checkBox1.TabIndex = 15;
-            this.checkBox1.Text = "Hatch";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBoxHatch.AutoSize = true;
+            this.checkBoxHatch.Location = new System.Drawing.Point(492, 250);
+            this.checkBoxHatch.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.checkBoxHatch.Name = "checkBoxHatch";
+            this.checkBoxHatch.Size = new System.Drawing.Size(58, 19);
+            this.checkBoxHatch.TabIndex = 15;
+            this.checkBoxHatch.Text = "Hatch";
+            this.checkBoxHatch.UseVisualStyleBackColor = true;
             // 
-            // checkBox2
+            // checkBoxSuv
             // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(550, 250);
-            this.checkBox2.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(47, 19);
-            this.checkBox2.TabIndex = 16;
-            this.checkBox2.Text = "SUV";
-            this.checkBox2.UseVisualStyleBackColor = true;
+            this.checkBoxSuv.AutoSize = true;
+            this.checkBoxSuv.Location = new System.Drawing.Point(550, 250);
+            this.checkBoxSuv.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.checkBoxSuv.Name = "checkBoxSuv";
+            this.checkBoxSuv.Size = new System.Drawing.Size(47, 19);
+            this.checkBoxSuv.TabIndex = 16;
+            this.checkBoxSuv.Text = "SUV";
+            this.checkBoxSuv.UseVisualStyleBackColor = true;
             // 
-            // checkBox3
+            // checkBoxSedan
             // 
-            this.checkBox3.AutoSize = true;
-            this.checkBox3.Location = new System.Drawing.Point(609, 250);
-            this.checkBox3.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(58, 19);
-            this.checkBox3.TabIndex = 17;
-            this.checkBox3.Text = "Sedan";
-            this.checkBox3.UseVisualStyleBackColor = true;
+            this.checkBoxSedan.AutoSize = true;
+            this.checkBoxSedan.Location = new System.Drawing.Point(609, 250);
+            this.checkBoxSedan.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.checkBoxSedan.Name = "checkBoxSedan";
+            this.checkBoxSedan.Size = new System.Drawing.Size(58, 19);
+            this.checkBoxSedan.TabIndex = 17;
+            this.checkBoxSedan.Text = "Sedan";
+            this.checkBoxSedan.UseVisualStyleBackColor = true;
             // 
             // comboBoxClientesCompra
             // 
@@ -259,9 +260,9 @@
             this.Controls.Add(this.maskedTextBoxCep);
             this.Controls.Add(this.maskedTextBoxCpf);
             this.Controls.Add(this.comboBoxClientesCompra);
-            this.Controls.Add(this.checkBox3);
-            this.Controls.Add(this.checkBox2);
-            this.Controls.Add(this.checkBox1);
+            this.Controls.Add(this.checkBoxSedan);
+            this.Controls.Add(this.checkBoxSuv);
+            this.Controls.Add(this.checkBoxHatch);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.buttonAvancar);
             this.Controls.Add(this.buttonClear);
@@ -296,9 +297,9 @@
         private Button buttonClear;
         private Button buttonAvancar;
         private Label label5;
-        private CheckBox checkBox1;
-        private CheckBox checkBox2;
-        private CheckBox checkBox3;
+        private CheckBox checkBoxHatch;
+        private CheckBox checkBoxSuv;
+        private CheckBox checkBoxSedan;
         private ComboBox comboBoxClientesCompra;
         private MaskedTextBox maskedTextBoxCpf;
         private MaskedTextBox maskedTextBoxCep;
