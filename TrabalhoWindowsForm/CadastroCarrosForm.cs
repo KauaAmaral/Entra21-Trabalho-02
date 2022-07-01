@@ -14,9 +14,9 @@ namespace TrabalhoWindowsForm
     public partial class CadastroCarrosForm : Form
     {
         private Button buttonLimparCampos;
-        private DataGridView dataGridView1;
+        private DataGridView dataGridViewVeiculos;
         private Label labelModelo;
-        private TextBox textBoxNome;
+        private TextBox textBoxModelo;
         private Label labelPlaca;
         private TextBox textBoxPlaca;
         private Label labelMarca;
@@ -26,41 +26,45 @@ namespace TrabalhoWindowsForm
         private Button buttonEditar;
 
         private List<Carro> carros;
-        private int codigo = 0;
         private int indiceLinhaSelecionada = -1;
         private int codigoSelecionado = -1;
         private string classe;
-
-        private DataGridViewTextBoxColumn ColumnModelo;
-        private DataGridViewTextBoxColumn ColumnPlaca;
-        private DataGridViewTextBoxColumn ColumnMarca;
-        private DataGridViewTextBoxColumn ColumnCategoria;
-        private DataGridViewTextBoxColumn ColumnPreco;
         private Label labelCategoria;
         private RadioButton radioButtonSuv;
         private RadioButton radioButtonSedam;
         private RadioButton radioButtonHatch;
         private TextBox textBoxMarca;
         private MaskedTextBox maskedTextBoxPreco;
+        private DataGridViewTextBoxColumn ColumnCodigo;
+        private DataGridViewTextBoxColumn ColumnModelo;
+        private DataGridViewTextBoxColumn ColumnPlaca;
+        private DataGridViewTextBoxColumn ColumnMarca;
+        private DataGridViewTextBoxColumn ColumnCategoria;
+        private DataGridViewTextBoxColumn ColumnPreco;
+        private Button buttonApagar;
         private CarroServico carroServico;
+        ///===================================================================================================================================
         public CadastroCarrosForm()
         {
             InitializeComponent();
             carroServico = new CarroServico();
+
+            ListarCarros();
         }
 
         private void InitializeComponent()
         {
             this.buttonEditar = new System.Windows.Forms.Button();
             this.buttonLimparCampos = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataGridViewVeiculos = new System.Windows.Forms.DataGridView();
+            this.ColumnCodigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnModelo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnPlaca = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnMarca = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnCategoria = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnPreco = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.labelModelo = new System.Windows.Forms.Label();
-            this.textBoxNome = new System.Windows.Forms.TextBox();
+            this.textBoxModelo = new System.Windows.Forms.TextBox();
             this.labelPlaca = new System.Windows.Forms.Label();
             this.textBoxPlaca = new System.Windows.Forms.TextBox();
             this.labelMarca = new System.Windows.Forms.Label();
@@ -73,7 +77,8 @@ namespace TrabalhoWindowsForm
             this.radioButtonHatch = new System.Windows.Forms.RadioButton();
             this.textBoxMarca = new System.Windows.Forms.TextBox();
             this.maskedTextBoxPreco = new System.Windows.Forms.MaskedTextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.buttonApagar = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewVeiculos)).BeginInit();
             this.SuspendLayout();
             // 
             // buttonEditar
@@ -96,25 +101,34 @@ namespace TrabalhoWindowsForm
             this.buttonLimparCampos.UseVisualStyleBackColor = true;
             this.buttonLimparCampos.Click += new System.EventHandler(this.buttonLimparCampos_Click);
             // 
-            // dataGridView1
+            // dataGridViewVeiculos
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewVeiculos.AllowUserToAddRows = false;
+            this.dataGridViewVeiculos.AllowUserToDeleteRows = false;
+            this.dataGridViewVeiculos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewVeiculos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ColumnCodigo,
             this.ColumnModelo,
             this.ColumnPlaca,
             this.ColumnMarca,
             this.ColumnCategoria,
             this.ColumnPreco});
-            this.dataGridView1.Location = new System.Drawing.Point(12, 41);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 25;
-            this.dataGridView1.Size = new System.Drawing.Size(579, 488);
-            this.dataGridView1.TabIndex = 2;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.dataGridViewVeiculos.Location = new System.Drawing.Point(12, 41);
+            this.dataGridViewVeiculos.Name = "dataGridViewVeiculos";
+            this.dataGridViewVeiculos.ReadOnly = true;
+            this.dataGridViewVeiculos.RowHeadersWidth = 51;
+            this.dataGridViewVeiculos.RowTemplate.Height = 25;
+            this.dataGridViewVeiculos.Size = new System.Drawing.Size(579, 488);
+            this.dataGridViewVeiculos.TabIndex = 2;
+            // 
+            // ColumnCodigo
+            // 
+            this.ColumnCodigo.HeaderText = "Codigo";
+            this.ColumnCodigo.MinimumWidth = 6;
+            this.ColumnCodigo.Name = "ColumnCodigo";
+            this.ColumnCodigo.ReadOnly = true;
+            this.ColumnCodigo.Visible = false;
+            this.ColumnCodigo.Width = 125;
             // 
             // ColumnModelo
             // 
@@ -166,12 +180,12 @@ namespace TrabalhoWindowsForm
             this.labelModelo.TabIndex = 3;
             this.labelModelo.Text = "Modelo";
             // 
-            // textBoxNome
+            // textBoxModelo
             // 
-            this.textBoxNome.Location = new System.Drawing.Point(613, 66);
-            this.textBoxNome.Name = "textBoxNome";
-            this.textBoxNome.Size = new System.Drawing.Size(236, 27);
-            this.textBoxNome.TabIndex = 4;
+            this.textBoxModelo.Location = new System.Drawing.Point(613, 66);
+            this.textBoxModelo.Name = "textBoxModelo";
+            this.textBoxModelo.Size = new System.Drawing.Size(236, 27);
+            this.textBoxModelo.TabIndex = 4;
             // 
             // labelPlaca
             // 
@@ -232,10 +246,10 @@ namespace TrabalhoWindowsForm
             // labelCategoria
             // 
             this.labelCategoria.AutoSize = true;
-            this.labelCategoria.Font = new System.Drawing.Font("Arial Narrow", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.labelCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.labelCategoria.Location = new System.Drawing.Point(634, 298);
             this.labelCategoria.Name = "labelCategoria";
-            this.labelCategoria.Size = new System.Drawing.Size(135, 40);
+            this.labelCategoria.Size = new System.Drawing.Size(158, 38);
             this.labelCategoria.TabIndex = 15;
             this.labelCategoria.Text = "Categoria";
             // 
@@ -282,14 +296,25 @@ namespace TrabalhoWindowsForm
             // maskedTextBoxPreco
             // 
             this.maskedTextBoxPreco.Location = new System.Drawing.Point(613, 242);
-            this.maskedTextBoxPreco.Mask = "R$ 00.000";
+            this.maskedTextBoxPreco.Mask = "00.000";
             this.maskedTextBoxPreco.Name = "maskedTextBoxPreco";
             this.maskedTextBoxPreco.Size = new System.Drawing.Size(236, 27);
             this.maskedTextBoxPreco.TabIndex = 20;
             // 
+            // buttonApagar
+            // 
+            this.buttonApagar.Location = new System.Drawing.Point(665, 7);
+            this.buttonApagar.Name = "buttonApagar";
+            this.buttonApagar.Size = new System.Drawing.Size(94, 29);
+            this.buttonApagar.TabIndex = 21;
+            this.buttonApagar.Text = "Apagar";
+            this.buttonApagar.UseVisualStyleBackColor = true;
+            this.buttonApagar.Click += new System.EventHandler(this.buttonApagar_Click);
+            // 
             // CadastroCarrosForm
             // 
             this.ClientSize = new System.Drawing.Size(950, 541);
+            this.Controls.Add(this.buttonApagar);
             this.Controls.Add(this.maskedTextBoxPreco);
             this.Controls.Add(this.textBoxMarca);
             this.Controls.Add(this.radioButtonHatch);
@@ -302,29 +327,44 @@ namespace TrabalhoWindowsForm
             this.Controls.Add(this.labelMarca);
             this.Controls.Add(this.textBoxPlaca);
             this.Controls.Add(this.labelPlaca);
-            this.Controls.Add(this.textBoxNome);
+            this.Controls.Add(this.textBoxModelo);
             this.Controls.Add(this.labelModelo);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dataGridViewVeiculos);
             this.Controls.Add(this.buttonLimparCampos);
             this.Controls.Add(this.buttonEditar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "CadastroCarrosForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cadastro  de Carros";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewVeiculos)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
-        private void buttonLimparCampos_Click(object sender, EventArgs e)
+        private void buttonSalvar_Click(object sender, EventArgs e)
         {
-            LimparCampos();
-        }
+            //Focar no primeiro TextBox
+            textBoxModelo.Focus();
+            //Obter as informaçoes dos campos
+            var modelo = textBoxModelo.Text.Trim();
+            var placa = textBoxPlaca.Text.Trim();
+            var marca = textBoxMarca.Text.Trim();
+            var preco = Convert.ToDouble(maskedTextBoxPreco.Text.Trim());
+            var categoria = classe;
 
+            if (dataGridViewVeiculos.SelectedRows.Count == 0)
+            {
+                AdicionarCarroSalvandoArquivo(modelo, placa, marca, preco, categoria);
+
+                return;
+            }
+
+            EditarDados(modelo, placa, marca, categoria, preco);
+        }
         public void LimparCampos()
         {
-            textBoxNome.Text = "";
+            textBoxModelo.Text = "";
             textBoxPlaca.Text = "";
             textBoxMarca.Text = "";
             radioButtonSuv.Checked = false;
@@ -332,118 +372,134 @@ namespace TrabalhoWindowsForm
             radioButtonHatch.Checked = false;
             maskedTextBoxPreco = null;
         }
-
-        private void buttonSalvar_Click(object sender, EventArgs e)
+        private void buttonLimparCampos_Click(object sender, EventArgs e)
         {
-            var modelo = textBoxNome.Text.Trim();
-            var placa = textBoxPlaca.Text.Trim();
-            var marca = textBoxMarca.Text.Trim();
-            var preco = Convert.ToDouble(maskedTextBoxPreco.Text.Trim());
-            var categoria = classe;
+            LimparCampos();
+        }
+        private void EditarDados(string modelo, string placa, string marca, string categoria, double preco)
+        {
+            var carro = new Carro();
+            carro.Modelo = modelo;
+            carro.Placa = placa;
+            carro.Marca = marca;
+            carro.Categoria = categoria;
+            carro.Preco = preco;
 
-            if (indiceLinhaSelecionada == -1)
+            var linhaSelecionada = dataGridViewVeiculos.SelectedRows[0];
+            var codigo = Convert.ToInt32(linhaSelecionada.Cells[0].Value);
+            carro.Codigo = codigo;
+
+            carroServico.Editar(carro);
+
+            LimparCampos();
+
+            ListarCarros();
+        }
+        private void ListarCarros()
+        {
+            //Obter a lista dos pacientes e listar para o usuario
+            var carros = carroServico.ObterTodos();
+
+            //Remover todos os itens do DataGridView, pois sera adicionado novamente
+            dataGridViewVeiculos.Rows.Clear();
+
+            //percorre a lista de pacientes
+            for (int i = 0; i < carros.Count; i++)
             {
-                dataGridView1.Rows.Add(new object[]
+                //Obtem o paciente que esta sendo percorrido
+                var carro = carros[i];
+
+                //Adicionar o paciente que estava no arquivo json no DataGridView
+                dataGridViewVeiculos.Rows.Add(new object[]
                 {
-                    ++codigo, modelo, placa, marca, preco, categoria
+                    carro.Codigo,
+                    carro.Modelo,
+                    carro.Placa,
+                    carro.Marca,
+                    carro.Categoria,
+                    carro.Preco,
                 });
-
-                textBoxNome.Text = "";
-                textBoxPlaca.Text = "";
-                textBoxMarca.Text = "";
-                maskedTextBoxPreco.Text = "";
-                radioButtonSuv.Checked = false;
-                radioButtonSedam.Checked = false;
-                radioButtonHatch.Checked = false;
             }
-
-            if (textBoxNome.Text == "")
+            dataGridViewVeiculos.ClearSelection();
+        }
+        private bool ValidarDadosDoVeiculo()
+        {
+            bool validar;
+            if (textBoxModelo.Text == "")
             {
+                validar = false;
                 MessageBox.Show("Insira o modelo do carro.");
-                return;
             }
             else if (textBoxPlaca.Text == "")
             {
+                validar = false;
                 MessageBox.Show("Insira a placa do carro.");
-                return;
             }
             else if (textBoxMarca.Text == "")
             {
+                validar = false;
                 MessageBox.Show("Insira a marca do carro.");
-                return;
             }
             else if (maskedTextBoxPreco.Text == "")
             {
+                validar = false;
                 MessageBox.Show("Insira o Preço do carro.");
-                return;
             }
             else if ((radioButtonSuv.Checked == false) && (radioButtonSedam.Checked == false) && (radioButtonHatch.Checked == false))
             {
+                validar = false;
                 MessageBox.Show("Informe a categoria.");
-                return;
             }
+            else
+                validar = true;
 
-            AdicionarCarroSalvandoArquivo(modelo, placa, marca, preco, classe);
+            return validar;
         }
-
         public void buttonEditar_Click(object sender, EventArgs e)
         {
-            var modelo = textBoxNome.Text.Trim();
-            var placa = textBoxPlaca.Text.Trim();
-            var marca = textBoxMarca.Text.Trim();
-            var preco = maskedTextBoxPreco.Text.Trim();
-
-            indiceLinhaSelecionada = dataGridView1.SelectedRows[0].Index;
-
-            if (indiceLinhaSelecionada == -1)
+            if (dataGridViewVeiculos.SelectedRows.Count == 0)
             {
-                MessageBox.Show("Selecione um carro.");
+                MessageBox.Show("Seleciona um Veiculo, Antes de Editar!");
                 return;
             }
-            // Obter a linha que o usuário selecionou
-            var linhaSelecionada = dataGridView1.SelectedRows[0];
 
-            // Obter a informação da linha selecionada passado a coluna desejada
-            codigoSelecionado = Convert.ToInt32(linhaSelecionada.Cells[0].Value);
-            var nome = linhaSelecionada.Cells[1].Value.ToString();
-            var altura = Convert.ToDouble(linhaSelecionada.Cells[2].Value);
-            var peso = Convert.ToDouble(linhaSelecionada.Cells[3].Value);
+            var linhaSelecionada = dataGridViewVeiculos.SelectedRows[0];
 
-            textBoxNome.Text = nome;
+            var modelo = linhaSelecionada.Cells[1].Value.ToString();
+            var placa = linhaSelecionada.Cells[2].Value.ToString();
+            var marca = linhaSelecionada.Cells[3].Value.ToString();
+            var categoria = linhaSelecionada.Cells[4].Value;
+            var preco = Convert.ToDouble(linhaSelecionada.Cells[5].Value);
+
+            textBoxModelo.Text = modelo;
             textBoxPlaca.Text = placa;
             textBoxMarca.Text = marca;
-            var categoria = classe;
-            maskedTextBoxPreco.Text = preco;
-        }
-
-        private void buttonVoltar_Click(object sender, EventArgs e)
-        {
-
+            maskedTextBoxPreco.Text = preco.ToString();
+            radioButtonHatch.Checked = false;
+            radioButtonSedam.Checked = false;
+            radioButtonSuv.Checked = false;
         }
 
         private void AdicionarCarroSalvandoArquivo(string modelo, string placa, string marca, double preco, string classe)
         {
             var carro = new Carro
             {
+                //Codigo = CarroServico.ObterUltimoCodigo() + 1,
                 Modelo = modelo,
                 Placa = placa,
                 Marca = marca,
                 Preco = preco,
-                Categoria = classe
+                Categoria = classe,
             };
-            carros.Add(carro);
 
-            SalvarArquivo();
+            //Adicionar a informação a lista e atualizar o arquivo JSON
+            carroServico.Cadastrar(carro);
 
             LimparCampos();
-        }
-        private void SalvarArquivo()
-        {
-            var carroJson = JsonConvert.SerializeObject(carros);
-            File.WriteAllText("carro.json", carroJson);
-        }
 
-        private void ValidarSuvSedamHatch()
+            ListarCarros();
+        }
+        private void ValidarCategorias()
         {
             if (radioButtonSuv.Checked == true)
                 classe = "SUV";
@@ -455,21 +511,33 @@ namespace TrabalhoWindowsForm
                 classe = "Hatch";
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void buttonApagar_Click(object sender, EventArgs e)
         {
+            // Obter a quantidade de linhas que o usuario selecionou no DataGridView
+            var quantidadeLinhasSelecionadas = dataGridViewVeiculos.SelectedRows.Count;
 
-        }
-        private void EditarDados(string modelo, string placa, string marca, string categoria, double preco)
-        {
-            carros[indiceLinhaSelecionada].Modelo = modelo;
-            carros[indiceLinhaSelecionada].Placa = placa;
-            carros[indiceLinhaSelecionada].Marca = marca;
-            carros[indiceLinhaSelecionada].Categoria = categoria;
-            carros[indiceLinhaSelecionada].Preco = preco;
+            if (quantidadeLinhasSelecionadas == 0)
+            {
+                MessageBox.Show("Selecione um paciente");
+                return;
+            }
 
-            SalvarArquivo();
+            var opcaoDesejada = MessageBox.Show(
+                "Deseja realmente apagar esse paciente?", "Aviso", MessageBoxButtons.YesNo);
 
-            LimparCampos();
+            //Verifica se o usuario escolheu realmente apagar o registro
+            if (opcaoDesejada == DialogResult.Yes)
+            {
+
+                //Obtem o codigo do paciente escolhido para apagar
+                var linhaSelecionada = dataGridViewVeiculos.SelectedRows[0];
+                var codigoSelecionado = Convert.ToInt32(linhaSelecionada.Cells[0].Value);
+
+                // Apaga o paciente da lista de pacientes atualizando o arquivo JSON
+                carroServico.Apagar(codigoSelecionado);
+
+                ListarCarros();
+            }
         }
     }
 }

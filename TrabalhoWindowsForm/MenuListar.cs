@@ -54,5 +54,10 @@
         {
 
         }
+
+        private void buttonHistorico_Click(object sender, EventArgs e)
+        {
+            FormShow(new ListarVendas());
+        }
     }
 }
