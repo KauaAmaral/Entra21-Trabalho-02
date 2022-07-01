@@ -174,7 +174,7 @@ namespace TrabalhoWindowsForm
             this.labelModelo.BackColor = System.Drawing.Color.Transparent;
             this.labelModelo.Location = new System.Drawing.Point(702, 43);
             this.labelModelo.Name = "labelModelo";
-            this.labelModelo.Size = new System.Drawing.Size(61, 20);
+            this.labelModelo.Size = new System.Drawing.Size(48, 15);
             this.labelModelo.TabIndex = 3;
             this.labelModelo.Text = "Modelo";
             // 
@@ -182,7 +182,7 @@ namespace TrabalhoWindowsForm
             // 
             this.textBoxModelo.Location = new System.Drawing.Point(702, 66);
             this.textBoxModelo.Name = "textBoxModelo";
-            this.textBoxModelo.Size = new System.Drawing.Size(236, 27);
+            this.textBoxModelo.Size = new System.Drawing.Size(236, 23);
             this.textBoxModelo.TabIndex = 4;
             // 
             // labelPlaca
@@ -191,7 +191,7 @@ namespace TrabalhoWindowsForm
             this.labelPlaca.BackColor = System.Drawing.Color.Transparent;
             this.labelPlaca.Location = new System.Drawing.Point(698, 93);
             this.labelPlaca.Name = "labelPlaca";
-            this.labelPlaca.Size = new System.Drawing.Size(44, 20);
+            this.labelPlaca.Size = new System.Drawing.Size(35, 15);
             this.labelPlaca.TabIndex = 5;
             this.labelPlaca.Text = "Placa";
             // 
@@ -199,7 +199,7 @@ namespace TrabalhoWindowsForm
             // 
             this.textBoxPlaca.Location = new System.Drawing.Point(702, 113);
             this.textBoxPlaca.Name = "textBoxPlaca";
-            this.textBoxPlaca.Size = new System.Drawing.Size(236, 27);
+            this.textBoxPlaca.Size = new System.Drawing.Size(236, 23);
             this.textBoxPlaca.TabIndex = 6;
             // 
             // labelMarca
@@ -208,7 +208,7 @@ namespace TrabalhoWindowsForm
             this.labelMarca.BackColor = System.Drawing.Color.Transparent;
             this.labelMarca.Location = new System.Drawing.Point(698, 149);
             this.labelMarca.Name = "labelMarca";
-            this.labelMarca.Size = new System.Drawing.Size(50, 20);
+            this.labelMarca.Size = new System.Drawing.Size(40, 15);
             this.labelMarca.TabIndex = 7;
             this.labelMarca.Text = "Marca";
             // 
@@ -218,7 +218,7 @@ namespace TrabalhoWindowsForm
             this.labelPreco.BackColor = System.Drawing.Color.Transparent;
             this.labelPreco.Location = new System.Drawing.Point(702, 209);
             this.labelPreco.Name = "labelPreco";
-            this.labelPreco.Size = new System.Drawing.Size(46, 20);
+            this.labelPreco.Size = new System.Drawing.Size(37, 15);
             this.labelPreco.TabIndex = 12;
             this.labelPreco.Text = "Preço";
             // 
@@ -238,7 +238,7 @@ namespace TrabalhoWindowsForm
             this.labelCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.labelCategoria.Location = new System.Drawing.Point(702, 287);
             this.labelCategoria.Name = "labelCategoria";
-            this.labelCategoria.Size = new System.Drawing.Size(158, 38);
+            this.labelCategoria.Size = new System.Drawing.Size(132, 31);
             this.labelCategoria.TabIndex = 15;
             this.labelCategoria.Text = "Categoria";
             // 
@@ -247,7 +247,7 @@ namespace TrabalhoWindowsForm
             this.radioButtonSuv.AutoSize = true;
             this.radioButtonSuv.Location = new System.Drawing.Point(702, 330);
             this.radioButtonSuv.Name = "radioButtonSuv";
-            this.radioButtonSuv.Size = new System.Drawing.Size(57, 24);
+            this.radioButtonSuv.Size = new System.Drawing.Size(46, 19);
             this.radioButtonSuv.TabIndex = 16;
             this.radioButtonSuv.TabStop = true;
             this.radioButtonSuv.Text = "SUV";
@@ -258,7 +258,7 @@ namespace TrabalhoWindowsForm
             this.radioButtonSedam.AutoSize = true;
             this.radioButtonSedam.Location = new System.Drawing.Point(702, 360);
             this.radioButtonSedam.Name = "radioButtonSedam";
-            this.radioButtonSedam.Size = new System.Drawing.Size(76, 24);
+            this.radioButtonSedam.Size = new System.Drawing.Size(61, 19);
             this.radioButtonSedam.TabIndex = 17;
             this.radioButtonSedam.TabStop = true;
             this.radioButtonSedam.Text = "Sedam";
@@ -269,7 +269,7 @@ namespace TrabalhoWindowsForm
             this.radioButtonHatch.AutoSize = true;
             this.radioButtonHatch.Location = new System.Drawing.Point(702, 390);
             this.radioButtonHatch.Name = "radioButtonHatch";
-            this.radioButtonHatch.Size = new System.Drawing.Size(74, 24);
+            this.radioButtonHatch.Size = new System.Drawing.Size(61, 19);
             this.radioButtonHatch.TabIndex = 18;
             this.radioButtonHatch.TabStop = true;
             this.radioButtonHatch.Text = "Hatcht";
@@ -279,7 +279,7 @@ namespace TrabalhoWindowsForm
             // 
             this.textBoxMarca.Location = new System.Drawing.Point(702, 172);
             this.textBoxMarca.Name = "textBoxMarca";
-            this.textBoxMarca.Size = new System.Drawing.Size(236, 27);
+            this.textBoxMarca.Size = new System.Drawing.Size(236, 23);
             this.textBoxMarca.TabIndex = 19;
             // 
             // buttonApagar
@@ -323,13 +323,12 @@ namespace TrabalhoWindowsForm
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "CadastroCarrosForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Cadastro  de Carros";
+            this.Text = "Cadastro de Carros";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewVeiculos)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
-
         private void buttonSalvar_Click(object sender, EventArgs e)
         {
             //Focar no primeiro TextBox
