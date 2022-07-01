@@ -19,7 +19,7 @@ namespace TrabalhoWindowsForm
         private DataGridViewTextBoxColumn ColumnDiaPagamento;
 
         private SetorPagamentoForm setorPagamento;
-        private ClientesForm clientes;
+        private Cliente clientes;
         private CadastroCarrosForm cadastroCarros;
         public HistoricoCompraForm()
         {
@@ -90,8 +90,15 @@ namespace TrabalhoWindowsForm
 
         private void ApresentarInformacoes()
         {
-            clientes.
+            var nome = clientes.Nome;
+            var carro = cadastroCarros;
+            var parcela = setorPagamento;
+            var dataPagamento = setorPagamento;
         }
 
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

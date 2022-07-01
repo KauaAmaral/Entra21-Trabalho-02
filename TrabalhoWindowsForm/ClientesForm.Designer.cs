@@ -35,50 +35,49 @@
             this.buttonEditar = new System.Windows.Forms.Button();
             this.buttonLimparCampos = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.textBoxNome = new System.Windows.Forms.TextBox();
-            this.textBoxEMail = new System.Windows.Forms.TextBox();
-            this.dateTimePickerDataNascimento = new System.Windows.Forms.DateTimePicker();
-            this.buttonApagar = new System.Windows.Forms.Button();
             this.ColumnCodigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnNome = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnEMail = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnDataNascimento = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.textBoxNome = new System.Windows.Forms.TextBox();
+            this.textBoxEMail = new System.Windows.Forms.TextBox();
+            this.dateTimePickerDataNascimento = new System.Windows.Forms.DateTimePicker();
+            this.buttonApagar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // labelNome
             // 
             this.labelNome.AutoSize = true;
-            this.labelNome.Location = new System.Drawing.Point(9, 68);
+            this.labelNome.Location = new System.Drawing.Point(8, 51);
             this.labelNome.Name = "labelNome";
-            this.labelNome.Size = new System.Drawing.Size(50, 20);
+            this.labelNome.Size = new System.Drawing.Size(40, 15);
             this.labelNome.TabIndex = 0;
             this.labelNome.Text = "Nome";
             // 
             // labelEMail
             // 
             this.labelEMail.AutoSize = true;
-            this.labelEMail.Location = new System.Drawing.Point(9, 122);
+            this.labelEMail.Location = new System.Drawing.Point(8, 92);
             this.labelEMail.Name = "labelEMail";
-            this.labelEMail.Size = new System.Drawing.Size(52, 20);
+            this.labelEMail.Size = new System.Drawing.Size(41, 15);
             this.labelEMail.TabIndex = 0;
             this.labelEMail.Text = "E-Mail";
             // 
             // labelDataDeNascimento
             // 
             this.labelDataDeNascimento.AutoSize = true;
-            this.labelDataDeNascimento.Location = new System.Drawing.Point(9, 185);
+            this.labelDataDeNascimento.Location = new System.Drawing.Point(8, 139);
             this.labelDataDeNascimento.Name = "labelDataDeNascimento";
-            this.labelDataDeNascimento.Size = new System.Drawing.Size(142, 20);
+            this.labelDataDeNascimento.Size = new System.Drawing.Size(112, 15);
             this.labelDataDeNascimento.TabIndex = 0;
             this.labelDataDeNascimento.Text = "Data de nascimento";
             // 
             // buttonSalvar
             // 
-            this.buttonSalvar.Location = new System.Drawing.Point(176, 559);
-            this.buttonSalvar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.buttonSalvar.Location = new System.Drawing.Point(154, 419);
             this.buttonSalvar.Name = "buttonSalvar";
-            this.buttonSalvar.Size = new System.Drawing.Size(157, 29);
+            this.buttonSalvar.Size = new System.Drawing.Size(137, 22);
             this.buttonSalvar.TabIndex = 1;
             this.buttonSalvar.Text = "Salvar";
             this.buttonSalvar.UseVisualStyleBackColor = true;
@@ -86,10 +85,9 @@
             // 
             // buttonEditar
             // 
-            this.buttonEditar.Location = new System.Drawing.Point(341, 27);
-            this.buttonEditar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.buttonEditar.Location = new System.Drawing.Point(298, 20);
             this.buttonEditar.Name = "buttonEditar";
-            this.buttonEditar.Size = new System.Drawing.Size(147, 31);
+            this.buttonEditar.Size = new System.Drawing.Size(129, 23);
             this.buttonEditar.TabIndex = 1;
             this.buttonEditar.Text = "Editar";
             this.buttonEditar.UseVisualStyleBackColor = true;
@@ -97,10 +95,9 @@
             // 
             // buttonLimparCampos
             // 
-            this.buttonLimparCampos.Location = new System.Drawing.Point(9, 559);
-            this.buttonLimparCampos.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.buttonLimparCampos.Location = new System.Drawing.Point(8, 419);
             this.buttonLimparCampos.Name = "buttonLimparCampos";
-            this.buttonLimparCampos.Size = new System.Drawing.Size(158, 31);
+            this.buttonLimparCampos.Size = new System.Drawing.Size(138, 23);
             this.buttonLimparCampos.TabIndex = 1;
             this.buttonLimparCampos.Text = "Limpar Campos";
             this.buttonLimparCampos.UseVisualStyleBackColor = true;
@@ -116,52 +113,14 @@
             this.ColumnNome,
             this.ColumnEMail,
             this.ColumnDataNascimento});
-            this.dataGridView1.Location = new System.Drawing.Point(341, 76);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.dataGridView1.Location = new System.Drawing.Point(298, 57);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 25;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(576, 512);
+            this.dataGridView1.Size = new System.Drawing.Size(504, 384);
             this.dataGridView1.TabIndex = 2;
-            // 
-            // textBoxNome
-            // 
-            this.textBoxNome.Location = new System.Drawing.Point(9, 92);
-            this.textBoxNome.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.textBoxNome.Name = "textBoxNome";
-            this.textBoxNome.Size = new System.Drawing.Size(319, 27);
-            this.textBoxNome.TabIndex = 3;
-            // 
-            // textBoxEMail
-            // 
-            this.textBoxEMail.Location = new System.Drawing.Point(9, 146);
-            this.textBoxEMail.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.textBoxEMail.Name = "textBoxEMail";
-            this.textBoxEMail.Size = new System.Drawing.Size(319, 27);
-            this.textBoxEMail.TabIndex = 3;
-            // 
-            // dateTimePickerDataNascimento
-            // 
-            this.dateTimePickerDataNascimento.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePickerDataNascimento.Location = new System.Drawing.Point(9, 209);
-            this.dateTimePickerDataNascimento.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.dateTimePickerDataNascimento.Name = "dateTimePickerDataNascimento";
-            this.dateTimePickerDataNascimento.Size = new System.Drawing.Size(108, 27);
-            this.dateTimePickerDataNascimento.TabIndex = 4;
-            this.dateTimePickerDataNascimento.Value = new System.DateTime(2022, 6, 29, 18, 52, 24, 0);
-            // 
-            // buttonApagar
-            // 
-            this.buttonApagar.Location = new System.Drawing.Point(770, 27);
-            this.buttonApagar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.buttonApagar.Name = "buttonApagar";
-            this.buttonApagar.Size = new System.Drawing.Size(147, 31);
-            this.buttonApagar.TabIndex = 1;
-            this.buttonApagar.Text = "Apagar";
-            this.buttonApagar.UseVisualStyleBackColor = true;
-            this.buttonApagar.Click += new System.EventHandler(this.buttonApagar_Click);
             // 
             // ColumnCodigo
             // 
@@ -196,11 +155,45 @@
             this.ColumnDataNascimento.ReadOnly = true;
             this.ColumnDataNascimento.Width = 150;
             // 
+            // textBoxNome
+            // 
+            this.textBoxNome.Location = new System.Drawing.Point(8, 69);
+            this.textBoxNome.Name = "textBoxNome";
+            this.textBoxNome.Size = new System.Drawing.Size(280, 23);
+            this.textBoxNome.TabIndex = 3;
+            this.textBoxNome.Text = " ";
+            // 
+            // textBoxEMail
+            // 
+            this.textBoxEMail.Location = new System.Drawing.Point(8, 110);
+            this.textBoxEMail.Name = "textBoxEMail";
+            this.textBoxEMail.Size = new System.Drawing.Size(280, 23);
+            this.textBoxEMail.TabIndex = 3;
+            // 
+            // dateTimePickerDataNascimento
+            // 
+            this.dateTimePickerDataNascimento.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTimePickerDataNascimento.Location = new System.Drawing.Point(8, 157);
+            this.dateTimePickerDataNascimento.Name = "dateTimePickerDataNascimento";
+            this.dateTimePickerDataNascimento.Size = new System.Drawing.Size(95, 23);
+            this.dateTimePickerDataNascimento.TabIndex = 4;
+            this.dateTimePickerDataNascimento.Value = new System.DateTime(2022, 6, 29, 18, 52, 24, 0);
+            // 
+            // buttonApagar
+            // 
+            this.buttonApagar.Location = new System.Drawing.Point(674, 20);
+            this.buttonApagar.Name = "buttonApagar";
+            this.buttonApagar.Size = new System.Drawing.Size(129, 23);
+            this.buttonApagar.TabIndex = 1;
+            this.buttonApagar.Text = "Apagar";
+            this.buttonApagar.UseVisualStyleBackColor = true;
+            this.buttonApagar.Click += new System.EventHandler(this.buttonApagar_Click);
+            // 
             // ClientesForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(929, 601);
+            this.ClientSize = new System.Drawing.Size(813, 451);
             this.Controls.Add(this.dateTimePickerDataNascimento);
             this.Controls.Add(this.textBoxEMail);
             this.Controls.Add(this.textBoxNome);
@@ -213,7 +206,6 @@
             this.Controls.Add(this.labelEMail);
             this.Controls.Add(this.labelNome);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "ClientesForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cadastro de Clientes";
