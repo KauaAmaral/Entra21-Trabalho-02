@@ -80,7 +80,10 @@ namespace TrabalhoWindowsForm
 
                 var dadosEndereco = JsonConvert.DeserializeObject<EnderecoLocalidade>(resposta);
 
-                textBoxEnderecoCompleto.Text = $"{dadosEndereco.Uf} - {dadosEndereco.Localidade} - {dadosEndereco.Bairro} - {dadosEndereco.Logradouro}";
+                textBoxRua.Text = $"{dadosEndereco.Logradouro}";
+                textBoxBairro.Text = $"{ dadosEndereco.Bairro}";
+                textBoxCidade.Text = $"{ dadosEndereco.Localidade}";
+                textBoxUf.Text = $"{dadosEndereco.Uf}";
             }
         }
 
@@ -132,7 +135,7 @@ namespace TrabalhoWindowsForm
             maskedTextBoxCep.Text = "";
             maskedTextBoxCpf.Text = "";
             textBoxContato.Text = "";
-            textBoxEnderecoCompleto.Text = "";
+            textBoxRua.Text = "";
             checkBoxHatch.Checked = false;
             checkBoxSedan.Checked = false;
             checkBoxSuv.Checked = false;
