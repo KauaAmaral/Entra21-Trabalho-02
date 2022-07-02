@@ -33,7 +33,7 @@ namespace TrabalhoWindowsForm
         private Button buttonEditar;
         private Label labelCategoria;
         private RadioButton radioButtonSuv;
-        private RadioButton radioButtonSedam;
+        private RadioButton radioButtonSedan;
         private RadioButton radioButtonHatch;
         private TextBox textBoxMarca;
         private DataGridViewTextBoxColumn ColumnCodigo;
@@ -71,7 +71,7 @@ namespace TrabalhoWindowsForm
             this.buttonSalvar = new System.Windows.Forms.Button();
             this.labelCategoria = new System.Windows.Forms.Label();
             this.radioButtonSuv = new System.Windows.Forms.RadioButton();
-            this.radioButtonSedam = new System.Windows.Forms.RadioButton();
+            this.radioButtonSedan = new System.Windows.Forms.RadioButton();
             this.radioButtonHatch = new System.Windows.Forms.RadioButton();
             this.textBoxMarca = new System.Windows.Forms.TextBox();
             this.buttonApagar = new System.Windows.Forms.Button();
@@ -174,7 +174,7 @@ namespace TrabalhoWindowsForm
             this.labelModelo.BackColor = System.Drawing.Color.Transparent;
             this.labelModelo.Location = new System.Drawing.Point(702, 43);
             this.labelModelo.Name = "labelModelo";
-            this.labelModelo.Size = new System.Drawing.Size(48, 15);
+            this.labelModelo.Size = new System.Drawing.Size(61, 20);
             this.labelModelo.TabIndex = 3;
             this.labelModelo.Text = "Modelo";
             // 
@@ -182,7 +182,7 @@ namespace TrabalhoWindowsForm
             // 
             this.textBoxModelo.Location = new System.Drawing.Point(702, 66);
             this.textBoxModelo.Name = "textBoxModelo";
-            this.textBoxModelo.Size = new System.Drawing.Size(236, 23);
+            this.textBoxModelo.Size = new System.Drawing.Size(236, 27);
             this.textBoxModelo.TabIndex = 4;
             // 
             // labelPlaca
@@ -191,7 +191,7 @@ namespace TrabalhoWindowsForm
             this.labelPlaca.BackColor = System.Drawing.Color.Transparent;
             this.labelPlaca.Location = new System.Drawing.Point(698, 93);
             this.labelPlaca.Name = "labelPlaca";
-            this.labelPlaca.Size = new System.Drawing.Size(35, 15);
+            this.labelPlaca.Size = new System.Drawing.Size(44, 20);
             this.labelPlaca.TabIndex = 5;
             this.labelPlaca.Text = "Placa";
             // 
@@ -199,7 +199,7 @@ namespace TrabalhoWindowsForm
             // 
             this.textBoxPlaca.Location = new System.Drawing.Point(702, 113);
             this.textBoxPlaca.Name = "textBoxPlaca";
-            this.textBoxPlaca.Size = new System.Drawing.Size(236, 23);
+            this.textBoxPlaca.Size = new System.Drawing.Size(236, 27);
             this.textBoxPlaca.TabIndex = 6;
             // 
             // labelMarca
@@ -208,7 +208,7 @@ namespace TrabalhoWindowsForm
             this.labelMarca.BackColor = System.Drawing.Color.Transparent;
             this.labelMarca.Location = new System.Drawing.Point(698, 149);
             this.labelMarca.Name = "labelMarca";
-            this.labelMarca.Size = new System.Drawing.Size(40, 15);
+            this.labelMarca.Size = new System.Drawing.Size(50, 20);
             this.labelMarca.TabIndex = 7;
             this.labelMarca.Text = "Marca";
             // 
@@ -218,7 +218,7 @@ namespace TrabalhoWindowsForm
             this.labelPreco.BackColor = System.Drawing.Color.Transparent;
             this.labelPreco.Location = new System.Drawing.Point(702, 209);
             this.labelPreco.Name = "labelPreco";
-            this.labelPreco.Size = new System.Drawing.Size(37, 15);
+            this.labelPreco.Size = new System.Drawing.Size(46, 20);
             this.labelPreco.TabIndex = 12;
             this.labelPreco.Text = "Preço";
             // 
@@ -235,10 +235,10 @@ namespace TrabalhoWindowsForm
             // labelCategoria
             // 
             this.labelCategoria.AutoSize = true;
-            this.labelCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.labelCategoria.Location = new System.Drawing.Point(702, 287);
+            this.labelCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.labelCategoria.Location = new System.Drawing.Point(702, 295);
             this.labelCategoria.Name = "labelCategoria";
-            this.labelCategoria.Size = new System.Drawing.Size(132, 31);
+            this.labelCategoria.Size = new System.Drawing.Size(138, 32);
             this.labelCategoria.TabIndex = 15;
             this.labelCategoria.Text = "Categoria";
             // 
@@ -247,39 +247,39 @@ namespace TrabalhoWindowsForm
             this.radioButtonSuv.AutoSize = true;
             this.radioButtonSuv.Location = new System.Drawing.Point(702, 330);
             this.radioButtonSuv.Name = "radioButtonSuv";
-            this.radioButtonSuv.Size = new System.Drawing.Size(46, 19);
+            this.radioButtonSuv.Size = new System.Drawing.Size(57, 24);
             this.radioButtonSuv.TabIndex = 16;
             this.radioButtonSuv.TabStop = true;
             this.radioButtonSuv.Text = "SUV";
             this.radioButtonSuv.UseVisualStyleBackColor = true;
             // 
-            // radioButtonSedam
+            // radioButtonSedan
             // 
-            this.radioButtonSedam.AutoSize = true;
-            this.radioButtonSedam.Location = new System.Drawing.Point(702, 360);
-            this.radioButtonSedam.Name = "radioButtonSedam";
-            this.radioButtonSedam.Size = new System.Drawing.Size(61, 19);
-            this.radioButtonSedam.TabIndex = 17;
-            this.radioButtonSedam.TabStop = true;
-            this.radioButtonSedam.Text = "Sedam";
-            this.radioButtonSedam.UseVisualStyleBackColor = true;
+            this.radioButtonSedan.AutoSize = true;
+            this.radioButtonSedan.Location = new System.Drawing.Point(702, 360);
+            this.radioButtonSedan.Name = "radioButtonSedan";
+            this.radioButtonSedan.Size = new System.Drawing.Size(71, 24);
+            this.radioButtonSedan.TabIndex = 17;
+            this.radioButtonSedan.TabStop = true;
+            this.radioButtonSedan.Text = "Sedan";
+            this.radioButtonSedan.UseVisualStyleBackColor = true;
             // 
             // radioButtonHatch
             // 
             this.radioButtonHatch.AutoSize = true;
             this.radioButtonHatch.Location = new System.Drawing.Point(702, 390);
             this.radioButtonHatch.Name = "radioButtonHatch";
-            this.radioButtonHatch.Size = new System.Drawing.Size(61, 19);
+            this.radioButtonHatch.Size = new System.Drawing.Size(69, 24);
             this.radioButtonHatch.TabIndex = 18;
             this.radioButtonHatch.TabStop = true;
-            this.radioButtonHatch.Text = "Hatcht";
+            this.radioButtonHatch.Text = "Hatch";
             this.radioButtonHatch.UseVisualStyleBackColor = true;
             // 
             // textBoxMarca
             // 
             this.textBoxMarca.Location = new System.Drawing.Point(702, 172);
             this.textBoxMarca.Name = "textBoxMarca";
-            this.textBoxMarca.Size = new System.Drawing.Size(236, 23);
+            this.textBoxMarca.Size = new System.Drawing.Size(236, 27);
             this.textBoxMarca.TabIndex = 19;
             // 
             // buttonApagar
@@ -307,7 +307,7 @@ namespace TrabalhoWindowsForm
             this.Controls.Add(this.buttonApagar);
             this.Controls.Add(this.textBoxMarca);
             this.Controls.Add(this.radioButtonHatch);
-            this.Controls.Add(this.radioButtonSedam);
+            this.Controls.Add(this.radioButtonSedan);
             this.Controls.Add(this.radioButtonSuv);
             this.Controls.Add(this.labelCategoria);
             this.Controls.Add(this.buttonSalvar);
@@ -329,25 +329,20 @@ namespace TrabalhoWindowsForm
             this.PerformLayout();
 
         }
-        private void buttonSalvar_Click(object sender, EventArgs e)
+
+
+        private string ObterCategoria()
         {
-            //Focar no primeiro TextBox
-            textBoxModelo.Focus();
-            //Obter as informaçoes dos campos
-            var modelo = textBoxModelo.Text.Trim();
-            var placa = textBoxPlaca.Text.Trim();
-            var marca = textBoxMarca.Text.Trim();
-            var preco = textBoxPreco.Text.Trim();
-            var categoria = classe;
+            var categorias = string.Empty;
 
-            if (dataGridViewVeiculos.SelectedRows.Count == 0)
-            {
-                AdicionarCarroSalvandoArquivo(modelo, placa, marca, preco, categoria);
+            if (radioButtonHatch.Checked == true)
+                categorias = "Hatch";
+            if (radioButtonSedan.Checked == true)
+                categorias = "Sedan";
+            if (radioButtonSuv.Checked == true)
+                categorias = "Suv";
 
-                return;
-            }
-
-            EditarDados(modelo, placa, marca, categoria, preco);
+            return categorias;
         }
         public void LimparCampos()
         {
@@ -356,20 +351,20 @@ namespace TrabalhoWindowsForm
             textBoxMarca.Text = "";
             textBoxPreco.Text = "";
             radioButtonSuv.Checked = false;
-            radioButtonSedam.Checked = false;
+            radioButtonSedan.Checked = false;
             radioButtonHatch.Checked = false;
         }
         private void buttonLimparCampos_Click(object sender, EventArgs e)
         {
             LimparCampos();
         }
-        private void EditarDados(string modelo, string placa, string marca, string categoria, string preco)
+        private void EditarDados(string modelo, string placa, string marca, string categorias, string preco)
         {
             var carro = new Carro();
             carro.Modelo = modelo;
             carro.Placa = placa;
             carro.Marca = marca;
-            carro.Categoria = categoria;
+            carro.Categoria = ObterCategoria();
             carro.Preco = preco;
 
             var linhaSelecionada = dataGridViewVeiculos.SelectedRows[0];
@@ -406,6 +401,7 @@ namespace TrabalhoWindowsForm
         }
         private bool ValidarDadosDoVeiculo()
         {
+
             bool validar;
             if (textBoxModelo.Text == "")
             {
@@ -427,7 +423,7 @@ namespace TrabalhoWindowsForm
                 validar = false;
                 MessageBox.Show("Insira o Preço do carro.");
             }
-            else if ((radioButtonSuv.Checked == false) && (radioButtonSedam.Checked == false) && (radioButtonHatch.Checked == false))
+            else if ((radioButtonSuv.Checked == false) && (radioButtonSedan.Checked == false) && (radioButtonHatch.Checked == false))
             {
                 validar = false;
                 MessageBox.Show("Informe a categoria.");
@@ -439,6 +435,7 @@ namespace TrabalhoWindowsForm
         }
         public void buttonEditar_Click(object sender, EventArgs e)
         {
+            ObterCategoria();
             if (dataGridViewVeiculos.SelectedRows.Count == 0)
             {
                 MessageBox.Show("Seleciona um Veiculo, Antes de Editar!");
@@ -450,7 +447,7 @@ namespace TrabalhoWindowsForm
             var modelo = linhaSelecionada.Cells[1].Value.ToString();
             var placa = linhaSelecionada.Cells[2].Value.ToString();
             var marca = linhaSelecionada.Cells[3].Value.ToString();
-            var categoria = linhaSelecionada.Cells[4].Value;
+            var categorias = linhaSelecionada.Cells[4].Value;
             var preco = Convert.ToDouble(linhaSelecionada.Cells[5].Value);
 
             textBoxModelo.Text = modelo;
@@ -458,11 +455,11 @@ namespace TrabalhoWindowsForm
             textBoxMarca.Text = marca;
             textBoxPreco.Text = preco.ToString();
             radioButtonHatch.Checked = false;
-            radioButtonSedam.Checked = false;
+            radioButtonSedan.Checked = false;
             radioButtonSuv.Checked = false;
         }
 
-        private void AdicionarCarroSalvandoArquivo(string modelo, string placa, string marca, string preco, string classe)
+        private void AdicionarCarroSalvandoArquivo(string modelo, string placa, string marca, string preco, string categorias)
         {
             var carro = new Carro
             {
@@ -471,7 +468,7 @@ namespace TrabalhoWindowsForm
                 Placa = placa,
                 Marca = marca,
                 Preco = preco,
-                Categoria = classe,
+                Categoria = ObterCategoria(),
             };
 
             carroServico.Cadastrar(carro);
@@ -479,17 +476,6 @@ namespace TrabalhoWindowsForm
             LimparCampos();
 
             ListarCarros();
-        }
-        private void ValidarCategorias()
-        {
-            if (radioButtonSuv.Checked == true)
-                classe = "SUV";
-
-            else if (radioButtonSedam.Checked == true)
-                classe = "Sedam";
-
-            else if (radioButtonHatch.Checked == true)
-                classe = "Hatch";
         }
 
         private void buttonApagar_Click(object sender, EventArgs e)
@@ -515,6 +501,28 @@ namespace TrabalhoWindowsForm
 
                 ListarCarros();
             }
+        }
+
+        private void buttonSalvar_Click(object sender, EventArgs e)
+        {
+            //Focar no primeiro TextBox
+            textBoxModelo.Focus();
+            //Obter as informaçoes dos campos
+            var modelo = textBoxModelo.Text.Trim();
+            var placa = textBoxPlaca.Text.Trim();
+            var marca = textBoxMarca.Text.Trim();
+            var preco = textBoxPreco.Text.Trim();
+            var categoria = ObterCategoria();
+            ;
+
+            if (dataGridViewVeiculos.SelectedRows.Count == 0)
+            {
+                AdicionarCarroSalvandoArquivo(modelo, placa, marca, preco, categoria);
+
+                return;
+            }
+
+            EditarDados(modelo, placa, marca, categoria, preco);
         }
     }
 }

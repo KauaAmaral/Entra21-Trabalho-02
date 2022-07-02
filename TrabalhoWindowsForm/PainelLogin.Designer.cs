@@ -96,6 +96,7 @@
             this.textBoxPassword.PasswordChar = '*';
             this.textBoxPassword.Size = new System.Drawing.Size(235, 30);
             this.textBoxPassword.TabIndex = 5;
+            this.textBoxPassword.Enter += new System.EventHandler(this.textBoxPassword_Enter);
             // 
             // buttonLogar
             // 

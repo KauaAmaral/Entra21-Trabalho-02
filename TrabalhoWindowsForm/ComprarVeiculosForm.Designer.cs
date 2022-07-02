@@ -244,7 +244,7 @@
             this.ColumnModelo.MinimumWidth = 6;
             this.ColumnModelo.Name = "ColumnModelo";
             this.ColumnModelo.ReadOnly = true;
-            this.ColumnModelo.Width = 90;
+            this.ColumnModelo.Width = 80;
             // 
             // ColumnPlaca
             // 
@@ -268,8 +268,7 @@
             this.ColumnCategoria.MinimumWidth = 6;
             this.ColumnCategoria.Name = "ColumnCategoria";
             this.ColumnCategoria.ReadOnly = true;
-            this.ColumnCategoria.Visible = false;
-            this.ColumnCategoria.Width = 70;
+            this.ColumnCategoria.Width = 80;
             // 
             // ColumnPreco
             // 

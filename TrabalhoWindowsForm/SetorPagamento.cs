@@ -40,6 +40,8 @@ namespace TrabalhoWindowsForm
             }
 
             MessageBox.Show("COMPRA EFETUADA COM SUCESSO");
+
+            this.Close();
         }
 
         private void buttonCancelarOp_Click(object sender, EventArgs e)

@@ -34,6 +34,8 @@ namespace TrabalhoWindowsForm
 
         private void ListarCarros()
         {
+            ObterSelecaoCategoria();
+
             var carros = carroServico.ObterTodos();
 
             dataGridViewAbaComprar.Rows.Clear();

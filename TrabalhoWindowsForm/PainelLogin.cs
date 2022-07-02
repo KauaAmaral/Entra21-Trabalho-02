@@ -60,5 +60,11 @@ namespace TrabalhoWindowsForm
             psi.FileName = enderecoSuporte;
             System.Diagnostics.Process.Start(psi);
         }
+
+        private void textBoxPassword_Enter(object sender, EventArgs e)
+        {
+            textBoxPassword.Text = "";
+            textBoxPassword.Focus();
+        }
     }
 }
